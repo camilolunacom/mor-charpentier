@@ -1,0 +1,26 @@
+{
+  "name": "mor-charpentier",
+  "version": "1.0.0",
+  "description": "WordPress theme for mor charpentier",
+  "main": "index.js",
+  "repository": "git@github.com:camilolunacom/mor-charpentier.git",
+  "author": "Camilo Luna <camilo@alunizar.co>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "node-sass": "^4.14.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2"
+  }
+}
