@@ -32,9 +32,9 @@ if ( ! function_exists( 'alzr_theme_setup' ) ) :
     /**
      * Add support for two custom navigation menus.
      */
-    register_nav_menus( array(
-        'primary'   => __( 'Primary Menu', 'alzr' ),
-    ) );
+    register_nav_menus( [
+        'primary'   => esc_html__( 'Primary Menu', 'alzr' ),
+    ] );
 
   }
 endif; // alzr_theme_setup
@@ -44,7 +44,7 @@ add_action( 'after_setup_theme', 'alzr_theme_setup' );
  * Load JS and CSS
  */
 function alzr_enqueue_scripts() {
-  wp_enqueue_style( 'main_css', get_stylesheet_directory_uri() . '/style.css', [], time() );
+  wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time() );
 }
 add_action( 'wp_enqueue_scripts', 'alzr_enqueue_scripts');
 
