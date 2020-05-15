@@ -1,0 +1,21 @@
+/*!
+Theme Name: mor charpentier
+Author: Alunizar
+Author URI: https://www.alunizar.co/
+Description: Custom theme for mor charpentier by Alunizar.
+Version: 1.0
+Text Domain: alzr
+Tags: entertainment, portfolio, grid-layout, one-column, custom-menu, featured-images, footer-widgets, translation-ready
+*/
+
+body {
+  margin: 0;
+  img {
+    width: 100%;
+  }
+}
+
+footer {
+  display: none;
+  background: blue;
+}
