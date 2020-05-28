@@ -14,8 +14,6 @@
 
   </div> <!-- #primary -->
 
-  <?php get_sidebar(); ?>
-
-  <h1>index.php</h1>
+  <h1>page.php</h1>
 
 <?php get_footer(); ?>
