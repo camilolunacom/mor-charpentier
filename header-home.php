@@ -10,7 +10,7 @@
 <div id="page">
 
   <a href="#content" class="skip-link screen-reader-text">
-    <?php esc_html_e( 'Skip to content', 'alzr' ); ?>
+    <?php esc_html_e( 'Skip to content', 'mc2020' ); ?>
   </a>
 
   <header class="main-header" role="banner">

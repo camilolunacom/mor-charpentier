@@ -2,13 +2,13 @@
 
   <header class="entry-header">
 
-    <h1><?php esc_html_e( 'No content found', 'alzr'); ?></h1>
+    <h1><?php esc_html_e( 'No content found', 'mc2020'); ?></h1>
 
   </header>
 
   <div class="entry-content">
 
-    <p><?php esc_html_e( "We couldn't find any content.", 'alzr' ); ?></p>
+    <p><?php esc_html_e( "We couldn't find any content.", 'mc2020' ); ?></p>
 
     <p><a href="<?php echo esc_url( home_url( '/') ); ?>" role="home">Go to homepage</a></p>
 
