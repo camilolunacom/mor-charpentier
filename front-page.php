@@ -78,11 +78,11 @@
           <div class="blog-post__overlay">
             <a class="blog-post__button" href="<?php echo the_permalink(); ?>">View more</a>
           </div>
-          <a class="blog-post__title" href="<?php echo the_permalink(); ?>">
-            <h3 class="blog-post__"><?php echo the_title() ?></h3>
-          </a>
-          <p class="blog-post__excerpt"><?php echo the_excerpt() ?></p>
         </div>
+        <a class="blog-post__title" href="<?php echo the_permalink(); ?>">
+          <h3 class="blog-post__"><?php echo the_title() ?></h3>
+        </a>
+        <p class="blog-post__excerpt"><?php echo the_excerpt() ?></p>
       </div>
 
     <?php endwhile; endif; wp_reset_query(); ?>

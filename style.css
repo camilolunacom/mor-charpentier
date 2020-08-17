@@ -7,6 +7,7 @@ Version: 1.0
 Text Domain: mc2020
 Tags: entertainment, portfolio, grid-layout, one-column, custom-menu, featured-images, footer-widgets, translation-ready
 */
+/* General */
 body {
   margin: 0;
   width: 100%;
@@ -22,8 +23,38 @@ footer {
   background: #00f;
 }
 
-img {
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
   height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 
 .section {
@@ -47,4 +78,36 @@ img {
 
 .blog-post:last-of-type {
   margin-right: 0;
+}
+
+.blog-post__img {
+  position: relative;
+}
+
+.blog-post__img img {
+  display: block;
+}
+
+.blog-post__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  width: calc(100% - 32px);
+  height: calc(100% - 32px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.blog-post:hover .blog-post__overlay {
+  opacity: 1;
 }
