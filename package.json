@@ -17,6 +17,7 @@
     "sass": "^1.26.5"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "svg4everybody": "^2.1.9"
   }
 }
