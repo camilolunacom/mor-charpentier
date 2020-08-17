@@ -65,9 +65,19 @@ if ( ! function_exists( 'mc2020_widgets_init' ) ) {
 /**
  * Load JS and CSS
  */
+
 function mc2020_enqueue_scripts() {
   wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/style.css', [], time() );
-}
+  
+  if ( is_front_page() ) {
+    wp_enqueue_script( 'alunizar-glide', get_stylesheet_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
+    wp_enqueue_style( 'alunizar-glide-core', get_stylesheet_directory_uri() . '/assets/css/glide.core.min.css', [], '3.4.1' );
+    wp_enqueue_style( 'alunizar-glide-theme', get_stylesheet_directory_uri() . '/assets/css/glide.theme.min.css', ['alunizar-glide-core'], '3.4.1' );
+    wp_enqueue_script( 'alunizar-home', get_stylesheet_directory_uri() . '/assets/js/home.js', ['alunizar-glide'], time(), true );
+  }
+
+
+} 
 add_action( 'wp_enqueue_scripts', 'mc2020_enqueue_scripts');
 
 ?>
