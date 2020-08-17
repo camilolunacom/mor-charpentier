@@ -6,4 +6,45 @@ Description: Custom theme for mor charpentier by Alunizar.
 Version: 1.0
 Text Domain: mc2020
 Tags: entertainment, portfolio, grid-layout, one-column, custom-menu, featured-images, footer-widgets, translation-ready
-*/body{margin:0}body img{width:100%}footer{display:none;background:#00f}
+*/
+body {
+  margin: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  display: none;
+  background: #00f;
+}
+
+img {
+  height: auto;
+}
+
+.section {
+  max-width: 1440px;
+  width: 80%;
+  margin: auto;
+}
+
+.blog-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-post {
+  margin-right: 32px;
+}
+
+.blog-post:last-of-type {
+  margin-right: 0;
+}

@@ -10,12 +10,37 @@ Tags: entertainment, portfolio, grid-layout, one-column, custom-menu, featured-i
 
 body {
   margin: 0;
-  img {
-    width: 100%;
-  }
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 footer {
   display: none;
-  background: blue;
+  background: #00f;
+}
+
+img {
+  height: auto;
+}
+
+.section {
+  max-width: 1440px;
+  width: 80%;
+  margin: auto;
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-post {
+  margin-right: 32px;
+  &:last-of-type {
+    margin-right: 0;
+  }
 }
