@@ -7,6 +7,8 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php include_once("assets/img/sprite.svg"); ?>
+
 <div id="page">
 
   <a href="#content" class="skip-link screen-reader-text">
@@ -16,7 +18,11 @@
   <header class="main-header" role="banner">
 
     <div class="main-header__logo">
-      <a href="<?php echo esc_url( home_url( '/') ); ?>" role="home">Logo</a>
+      <a href="<?php echo esc_url( home_url( '/') ); ?>" role="home">
+        <svg viewBox="0 0 160 33" class="main-header__logo-img">
+          <use xlink:href="#logo"></use>
+        </svg>
+      </a>
     </div>
 
     <nav class="main-header__nav" role="navigation" aria-label="Main">
@@ -32,4 +38,4 @@
 
   </header>
 
-  <div id="content">
+  <div id="content" class="main-content">

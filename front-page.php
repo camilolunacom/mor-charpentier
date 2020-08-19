@@ -47,8 +47,16 @@
     </div>
 
     <div class="glide__arrows" data-glide-el="controls">
-      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <svg class="slider-arrow" viewBox="0 0 200 330">
+          <use xlink:href="#arrow-left"></use>
+        </svg>
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+        <svg class="slider-arrow" viewBox="0 0 200 330">
+          <use xlink:href="#arrow-right"></use>
+        </svg>
+      </button>
     </div>
 
   </div>
@@ -74,7 +82,7 @@
  
       <div class="blog-post">
         <div class="blog-post__img">
-          <?php echo get_the_post_thumbnail( get_the_ID(), 'full' ); ?>
+          <?php echo get_the_post_thumbnail( get_the_ID(), 'news' ); ?>
           <div class="blog-post__overlay">
             <a class="blog-post__button" href="<?php echo the_permalink(); ?>">View more</a>
           </div>
