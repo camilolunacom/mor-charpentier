@@ -188,7 +188,6 @@ function mc2020_enqueue_scripts() {
     if ( is_front_page() ) {
         wp_enqueue_script( 'mc2020-glide', get_stylesheet_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
         wp_enqueue_style( 'mc2020-glide-core', get_stylesheet_directory_uri() . '/assets/css/glide.core.min.css', [], '3.4.1' );
-        wp_enqueue_style( 'mc2020-glide-theme', get_stylesheet_directory_uri() . '/assets/css/glide.theme.min.css', ['mc2020-glide-core'], '3.4.1' );
         wp_enqueue_script( 'mc2020-home', get_stylesheet_directory_uri() . '/assets/js/home.js', ['mc2020-glide'], time(), true );
     }
 
