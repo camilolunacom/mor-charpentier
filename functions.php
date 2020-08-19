@@ -121,7 +121,7 @@ if ( ! function_exists( 'custom_post_types' ) ) {
             'show_in_admin_bar' => true,
             'show_in_nav_menus' => true,
             'can_export' => true,
-            'has_archive'  => 'exhibition ',
+            'has_archive'  => 'viewing-rooms',
             'show_in_rest' => true,
 		);
         register_post_type( 'viewing-room', $viewing_room_args );
