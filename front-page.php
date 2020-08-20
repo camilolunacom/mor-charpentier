@@ -66,7 +66,7 @@
 <!-- Latest news -->
 <section class="section">
 
-  <h2><?php _e('Latest News', 'mc2020'); ?></h2>
+  <h2 class="section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
 
   <div class="blog-posts">
 

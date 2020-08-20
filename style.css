@@ -463,8 +463,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: rgba(255, 255, 255, 0.7);
   font-size: 20px;
   line-height: 1.4;
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .main-header__logo {
@@ -737,6 +741,8 @@ a:hover {
   font-size: 2.25em;
   line-height: 1.361em;
   margin: 0;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .btn {
@@ -777,15 +783,15 @@ a:hover {
   position: relative;
 }
 
-.home .main-header {
-  z-index: 10;
+.home .main-header--home {
+  background: none;
 }
 
-.home .main-header__logo {
+.home .main-header--home .main-header__logo {
   fill: #fff;
 }
 
-.home .main-header__menu a {
+.home .main-header--home .main-header__menu a {
   color: #fff;
   opacity: 1;
 }
