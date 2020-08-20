@@ -575,10 +575,57 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 14px;
+  line-height: 21px;
 }
 
-.footer__col--2 {
+.footer__col--exhibition {
+  font-size: 12px;
+  line-height: 13px;
+  font-weight: 700;
+}
+
+.footer__col--credits {
   text-align: center;
+}
+
+.footer__col--contact {
+  text-align: right;
+}
+
+.footer-exhibition__link {
+  display: block;
+}
+
+.footer-exhibition__title {
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.footer-exhibition__name {
+  margin: 8px 0 8px;
+  font-style: italic;
+}
+
+.footer-exhibition__artists {
+  margin: 8px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-exhibition__name::after, .footer-exhibition__artists::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  margin-top: 6px;
+  background: #000;
+}
+
+.footer-exhibition__dates {
+  margin: 8px 0 0;
 }
 
 .svg-sprites {

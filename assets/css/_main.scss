@@ -191,10 +191,60 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
+  line-height: 21px;
 
   &__col {
-    &--2 {
+    &--exhibition {
+      font-size: 12px;
+      line-height: 13px;
+      font-weight: 700;
+    }
+
+    &--credits {
       text-align: center;
+    }
+
+    &--contact {
+      text-align: right;
+    }
+  }
+
+  &-exhibition {
+    &__link {
+      display: block;
+    }
+    
+    &__title {
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+    
+    &__name {
+      margin: 8px 0 8px;
+      font-style: italic;
+    }
+
+    &__artists {
+      margin: 8px 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    &__name::after,
+    &__artists::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 2px;
+      margin-top: 6px;
+      background: #000;
+    }
+
+    &__dates {
+      margin: 8px 0 0;
     }
   }
 }
