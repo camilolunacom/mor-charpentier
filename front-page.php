@@ -28,7 +28,7 @@
 
               <?php if ( $text ) : ?><div class="glide__text"><?php echo $text; ?></div><?php endif; ?>
 
-              <?php if ( $button_text ) : ?><a href="<?php echo $button_url; ?>"><?php echo $button_text; ?></a><?php endif; ?>
+              <?php if ( $button_text ) : ?><a class="glide__button btn btn--alt" href="<?php echo $button_url; ?>"><?php echo $button_text; ?></a><?php endif; ?>
 
             </div>
 
@@ -38,7 +38,7 @@
       <?php else : ?>
 
         <li class="glide__slide">
-          <h2 class="glide__title">mor charpentier</h2>
+          <h2 class="glide__title"><?php _e( 'mor charpentier', 'mc2020' ); ?></h2>
         </li>
 
       <?php endif; ?>
@@ -84,7 +84,7 @@
         <div class="blog-post__img">
           <?php echo get_the_post_thumbnail( get_the_ID(), 'news' ); ?>
           <div class="blog-post__overlay">
-            <a class="blog-post__button" href="<?php echo the_permalink(); ?>">View more</a>
+            <a class="blog-post__button btn" href="<?php echo the_permalink(); ?>"><?php _e( 'View more', 'mc2020' ); ?></a>
           </div>
         </div>
         <a class="blog-post__title" href="<?php echo the_permalink(); ?>">
@@ -93,7 +93,9 @@
         <p class="blog-post__excerpt"><?php echo the_excerpt() ?></p>
       </div>
 
-    <?php endwhile; endif; wp_reset_query(); ?>
+      <?php endwhile; ?>
+    <?php endif; ?>
+    <?php wp_reset_query(); ?>
 
   </div>
 
