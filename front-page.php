@@ -1,104 +1,97 @@
 <?php get_header(); ?>
 
-<!-- Hero slider -->
-<section class="hero">
-  <div class="glide">
-    <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides">
+<main <?php post_class(); ?>>
 
-      <?php
+	<!-- Hero slider -->
+	<section class="hero">
+		<div class="glide">
+		<div class="glide__track" data-glide-el="track">
+			<ul class="glide__slides">
 
-      if ( have_rows('slider') ) :
+			<?php
 
-        while ( have_rows('slider') ) : the_row();
-          $background = get_sub_field( 'background' );
-          $title = get_sub_field( 'title' );
-          $text = get_sub_field( 'text' );
-          $button_text = get_sub_field( 'button_text' );
-          $button_url = get_sub_field( 'button_url' );
+			if ( have_rows('slider') ) :
 
-          ?>
+			while ( have_rows('slider') ) : the_row();
+				$background = get_sub_field( 'background' );
+				$title = get_sub_field( 'title' );
+				$text = get_sub_field( 'text' );
+				$button_text = get_sub_field( 'button_text' );
+				$button_url = get_sub_field( 'button_url' );
 
-          <li class="glide__slide"<?php if ( $background ) : ?> style="background-image: url(<?php echo $background; ?>)"<?php endif; ?>>
-            <div class="glide__overlay"></div>
+				?>
 
-            <div class="glide__content">
-              
-              <?php if ( $title ) : ?><h2 class="glide__title"><?php echo $title; ?></h2><?php endif; ?>
+				<li class="glide__slide"<?php if ( $background ) : ?> style="background-image: url(<?php echo $background; ?>)"<?php endif; ?>>
+				<div class="glide__overlay"></div>
 
-              <?php if ( $text ) : ?><div class="glide__text"><?php echo $text; ?></div><?php endif; ?>
+				<div class="glide__content">
 
-              <?php if ( $button_text ) : ?><a class="glide__button btn btn--alt" href="<?php echo $button_url; ?>"><?php echo $button_text; ?></a><?php endif; ?>
+					<?php if ( $title ) : ?><h2 class="glide__title"><?php echo $title; ?></h2><?php endif; ?>
 
-            </div>
+					<?php if ( $text ) : ?><div class="glide__text"><?php echo $text; ?></div><?php endif; ?>
 
-          </li>
+					<?php if ( $button_text ) : ?><a class="glide__button btn btn--alt" href="<?php echo $button_url; ?>"><?php echo $button_text; ?></a><?php endif; ?>
 
-        <?php endwhile; ?>
-      <?php else : ?>
+				</div>
 
-        <li class="glide__slide">
-          <h2 class="glide__title"><?php _e( 'mor charpentier', 'mc2020' ); ?></h2>
-        </li>
+				</li>
 
-      <?php endif; ?>
+			<?php endwhile; ?>
+			<?php else : ?>
 
-      </ul>
-    </div>
+			<li class="glide__slide">
+				<h2 class="glide__title"><?php _e( 'mor charpentier', 'mc2020' ); ?></h2>
+			</li>
 
-    <div class="glide__arrows" data-glide-el="controls">
-      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-        <svg class="slider-arrow" viewBox="0 0 200 330">
-          <use xlink:href="#arrow-left"></use>
-        </svg>
-      </button>
-      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-        <svg class="slider-arrow" viewBox="0 0 200 330">
-          <use xlink:href="#arrow-right"></use>
-        </svg>
-      </button>
-    </div>
+			<?php endif; ?>
 
-  </div>
+			</ul>
+		</div>
 
-</section>
+		<div class="glide__arrows" data-glide-el="controls">
+			<button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+			<svg class="slider-arrow" viewBox="0 0 200 330">
+				<use xlink:href="#arrow-left"></use>
+			</svg>
+			</button>
+			<button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+			<svg class="slider-arrow" viewBox="0 0 200 330">
+				<use xlink:href="#arrow-right"></use>
+			</svg>
+			</button>
+		</div>
 
-<!-- Latest news -->
-<section class="section">
+		</div>
 
-  <h2 class="section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
+	</section>
 
-  <div class="blog-posts">
+	<!-- Latest news -->
+	<section class="section">
 
-  <?php
-    $recent_posts = new WP_Query([
-      'post_type' => 'post',
-      'posts_per_page' => 3
-    ]);
+		<h2 class="section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
 
-    if ( $recent_posts->have_posts() ) :
-      while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
-      ?>
- 
-      <div class="blog-post">
-        <div class="blog-post__img">
-          <?php echo get_the_post_thumbnail( get_the_ID(), 'news' ); ?>
-          <div class="blog-post__overlay">
-            <a class="blog-post__button btn" href="<?php echo the_permalink(); ?>"><?php _e( 'View more', 'mc2020' ); ?></a>
-          </div>
-        </div>
-        <a class="blog-post__title" href="<?php echo the_permalink(); ?>">
-          <h3 class="blog-post__"><?php echo the_title() ?></h3>
-        </a>
-        <p class="blog-post__excerpt"><?php echo the_excerpt() ?></p>
-      </div>
+		<div class="blog-posts">
 
-      <?php endwhile; ?>
-    <?php endif; ?>
-    <?php wp_reset_query(); ?>
+		<?php
+		$recent_posts = new WP_Query([
+			'post_type' => 'post',
+			'posts_per_page' => 3
+		]);
 
-  </div>
+		if ( $recent_posts->have_posts() ) :
+			while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
+			?>
 
-</section>
+			<?php get_template_part( 'includes/post-news' ); ?>
+
+			<?php endwhile; ?>
+		<?php endif; ?>
+		<?php wp_reset_query(); ?>
+
+		</div>
+
+	</section>
+
+</main>
 
 <?php get_footer(); ?>
