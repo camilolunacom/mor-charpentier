@@ -471,6 +471,11 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
+.main-header--fixed {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
 .main-header__logo {
   display: block;
   height: 32px;
@@ -783,15 +788,15 @@ a:hover {
   position: relative;
 }
 
-.home .main-header--home {
+.home .main-header:not(.main-header--fixed) {
   background: none;
 }
 
-.home .main-header--home .main-header__logo {
+.home .main-header:not(.main-header--fixed) .main-header__logo {
   fill: #fff;
 }
 
-.home .main-header--home .main-header__menu a {
+.home .main-header:not(.main-header--fixed) .main-header__menu a {
   color: #fff;
   opacity: 1;
 }

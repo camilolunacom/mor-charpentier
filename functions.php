@@ -182,12 +182,13 @@ if ( ! function_exists( 'mc2020_widgets_init' ) ) {
  */
 
 function mc2020_enqueue_scripts() {
-    wp_enqueue_style( 'mc2020-main', get_stylesheet_directory_uri() . '/style.css', [], time() );
+	wp_enqueue_style( 'mc2020-style', get_stylesheet_directory_uri() . '/style.css', [], time() );
+	wp_enqueue_script( 'mc2020-script', get_stylesheet_directory_uri() . '/assets/js/script.js', [], time(), true );
 
     if ( is_front_page() ) {
         wp_enqueue_script( 'mc2020-glide', get_stylesheet_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
-        wp_enqueue_style( 'mc2020-glide-core', get_stylesheet_directory_uri() . '/assets/css/glide.core.min.css', [], '3.4.1' );
-        wp_enqueue_script( 'mc2020-home', get_stylesheet_directory_uri() . '/assets/js/home.js', ['mc2020-glide'], time(), true );
+        wp_enqueue_style( 'mc2020-glide-core', get_stylesheet_directory_uri() . '/assets/css/glide.core.min.css', ['mc2020-style'], '3.4.1' );
+        wp_enqueue_script( 'mc2020-home', get_stylesheet_directory_uri() . '/assets/js/home.js', ['mc2020-script','mc2020-glide'], time(), true );
     }
 
 }

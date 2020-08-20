@@ -103,6 +103,11 @@ a {
   z-index: 10;
   @include transition;
 
+  &--fixed {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   &__logo {
     display: block;
     height: 32px;
@@ -410,7 +415,7 @@ a {
     position: relative;
   }
 
-  .main-header--home {
+  .main-header:not(.main-header--fixed) {
     background: none;
 
     .main-header__logo {
