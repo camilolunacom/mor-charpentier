@@ -25,7 +25,7 @@
 
     <div class="footer__col footer__col--contact">
 
-      <a class="footer__email" href="<?php esc_url( 'mailto:contact@mor-charpentier.com', 'mc2020' ); ?>"><?php _e( 'contact@<br>mor-charpentier.com', 'mc2020' ); ?></a>
+      <a class="footer__email" href="mailto:<?php the_field( 'contact_email', 'option' ); ?>"><?php the_field( 'contact_email_display', 'option' ); ?></a>
       <?php get_template_part( 'includes/social-links' ); ?>
 
     </div>

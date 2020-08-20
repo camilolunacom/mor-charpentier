@@ -9,6 +9,11 @@
   transition-delay: 0.3s;
 }
 
+@mixin h2-large {
+  font-size: 2.25em;
+  line-height: 1.361em;
+}
+
 $icon-down: "data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMyMCAyMDAiPjxwYXRoIGRhdGEtbmFtZT0iUGF0aCAxNiIgZD0iTTAgMzYuMTlMMzYuODggMCAxNjAgMTI3IDI4My43NiAwIDMyMCAzNi4xOSAxNjAgMjAweiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==";
 
 html {
@@ -214,14 +219,14 @@ a {
     &__link {
       display: block;
     }
-    
+
     &__title {
       font-size: 10px;
       font-weight: 400;
       text-transform: uppercase;
       margin: 0 0 8px;
     }
-    
+
     &__name {
       margin: 8px 0 8px;
       font-style: italic;
@@ -232,7 +237,7 @@ a {
       padding-left: 0;
       list-style: none;
     }
-    
+
     &__name::after,
     &__artists::after {
       content: "";
@@ -245,6 +250,29 @@ a {
 
     &__dates {
       margin: 8px 0 0;
+    }
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 1.5em;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__social-link {
+    display: block;
+    margin-right: 16px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 }
@@ -324,6 +352,12 @@ a {
   max-width: 1440px;
   width: 80%;
   margin: auto;
+  padding: 4em 0;
+
+  &__title {
+    @include h2-large;
+    margin: 0;
+  }
 }
 
 .btn {
@@ -340,6 +374,7 @@ a {
   &:hover {
     background: #fff;
     color: #000;
+    opacity: 1;
   }
 
   &--alt {
@@ -354,6 +389,7 @@ a {
     }
   }
 }
+
 
 /********
  * HOME *

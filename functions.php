@@ -192,3 +192,23 @@ function mc2020_enqueue_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'mc2020_enqueue_scripts' );
+
+/**
+ * Create options page
+ */
+
+function mc2020_acf_op_init() {
+    
+    if ( function_exists( 'acf_add_options_page' ) ) {
+        
+        $option_page = acf_add_options_page( array(
+            'page_title'    => __('mor charpentier Theme Settings'),
+            'menu_title'    => __('MC2020 Settings'),
+            'menu_slug'     => 'mc2020',
+            'capability'    => 'edit_posts',
+            'icon_url'      => 'dashicons-admin-tools',
+            'redirect'      => true,
+        ));
+    }
+}
+add_action('acf/init', 'mc2020_acf_op_init');
