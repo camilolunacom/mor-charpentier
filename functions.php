@@ -182,8 +182,7 @@ if ( ! function_exists( 'mc2020_widgets_init' ) ) {
  */
 
 function mc2020_enqueue_scripts() {
-    wp_enqueue_style( 'mc2020-normalize', get_stylesheet_directory_uri() . '/assets/css/normalize.css', [], '8.0.1' );
-    wp_enqueue_style( 'mc2020-main', get_stylesheet_directory_uri() . '/style.css', ['mc2020-normalize'], time() );
+    wp_enqueue_style( 'mc2020-main', get_stylesheet_directory_uri() . '/style.css', [], time() );
 
     if ( is_front_page() ) {
         wp_enqueue_script( 'mc2020-glide', get_stylesheet_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
