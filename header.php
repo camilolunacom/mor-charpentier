@@ -19,11 +19,13 @@
 
     <div class="main-header__logo">
       <a href="<?php echo esc_url( home_url( '/') ); ?>" role="home">
-        <svg viewBox="0 0 160 33" class="main-header__logo-img">
+        <svg viewBox="0 0 160 32" class="main-header__logo-img">
           <use xlink:href="#logo"></use>
         </svg>
       </a>
     </div>
+
+    <button id="hamburguer" class="main-header__button">Menú</button>
 
     <nav class="main-header__nav" role="navigation" aria-label="Main">
       <?php
