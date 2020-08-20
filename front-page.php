@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main <?php post_class(); ?>>
+<main <?php post_class( 'site-main' ); ?> role="main">
 
 	<!-- Hero slider -->
 	<section class="hero">
