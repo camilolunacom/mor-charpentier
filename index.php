@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main <?php post_class( 'site-main' ); ?> role="main">
+<main class="'site-main" role="main">
 
 	<section class="section section--no-padding-bottom">
 
