@@ -213,3 +213,44 @@ function mc2020_acf_op_init() {
     }
 }
 add_action('acf/init', 'mc2020_acf_op_init');
+
+/**
+ * Fix .current_page_parent class on nav for CPT
+ * From: https://wordpress.stackexchange.com/questions/206523/remove-current-page-parent-nav-class-from-blog-index-when-in-cpt/206536
+ */
+
+function mc2020_remove_cpt_blog_class( $classes, $item, $args ) {
+
+    if ( ! is_singular( 'post' ) && ! is_category() && ! is_tag() && ! is_date() ) {
+
+        $blog_page_id = intval( get_option( 'page_for_posts' ) );
+
+        if ( $blog_page_id != 0 && $item->object_id == $blog_page_id ) {
+            unset( $classes[ array_search( 'current_page_parent', $classes ) ] );
+        }
+
+    }
+
+    return $classes;
+
+}
+add_filter( 'nav_menu_css_class', 'mc2020_remove_cpt_blog_class', 10, 3 );
+
+function mc2020_add_cpt_ancestor_class( $classes, $item, $args ) {
+
+    global $post;
+
+    $current_post_type = get_post_type_object( get_post_type( $post->ID ) );
+
+    $current_post_type_slug = $current_post_type->rewrite[ 'slug' ];
+
+    $menu_slug = strtolower( trim( $item->url ) );
+
+    if ( strpos( $menu_slug, $current_post_type_slug ) !== false ) {
+        $classes[] = 'current_page_parent';
+    }
+
+    return $classes;
+
+}
+add_action( 'nav_menu_css_class', 'mc2020_add_cpt_ancestor_class', 10, 3 );
