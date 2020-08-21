@@ -1,19 +1,17 @@
 <?php get_header(); ?>
 
-  <div id="primary" class="content-area">
+<main <?php post_class( 'site-main' ); ?> role="main">
 
-    <main class="site-main" role="main">
+	<section class="section">
 
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'includes/content', 'page' ); ?>
+			<?php get_template_part( 'includes/content', 'page' ); ?>
 
-      <?php endwhile; endif; ?>
+		<?php endwhile; endif; ?>
 
-    </main>
+	</section>
 
-  </div> <!-- #primary -->
-
-  <h1>page.php</h1>
+</main>
 
 <?php get_footer(); ?>

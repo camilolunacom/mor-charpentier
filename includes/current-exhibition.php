@@ -57,7 +57,7 @@
   <?php endwhile; ?>
   <?php wp_reset_postdata(); ?>
 <?php else : ?>
-  <h3 class="footer_exhibition__title"><?php _e( 'There are no current exhibitions', 'mc2020' ); ?></h3>
+  <h3 class="footer-exhibition__title footer-exhibition__title--none"><?php _e( 'There are no current exhibitions', 'mc2020' ); ?></h3>
 <?php endif; ?>
 
 </div>
