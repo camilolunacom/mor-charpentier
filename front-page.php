@@ -70,7 +70,7 @@
 
 		<h2 class="section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
 
-		<div class="blog-posts">
+		<div class="news">
 
 		<?php
 		$recent_posts = new WP_Query([
@@ -82,7 +82,7 @@
 			while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
 			?>
 
-			<?php get_template_part( 'includes/post-news' ); ?>
+			<?php get_template_part( 'includes/content' ); ?>
 
 			<?php endwhile; ?>
 		<?php endif; ?>
