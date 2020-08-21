@@ -70,7 +70,18 @@ body {
     &::before {
       top: 32px;
     }
+
+    #page {
+      min-height: calc(100vh - 52px);
+    }
   }
+}
+
+#page {
+  min-height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -531,6 +542,30 @@ a {
   }
 }
 
+/*******
+ * 404 *
+ *******/
+
+.error404 {
+  text-align: center;
+
+  &__404 {
+    font-size: 120px;
+    line-height: 1.25;
+    font-weight: 700;
+    opacity: 0.3;
+    margin: 0 0 2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__content p {
+    margin: 2em;
+  }
+}
+
 /********
  * NEWS *
  ********/
@@ -541,7 +576,7 @@ a {
   flex-wrap: wrap;
 }
 
-.single {
+.grid-single {
   width: calc(33% - 1.3333em);
   margin-right: 32px;
   margin-bottom: 3em;
@@ -732,3 +767,4 @@ a {
     cursor: pointer;
   }
 }
+

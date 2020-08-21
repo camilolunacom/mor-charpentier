@@ -1,33 +1,43 @@
 <?php get_header(); ?>
 
-  <div id="primary" class="content-area">
-    <main class="site-main" role="main">
+<main class="site-main" role="main">
 
-      <article <?php post_class(); ?>>
+	<section class="section">
 
-        <div class="single__container">              
+		<article <?php post_class(); ?>>
 
-          <header class="entry-header">
+			<div class="error404__container">
 
-            <h1><?php esc_html_e( 'Page not found', 'mc2020'); ?></h1>
+				<header class="error404__header">
 
-          </header>
+					<p class="error404__404">404</p>
 
-          <div class="entry-content">
+					<h1 class="error404__title section__title">
+						<?php esc_html_e( 'No content found', 'mc2020'); ?>
+					</h1>
 
-            <p><?php esc_html_e( "We couldn't find the page you were looking for.", 'mc2020'); ?></p>
-            <p><a href="<?php echo esc_url( home_url( '/') ); ?>" role="home"><?php esc_html_e( 'Go to homepage', 'mc2020'); ?></a></p>
-            
-          </div>
+				</header>
 
-        </div>
+				<div class="error404__content">
 
-      </article>
+					<p><?php esc_html_e( "Nothing was found at this location.", 'mc2020'); ?><br><?php esc_html_e( "Try using the main menu above.", 'mc2020'); ?></p>
 
-    </main>
+				</div>
 
-  </div> <!-- #primary -->
+				<div class="error404__btn">
 
-  <h1>404.php</h1>
+					<a class="btn" href="<?php echo esc_url( home_url( '/') ); ?>" role="home">
+						<?php esc_html_e( 'Go to home', 'mc2020'); ?>
+					</a>
+
+				</p>
+
+			</div>
+
+		</article>
+
+	</section>
+
+</main>
 
 <?php get_footer(); ?>

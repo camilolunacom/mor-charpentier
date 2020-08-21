@@ -433,6 +433,24 @@ body.admin-bar::before {
   top: 32px;
 }
 
+body.admin-bar #page {
+  min-height: calc(100vh - 52px);
+}
+
+#page {
+  min-height: calc(100vh - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -904,6 +922,29 @@ a:hover {
   color: #fff;
 }
 
+/*******
+ * 404 *
+ *******/
+.error404 {
+  text-align: center;
+}
+
+.error404__404 {
+  font-size: 120px;
+  line-height: 1.25;
+  font-weight: 700;
+  opacity: 0.3;
+  margin: 0 0 2rem;
+}
+
+.error404__title {
+  text-transform: uppercase;
+}
+
+.error404__content p {
+  margin: 2em;
+}
+
 /********
  * NEWS *
  ********/
@@ -918,25 +959,25 @@ a:hover {
       flex-wrap: wrap;
 }
 
-.single {
+.grid-single {
   width: calc(33% - 1.3333em);
   margin-right: 32px;
   margin-bottom: 3em;
 }
 
-.single:nth-of-type(3n) {
+.grid-single:nth-of-type(3n) {
   margin-right: 0;
 }
 
-.single__img {
+.grid-single__img {
   position: relative;
 }
 
-.single__img img {
+.grid-single__img img {
   display: block;
 }
 
-.single__overlay {
+.grid-single__overlay {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: absolute;
@@ -958,7 +999,7 @@ a:hover {
   opacity: 0;
 }
 
-.single:hover .single__overlay {
+.grid-single:hover .grid-single__overlay {
   opacity: 1;
 }
 
