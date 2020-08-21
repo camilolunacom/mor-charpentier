@@ -43,6 +43,7 @@ body {
   font-size: 16px;
   line-height: 1.563;
   font-family: "Euclid Flex", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 
   &::before,
   &::after {
@@ -238,6 +239,10 @@ a {
       font-weight: 400;
       text-transform: uppercase;
       margin: 0 0 8px;
+
+      &--none {
+        margin-bottom: 0;
+      }
     }
 
     &__name {
@@ -617,7 +622,9 @@ a {
       opacity: 0.3;
       @include transition;
 
-      &:hover {
+      &:hover,
+      &:hover a,
+      &.current-cat {
         opacity: 1;
       }
     }
@@ -673,25 +680,55 @@ a {
   }
 
   .happyforms-form__part {
-    margin: 0;
+    margin: 0 0 1em;
     padding: 0;
+  }
+
+  .happyforms-part__description {
+    display: none;
   }
 
   &__input {
     .happyforms-part__label {
       margin-bottom: 0.5em;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     input {
       border: 2px solid #000;
       height: 34px;
+      text-align: center;
     }
   }
 
   &__consent {
-    .option-label {
+    label.option-label {
       justify-content: center;
       align-items: center;
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 20px;
+      color: #666666;
+      padding-bottom: 0;
+
+      input {
+        position: relative;
+      }
+
+      .label {
+        padding-left: 3px;
+
+        a {
+          color: #000;
+          font-weight: inherit;
+        }
+      }
     }
+  }
+
+  &__btn {
+    margin: auto !important;
+    cursor: pointer;
   }
 }

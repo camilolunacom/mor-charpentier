@@ -404,6 +404,7 @@ body {
   font-size: 16px;
   line-height: 1.563;
   font-family: "Euclid Flex", Helvetica, Arial, sans-serif;
+  font-weight: 400;
 }
 
 body::before, body::after {
@@ -611,6 +612,10 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase;
   margin: 0 0 8px;
+}
+
+.footer-exhibition__title--none {
+  margin-bottom: 0;
 }
 
 .footer-exhibition__name {
@@ -1009,7 +1014,8 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-.filters__list li:hover {
+.filters__list li:hover,
+.filters__list li:hover a, .filters__list li.current-cat {
   opacity: 1;
 }
 
@@ -1059,24 +1065,56 @@ a:hover {
 }
 
 .form .happyforms-form__part {
-  margin: 0;
+  margin: 0 0 1em;
   padding: 0;
+}
+
+.form .happyforms-part__description {
+  display: none;
 }
 
 .form__input .happyforms-part__label {
   margin-bottom: 0.5em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .form__input input {
   border: 2px solid #000;
   height: 34px;
+  text-align: center;
 }
 
-.form__consent .option-label {
+.form__consent label.option-label {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+  padding-bottom: 0;
+}
+
+.form__consent label.option-label input {
+  position: relative;
+}
+
+.form__consent label.option-label .label {
+  padding-left: 3px;
+}
+
+.form__consent label.option-label .label a {
+  color: #000;
+  font-weight: inherit;
+}
+
+.form__btn {
+  margin: auto !important;
+  cursor: pointer;
 }

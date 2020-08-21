@@ -2,7 +2,7 @@
 
 <main <?php post_class( 'site-main' ); ?> role="main">
 
-	<section class="section">
+	<section class="section section--no-padding-bottom">
 
 		<h1 class="section__title">
 			<?php if ( is_page() ) {
@@ -15,7 +15,7 @@
 		?>
 		</h1>
 
-		<?php if ( is_home() ) : ?>
+		<?php if ( is_home() || is_category() ) : ?>
 
 			<div class="filters">
 
@@ -57,7 +57,7 @@
 
 	</section>
 
-	<section class="section section-no-padding-top">
+	<section class="section section--no-padding-top">
 
 		<?php get_template_part( 'includes/newsletter-form' ); ?>
 
