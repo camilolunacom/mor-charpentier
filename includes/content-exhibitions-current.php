@@ -1,6 +1,5 @@
 <?php
 $artists = get_field( 'relation_artists_exhibitions' );
-$vrs = get_field( 'relation_exhibitions_vrs' );
 
 $start_date_string = get_field( 'start_date' );
 $end_date_string = get_field( 'end_date' );
@@ -54,7 +53,7 @@ $end_date  = DateTime::createFromFormat('Ymd', $end_date_string);
 
 				<?php endif; ?>
 
-				<?php the_title( '<h2 class="current-exhibition__title">', '</h2>'); ?>
+				<?php the_title( '<h3 class="current-exhibition__title">', '</h3>'); ?>
 
 				<?php if ( $start_date && $end_date ) : ?>
 
@@ -62,7 +61,7 @@ $end_date  = DateTime::createFromFormat('Ymd', $end_date_string);
 
 						<?php echo esc_html( $start_date->format( $start_date_format ) ); ?> – <?php echo esc_html( $end_date->format( $end_date_format ) ); ?>
 
-					</div> <!-- .single--exhibition__dates -->
+					</div>
 
 				<?php endif; ?>
 

@@ -27,7 +27,7 @@
 				<button class="grid__button grid__button--line btn btn--small" href="<?php echo the_permalink(); ?>">
 
 					<?php _e( 'View', 'mc2020' ); 
-					echo ' ' . get_post_type(); ?>
+					echo ' ' . esc_html( get_post_type() ); ?>
 
 				</button>
 

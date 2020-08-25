@@ -184,14 +184,9 @@ if ( ! function_exists( 'mc2020_widgets_init' ) ) {
 
 function mc2020_enqueue_scripts() {
 	wp_enqueue_style( 'mc2020-style', get_template_directory_uri() . '/style.css', [], time() );
-	wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', [], time(), true );
-
-    if ( is_front_page() ) {
-        wp_enqueue_script( 'mc2020-glide', get_template_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
-        wp_enqueue_style( 'mc2020-glide-core', get_template_directory_uri() . '/assets/css/glide.core.min.css', ['mc2020-style'], '3.4.1' );
-        wp_enqueue_script( 'mc2020-home', get_template_directory_uri() . '/assets/js/home.js', ['mc2020-script','mc2020-glide'], time(), true );
-    }
-
+    wp_enqueue_style( 'mc2020-glide-core', get_template_directory_uri() . '/assets/css/glide.core.min.css', ['mc2020-style'], '3.4.1' );
+    wp_enqueue_script( 'mc2020-glide', get_template_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
+	wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', ['jquery', 'mc2020-glide'], time(), true );
 }
 add_action( 'wp_enqueue_scripts', 'mc2020_enqueue_scripts' );
 
@@ -204,13 +199,13 @@ function mc2020_acf_op_init() {
     if ( function_exists( 'acf_add_options_page' ) ) {
         
         $option_page = acf_add_options_page( array(
-            'page_title'    => __('mor charpentier Theme Settings'),
-            'menu_title'    => __('MC2020 Settings'),
+            'page_title'    => __('Theme Options'),
+            'menu_title'    => __('mc2020'),
             'menu_slug'     => 'mc2020',
             'capability'    => 'edit_posts',
-            'icon_url'      => 'dashicons-admin-tools',
             'redirect'      => true,
         ));
+
     }
 }
 add_action('acf/init', 'mc2020_acf_op_init');
@@ -269,3 +264,16 @@ function mc2020_artists_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'mc2020_artists_query', 1 );
+
+/**
+ * Modify exhibitions archive query
+ */
+
+function mc2020_exhibitions_query( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'exhibition' ) ) {
+        $query->set( 'meta_key', 'end_date' );
+        $query->set( 'orderby', 'meta_value_num' );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'mc2020_exhibitions_query', 1 );

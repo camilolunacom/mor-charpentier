@@ -14,9 +14,19 @@
   line-height: 1.5em;
 }
 
+@mixin body-small {
+  font-size: 18px;
+  line-height: 1.444em;
+}
+
+@mixin body-mini {
+  font-size: 14px;
+  line-height: 1.57em;
+}
+
 @mixin body-tiny {
   font-size: 10px;
-  line-height: 1.4;
+  line-height: 1.4em;
 }
 
 @mixin h1-small {
@@ -419,6 +429,11 @@ a {
     &-bottom {
       padding-bottom: 0;
     }
+  }
+
+  &--full-width {
+    width: 100%;
+    max-width: 100%;
   }
 
   &__title {
@@ -1041,11 +1056,15 @@ a {
     font-weight: 700;
     z-index: 1;
   }
+
+  &--past {
+    padding-bottom: 7em;
+  }
 }
 
 .current-exhibitions {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto 5em;
 }
 
 .current-exhibition {
@@ -1099,6 +1118,97 @@ a {
   }
 }
 
+.past-exhibitions {
+  &__year {
+    margin: 1rem auto 1rem;
+    text-align: center;
+    @include h1-small;
+  }
+  
+  &__toggle {
+    font-weight: 700;
+    background: none;
+    border: none;
+    appearance: none;
+    opacity: 0.3;
+    cursor: pointer;
+    @include transition;
+
+    &:hover,
+    .past-exhibitions__group--active & {
+      opacity: 1;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em auto;
+  }
+}
+
+.past-exhibition {
+  &__link {
+    display: block;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    width: 280px;
+    margin: 1em;
+    margin-bottom: 2em;
+  }
+
+  &__image {
+    min-height: 185px;
+    position: relative;
+    margin-bottom: 0.5em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: calc(100% - 2em);
+    height: calc(100% - 2em);
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    @include transition;
+
+    .past-exhibition__container:hover & {
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    @include transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    @include body-small;
+  }
+
+  &__date {
+    @include body-mini;
+    font-weight: 400;
+  }
+}
+
 .single--exhibition {
   &__artists {
     padding-left: 0;
@@ -1123,4 +1233,15 @@ a {
     font-weight: 700;
     margin-bottom: 2em;
   }
+}
+
+/*********
+ * About *
+ *********/
+
+ #map-canvas {
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
