@@ -66,11 +66,11 @@
 	</section>
 
 	<!-- Latest news -->
-	<section class="section">
+	<section class="section section--no-padding-bottom">
 
 		<h2 class="section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
 
-		<div class="news">
+		<div class="grid grid--posts">
 
 		<?php
 		$recent_posts = new WP_Query([
@@ -82,7 +82,7 @@
 			while ( $recent_posts->have_posts() ) : $recent_posts->the_post();
 			?>
 
-			<?php get_template_part( 'includes/content' ); ?>
+			<?php get_template_part( 'includes/content-grid', 'posts' ); ?>
 
 			<?php endwhile; ?>
 		<?php endif; ?>

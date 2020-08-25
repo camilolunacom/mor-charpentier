@@ -1,21 +1,57 @@
 <?php get_header(); ?>
 
-  <div id="primary" class="content-area">
-  
-    <main class="site-main" role="main">
+<main class="site-main" role="main">
 
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<article <?php post_class( 'section single' ); ?>>
 
-        <?php get_template_part( 'includes/content' ); ?>
+		<header class="single__header">
 
-      <?php endwhile; endif; ?>
-    
-    </main>
-  
-  </div> <!-- #primary -->
+			<h1 class="section__title single__title">
 
-  <?php get_sidebar(); ?>
+				<?php if ( is_page() || is_singular() ) {
+					single_post_title();
+				} else {
+					wp_title( '' );
+				} ?>
 
-  <p>single.php</p>
+			</h1>
+
+			<div class="single__extra extra">
+
+				<?php if ( 'artist' === get_post_type() ) {
+
+					get_template_part( 'includes/content-single-extra', 'artist' );
+
+				} elseif ( 'viewing-room' === get_post_type() ) {
+
+					get_template_part( 'includes/content-single-extra', 'viewing-room' );
+
+				} ?>
+
+			</div>
+
+		</header>
+
+		<?php if ( 'post' === get_post_type() ) : ?>
+
+			<div class="single__content single-post">
+
+				<?php get_template_part( 'includes/content-single', 'post' ); ?>
+
+			</div>
+
+		<?php else : ?>
+
+			<div class="single__main">
+
+				<?php get_template_part( 'includes/content-single' ); ?>
+
+			</div>
+
+			<?php endif; ?>
+
+	</article>
+
+</main>
 
 <?php get_footer(); ?>

@@ -35,7 +35,8 @@ if ( ! function_exists( 'mc2020_theme_setup' ) ) {
             'primary' => esc_html__( 'Primary Menu', 'mc2020' ),
 		) );
 
-        add_image_size( 'news', 350, 210, true );
+        add_image_size( 'news-grid', 456, 304, true );
+        add_image_size( 'news', 600 );
 
     }
     add_action( 'after_setup_theme', 'mc2020_theme_setup' );
@@ -182,13 +183,13 @@ if ( ! function_exists( 'mc2020_widgets_init' ) ) {
  */
 
 function mc2020_enqueue_scripts() {
-	wp_enqueue_style( 'mc2020-style', get_stylesheet_directory_uri() . '/style.css', [], time() );
-	wp_enqueue_script( 'mc2020-script', get_stylesheet_directory_uri() . '/assets/js/script.js', [], time(), true );
+	wp_enqueue_style( 'mc2020-style', get_template_directory_uri() . '/style.css', [], time() );
+	wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', [], time(), true );
 
     if ( is_front_page() ) {
-        wp_enqueue_script( 'mc2020-glide', get_stylesheet_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
-        wp_enqueue_style( 'mc2020-glide-core', get_stylesheet_directory_uri() . '/assets/css/glide.core.min.css', ['mc2020-style'], '3.4.1' );
-        wp_enqueue_script( 'mc2020-home', get_stylesheet_directory_uri() . '/assets/js/home.js', ['mc2020-script','mc2020-glide'], time(), true );
+        wp_enqueue_script( 'mc2020-glide', get_template_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
+        wp_enqueue_style( 'mc2020-glide-core', get_template_directory_uri() . '/assets/css/glide.core.min.css', ['mc2020-style'], '3.4.1' );
+        wp_enqueue_script( 'mc2020-home', get_template_directory_uri() . '/assets/js/home.js', ['mc2020-script','mc2020-glide'], time(), true );
     }
 
 }
@@ -254,3 +255,17 @@ function mc2020_add_cpt_ancestor_class( $classes, $item, $args ) {
 
 }
 add_action( 'nav_menu_css_class', 'mc2020_add_cpt_ancestor_class', 10, 3 );
+
+/**
+ * Modify artists archive query
+ */
+
+function mc2020_artists_query( $query ) {
+    if ( ! is_admin() && $query->is_main_query() ) {
+        if ( is_post_type_archive( 'artist' ) || is_post_type_archive( 'exhibition' ) ) {
+            $query->set( 'posts_per_page', -1 );
+            return;
+        }
+    }
+}
+add_action( 'pre_get_posts', 'mc2020_artists_query', 1 );

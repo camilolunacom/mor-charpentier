@@ -25,7 +25,7 @@
 
     <div class="footer__col footer__col--contact">
 
-      <a class="footer__email" href="mailto:<?php the_field( 'contact_email', 'option' ); ?>"><?php the_field( 'contact_email_display', 'option' ); ?></a>
+      <a class="footer__email" href="mailto:<?php esc_url( the_field( 'contact_email', 'option' ) ); ?>"><?php esc_html( the_field( 'contact_email_display', 'option' ) ); ?></a>
       <?php get_template_part( 'includes/social-links' ); ?>
 
     </div>
