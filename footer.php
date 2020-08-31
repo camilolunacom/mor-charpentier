@@ -1,36 +1,37 @@
-  </div> <!-- #content -->
+	</div> <!-- #content -->
 
-  <footer class="footer" role="contentinfo">
+	<footer class="footer" role="contentinfo">
 
-    <?php
+		<?php
+		$part1 = '<a href="https://www.alunizar.co" target="_blank" rel="nofollow noopener">';
+		$part2 = '</a>';
+		?>
 
-    $part1 = '<a href="https://www.alunizar.co" target="_blank" rel="nofollow noopener">';
-    $part2 = '</a>';
+		<div class="footer__col footer__col--exhibition">
 
-    ?>
+			<?php get_template_part( 'includes/current-exhibition' ); ?>
 
-    <div class="footer__col footer__col--exhibition">
+		</div>
 
-    <?php get_template_part( 'includes/current-exhibition' ); ?>
+		<div class="footer__col footer__col--credits">
 
-    </div>
+			<p id="footer__info">
+				&copy; <?php echo date("Y"); ?> <a href="<?php esc_url( bloginfo( 'url' ) ); ?>"><?php esc_html__( bloginfo( 'name' ) ); ?></a>.<br>
+				<?php _e('All rights reserved.', 'alunizar-child'); ?><br>
+				<?php printf(__('By %1$sAlunizar%2$s.', 'alunizar-child'), $part1, $part2);?>
+			</p>
 
-    <div class="footer__col footer__col--credits">
-      <p id="footer__info">
-        &copy; <?php echo date("Y"); ?> <a href="<?php esc_url( bloginfo( 'url' ) ); ?>"><?php esc_html__( bloginfo( 'name' ) ); ?></a>.<br>
-        <?php _e('All rights reserved.', 'alunizar-child'); ?><br>
-        <?php printf(__('By %1$sAlunizar%2$s.', 'alunizar-child'), $part1, $part2);?>
-      </p>
-    </div>
+		</div>
 
-    <div class="footer__col footer__col--contact">
+		<div class="footer__col footer__col--contact">
 
-      <a class="footer__email" href="mailto:<?php esc_url( the_field( 'contact_email', 'option' ) ); ?>"><?php esc_html( the_field( 'contact_email_display', 'option' ) ); ?></a>
-      <?php get_template_part( 'includes/social-links' ); ?>
+			<a class="footer__email" href="mailto:<?php the_field( 'contact_email', 'option' ); ?>"><?php the_field( 'contact_email_display', 'option' ); ?></a>
 
-    </div>
+			<?php get_template_part( 'includes/social-links' ); ?>
 
-  </footer>
+		</div>
+
+	</footer>
 
 </div> <!-- #page -->
 
