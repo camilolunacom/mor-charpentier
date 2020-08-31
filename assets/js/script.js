@@ -1,97 +1,128 @@
 la_carte = [
   {
-    "elementType": "geometry.fill",
-    "stylers": [
+    elementType: "geometry.fill",
+    stylers: [
       {
-      	"color": "#333333"
-      }
-    ]
+        color: "#333333",
+      },
+    ],
   },
   {
-    "elementType": "geometry.stroke",
-    "stylers": [
+    elementType: "geometry.stroke",
+    stylers: [
       {
-      	"color": "#111111"
-      }
-    ]
+        color: "#111111",
+      },
+    ],
   },
   {
-    "featureType": "road",
-    "elementType": "geometry.stroke",
-    "stylers": [
+    featureType: "road",
+    elementType: "geometry.stroke",
+    stylers: [
       {
-      	"color": "#000000"
+        color: "#000000",
       },
       {
-      	"weight": 2
-      }
-    ]
+        weight: 2,
+      },
+    ],
   },
   {
-    "featureType": "road",
-    "elementType": "geometry.fill",
-    "stylers": [
+    featureType: "road",
+    elementType: "geometry.fill",
+    stylers: [
       {
-      	"color": "#000000"
-      }
-    ]
+        color: "#000000",
+      },
+    ],
   },
   {
-  	"featureType": "road",
-    "elementType": "labels.icon",
-    "stylers": [
+    featureType: "road",
+    elementType: "labels.icon",
+    stylers: [
       {
-      	"color": "#cccccc"
+        color: "#cccccc",
       },
       {
-      	"weight": 0.9
-      }
-    ]
+        weight: 0.9,
+      },
+    ],
   },
   {
-    "elementType": "labels.text",
-    "stylers": [
+    elementType: "labels.text",
+    stylers: [
       {
-      	"color": "#cccccc"
+        color: "#cccccc",
       },
       {
-      	"weight": 0.9
-      }
-    ]
+        weight: 0.9,
+      },
+    ],
   },
   {
-    "featureType": "poi",
-    "elementType": "geometry.fill",
-    "stylers": [
+    featureType: "poi",
+    elementType: "geometry.fill",
+    stylers: [
       {
-      	"color": "#444444"
-      }
-    ]
+        color: "#444444",
+      },
+    ],
   },
   {
-    "featureType": "poi.park",
-    "elementType": "geometry.fill",
-    "stylers": [
+    featureType: "poi.park",
+    elementType: "geometry.fill",
+    stylers: [
       {
-      	"color": "#333333"
-      }
-    ]
+        color: "#333333",
+      },
+    ],
   },
   {
-    "featureType": "poi.government",
-    "elementType": "geometry.fill",
-    "stylers": [
+    featureType: "poi.government",
+    elementType: "geometry.fill",
+    stylers: [
       {
-      	"color": "#444444"
-      }
-    ]
-  }
+        color: "#444444",
+      },
+    ],
+  },
 ];
 
-window.onload = () => {
+const overlayContents = `
+    <div id="artwork-overlay" class="overlay-artwork">
+        <button class="overlay-artwork__close" onclick="hideArtwork()">X</button>
+        <div class="overlay-artwork__cols">
+          <div class="overlay-artwork__left">
+            <div class="overlay-artwork__img-container"></div>
+          </div>
+          <div class="overlay-artwork__right">
+              <div class="overlay-artwork__title"></div>
+              <div class="overlay-artwork__artist"></div>
+              <div class="overlay-artwork__short">
+                  <p class="overlay-artwork__excerpt"></p>
+              </div>
+              <div class="overlay-artwork__availability mc-hidden">
+                  <div class="overlay-artwork__price"></div>
+                  <div class="overlay-artwork__button-container">
+                      <button class="overlay-artwork__button btn" onclick="showForm()"></button>
+                  </div>
+              </div>
+              <div class="overlay-artwork__inquire">
+                  <div class="overlay-artwork__inquire-title"></div>
+                  <div class="overlay-artwork__inquire-form"></div>
+              </div>
+              <div class="overlay-artwork__about">
+                  <div class="overlay-artwork__desc-title"></div>
+                  <div class="overlay-artwork__description"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+`;
 
+window.onload = () => {
   /**
-   * Header 
+   * Header
    */
   const mainHeader = document.querySelector(".main-header");
   let scrollTop;
@@ -129,7 +160,7 @@ window.onload = () => {
    * Share buttons
    */
 
-  const shareButtons = document.querySelectorAll(".share__btn");
+  const shareButtons = document.querySelectorAll(".share__link");
 
   // If there are share buttons
   if (shareButtons.length > 0) {
@@ -137,18 +168,16 @@ window.onload = () => {
       button.addEventListener("click", (e) => {
         e.preventDefault();
 
-        console.log(e.target);
+        console.log(e.currentTarget);
 
-        let network = e.target.getAttribute("data-network");
-        let content = e.target.getAttribute("data-content");
-        let url = e.target.getAttribute("data-url");
+        let network = e.currentTarget.getAttribute("data-network");
+        let content = e.currentTarget.getAttribute("data-content");
+        let url = e.currentTarget.getAttribute("data-url");
 
         if (network === "facebook") {
           window.open(
             "http://www.facebook.com/sharer.php?u=" +
-              encodeURIComponent(url) +
-              "&t=" +
-              encodeURIComponent(content),
+              encodeURIComponent(url),
             "facebook",
             "height=700,width=550,resizable=1"
           );
@@ -169,18 +198,17 @@ window.onload = () => {
 };
 
 (function ($) {
-
-  $(document).on('ready', function () {
-
+  $(document).on("ready", function () {
     /**
-     * Start Glide galleries
+     * Start slick galleries
      */
 
-    if ($(".glide").length) {
-      new Glide('.glide').mount();
-    }
+    $(".hero-slider").slick({
+      nextArrow: '<button type="button" class="hero-slider__arrow hero-slider__arrow--right"><svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330"><g id="arrow-right" class="slider-arrow__g"><path d="M194.7 177.82L48 324.69a18.11 18.11 0 01-25.62 0L5.31 307.56a18.15 18.15 0 010-25.62L121.51 165 5.27 48.06a18.15 18.15 0 010-25.62L22.41 5.31a18.11 18.11 0 0125.59 0l146.69 146.87a18.14 18.14 0 01.01 25.64z"/></g></svg></button>',
+      prevArrow: '<button type="button" class="hero-slider__arrow hero-slider__arrow--left"><svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330"><g id="arrow-left" class="slider-arrow__g"><path d="M5.3 152.18L152 5.31a18.11 18.11 0 0125.62 0l17.1 17.13a18.15 18.15 0 010 25.62L78.49 165l116.24 116.94a18.15 18.15 0 010 25.62l-17.1 17.13a18.11 18.11 0 01-25.62 0L5.31 177.82a18.14 18.14 0 01-.01-25.64z"/></g></svg></button>'
+    });
 
-    /** 
+    /**
      * Past exhibitions
      */
     if ($(".past-exhibitions__year").length > 0) {
@@ -194,12 +222,15 @@ window.onload = () => {
             .children(".past-exhibitions__grid")
             .slideUp(500);
         } else {
-          $(".past-exhibitions__group").removeClass("past-exhibitions__group--active");
+          $(".past-exhibitions__group").removeClass(
+            "past-exhibitions__group--active"
+          );
           $(".past-exhibitions__grid").slideUp();
           $(this)
             .parent()
             .addClass("past-exhibitions__group--active")
-            .children(".past-exhibitions__grid").slideDown(500);
+            .children(".past-exhibitions__grid")
+            .slideDown(500);
         }
       });
     }
@@ -207,7 +238,7 @@ window.onload = () => {
     /**
      * Include Google maps
      */
-    if ($('#map-canvas').length > 0) {
+    if ($("#map-canvas").length > 0) {
       loadMapScript();
     }
   });
@@ -217,14 +248,15 @@ window.onload = () => {
  * Google Maps
  */
 function loadMapScript() {
-	var script = document.createElement("script");
-	script.type = "text/javascript";
-	script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&callback=initializeMap";
-	document.body.appendChild(script);
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src =
+    "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&callback=initializeMap";
+  document.body.appendChild(script);
 }
 
 function initializeMap() {
-  var la_galerie = new google.maps.LatLng(48.863943, 2.360240);
+  var la_galerie = new google.maps.LatLng(48.863943, 2.36024);
   var drag = true;
 
   var mapOptions = {
@@ -233,15 +265,82 @@ function initializeMap() {
     center: la_galerie,
     disableDefaultUI: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    draggable: drag
-  }
+    draggable: drag,
+  };
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   var marker = new google.maps.Marker({
     position: la_galerie,
     map: map,
-    title: ''
+    title: "",
   });
 
-  map.setOptions({styles: la_carte});
+  map.setOptions({ styles: la_carte });
 }
 
+function appendOverlay() {
+  if (!jQuery("#artwork-overlay").length > 0) {
+    jQuery("body").append(overlayContents);
+  }
+}
+
+function showArtwork(artwork) {
+  const overlay = document.getElementById("artwork-overlay")
+  const imageContainer = overlay.querySelector(".overlay-artwork__img-container");
+  const title = overlay.querySelector(".overlay-artwork__title");
+  const artist = overlay.querySelector(".overlay-artwork__artist");
+  const excerpt = overlay.querySelector(".overlay-artwork__excerpt");
+  const availability = overlay.querySelector(".overlay-artwork__availability");
+  const price = overlay.querySelector(".overlay-artwork__price");
+  const button = overlay.querySelector(".overlay-artwork__button");
+  // const formContainer = overlay.querySelector(".overlay-artwork__inquire");
+  const formTitle = overlay.querySelector(".overlay-artwork__inquire-title");
+  const formElement = overlay.querySelector(".overlay-artwork__inquire-form");
+  const aboutTitle = overlay.querySelector(".overlay-artwork__desc-title");
+  const description = overlay.querySelector(".overlay-artwork__description");
+
+  let actualPrice;
+  if (artwork.showPrice > 0) {
+    actualPrice = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(artwork.price);
+  } else {
+    actualPrice = artwork.priceMessage;
+  }
+
+  imageContainer.innerHTML = artwork.image;
+  title.innerHTML = artwork.title;
+  artist.innerHTML = artwork.artist;
+  excerpt.innerHTML = artwork.excerpt
+  if (artwork.availability) {
+    availability.classList.remove("mc-hidden");
+  }
+  price.innerHTML = actualPrice;
+  button.innerHTML = artwork.button;
+  formTitle.innerHTML = artwork.button;
+  formElement.innerHTML = artwork.formElement;
+  aboutTitle.innerHTML = artwork.aboutTitle;
+  description.innerHTML = artwork.description;
+
+  jQuery(".overlay-artwork__inquire").slideUp(0);
+
+  document.getElementsByTagName("body")[0].classList.add("mc-no-overflow");
+  document.addEventListener('keydown', closeOnEsc);
+  overlay.classList.add("overlay-artwork--active");
+}
+
+function hideArtwork() {
+  const overlay = document.getElementById("artwork-overlay")
+  overlay.querySelector(".overlay-artwork__availability").classList.add("mc-hidden");
+  document.getElementsByTagName("body")[0].classList.remove("mc-no-overflow");
+  overlay.classList.remove("overlay-artwork--active");
+  jQuery(".overlay-artwork__button").fadeIn(0);
+}
+
+function closeOnEsc(e) {
+  if (e.keyCode == 27) {
+    hideArtwork();
+  }
+}
+
+function showForm() {
+  jQuery(".overlay-artwork__button").fadeOut(0);
+  jQuery(".overlay-artwork__inquire").slideDown("slow");
+}

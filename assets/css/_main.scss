@@ -154,6 +154,11 @@ a {
   &__logo {
     display: block;
     height: 32px;
+    fill: #000;
+
+    .main-header--light:not(.main-header--fixed) & {
+      fill: #fff;
+    }
   }
 
   &__logo-img {
@@ -185,16 +190,24 @@ a {
       &.current-menu-item > a,
       &.current-menu-parent > a,
       &.current_page_parent > a {
+        color: #000;
         opacity: 1;
       }
 
       a {
         @include transition;
-        color: #000;
-        opacity: 0.3;
+        color: #bbb;
 
         &:hover {
-          opacity: 1;
+          color: #000;
+        }
+
+        .main-header--light:not(.main-header--fixed) & {
+          color: #fff;
+
+          &:hover {
+            color: #fff;
+          }
         }
       }
 
@@ -317,7 +330,7 @@ a {
   }
 
   &__email {
-    display: block;
+    display: inline-block;
     margin-bottom: 1.5em;
   }
 
@@ -333,13 +346,18 @@ a {
 
 .sm-icons {
   &__svg {
+    display: block;
     width: 40px;
     height: 40px;
   }
 
   &__link {
     display: block;
-    margin-right: 16px;
+    margin: 0 5px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
 
     &:last-of-type {
       margin-right: 0;
@@ -431,6 +449,14 @@ a {
     }
   }
 
+  &--half-padding {
+    padding: 2em 0;
+  }
+
+  &--cuarter-padding {
+    padding: 1em 0;
+  }
+
   &--full-width {
     width: 100%;
     max-width: 100%;
@@ -454,6 +480,7 @@ a {
   background: #000;
   border: 2px solid #000;
   color: #fff;
+  white-space: nowrap;
   cursor: pointer;
 
   &--small {
@@ -481,6 +508,8 @@ a {
 }
 
 .title-line {
+  @include body-small;
+  font-weight: 700;
   padding-bottom: 3.5rem;
   margin: 0;
   position: relative;
@@ -513,15 +542,6 @@ a {
 
   .main-header:not(.main-header--fixed) {
     background: none;
-
-    .main-header__logo {
-      fill: #fff;
-    }
-
-    .main-header__menu a {
-      color: #fff;
-      opacity: 1;
-    }
   }
 
   .main-content {
@@ -531,9 +551,19 @@ a {
 
 // Slider
 
-.glide {
-  &__slides {
-    margin: 0;
+.hero-slider {
+  &__slide {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &--light {
+      color: #fff;
+    }
+
+    &--cover {
+      background-size: cover;
+    }
   }
 
   &__arrow {
@@ -545,13 +575,17 @@ a {
     width: 20px;
     padding: 0;
     z-index: 2;
-    fill: #fff;
+    fill: #000;
     background-color: transparent;
-    opacity: 0.5;
+    opacity: 0.3;
     border: none;
     cursor: pointer;
     transform: translateY(-50%);
     line-height: 1;
+
+    .hero-slider--light & {
+      fill: #fff;
+    }
 
     &:hover {
       opacity: 0.8;
@@ -577,18 +611,28 @@ a {
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: #fff;
+    opacity: 0;
   }
 
   &__content {
-    position: relative;
-    z-index: 2;
-    padding: 11em 0 6em;
-    width: 80%;
-    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 20px);
+    padding: 6em 0;
     margin: auto;
     text-align: center;
-    color: #fff;
+  }
+
+  &__title,
+  &__text,
+  &__button {
+    max-width: 600px;
+    z-index: 1;
   }
 
   &__button {
@@ -791,6 +835,7 @@ a {
     line-height: 23px;
     font-weight: 700;
     text-transform: uppercase;
+    cursor: pointer;
 
     &::after {
       content: "";
@@ -951,13 +996,13 @@ a {
 }
 
 .share {
-  max-width: 96px;
+  max-width: 190px;
   text-align: center;
   margin-top: 2em;
 
   &__btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
@@ -975,7 +1020,6 @@ a {
   }
 
   &__share {
-    margin-top: 4em;
     .share {
       margin: auto;
     }
@@ -1244,4 +1288,220 @@ a {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+.cols {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.col-half {
+  flex: 1;
+  margin: 0 2em;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.about {
+  &__image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 2em;
+  }
+
+  &__schedule {
+    margin-top: 2em;
+    text-align: center;
+
+    &-content {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 700;
+
+    &-part {
+      padding: 1em;
+      width: 20%;
+      min-width: 200px;
+    }
+  }
+}
+
+/***********
+ * Artwork *
+ ***********/
+
+.artwork-small {
+  &__thumbnail {
+    img {
+      display: bloc;
+    }
+  }
+
+  &__short {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1em;
+  }
+
+  &__info {
+    width: calc(100% - 152px);
+  }
+
+  &__title,
+  &__artist {
+    margin: 0;
+    @include body-large;
+    font-weight: 700;
+  }
+
+  &__excerpt,
+  &__price {
+    margin: 0.5em 0;
+  }
+}
+
+.overlay-artwork {
+  padding: 2em;
+  height: 100%;
+  width: 100%;
+  max-height: 100vh;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background: #fff;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+  border: 10px solid #000;
+  @include transition;
+
+  &--active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    padding: 0.5em;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  &__cols {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 1480px;
+    margin: auto;
+  }
+
+  &__left {
+    width: calc(70% - 2em);
+  }
+
+  &__right {
+    width: 30%;
+    max-height: 100%;
+    padding-right: 1em;
+    overflow-y: auto;
+  }
+
+  &__title,
+  &__artist {
+    @include h3-small;
+    font-weight: 700;
+  }
+
+  &__short {
+    margin: 1em 0;
+  }
+
+  &__excerpt {
+    margin-bottom: 0;
+  }
+
+  &__availability {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+  }
+
+  &__inquire {
+    margin: 1em 0;
+  }
+
+  &__inquire-title,
+  &__desc-title {
+    @include body-large;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__about {
+    margin: 1em 0;
+  }
+
+  .happyforms-form {
+    .happyforms-flex {
+      margin: 0;
+    }
+
+    &.happyforms-styles {
+      .happyforms-part {
+        &__label .label {
+          @include body-mini;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          @include body-mini;
+          padding: 5px 0;
+        }
+        
+        &--legal .happyforms-part__el .label {
+          padding-left: 10px;
+          font-size: 12px;
+          line-height: 1.49em;
+
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mc-hidden {
+  display: none !important;
+}
+
+.mc-no-overflow {
+  overflow: hidden;
 }
