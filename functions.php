@@ -29,6 +29,11 @@ if ( ! function_exists( 'mc2020_theme_setup' ) ) {
         add_theme_support( 'html5' );
 
         /**
+         * Enable support for editor styles
+         */
+        add_theme_support( 'editor-styles' );
+
+        /**
          * Add support for custom navigation menus.
          */
         register_nav_menus( array(
@@ -139,7 +144,6 @@ if ( ! function_exists( 'custom_post_types' ) ) {
             'labels' => $artwork_labels,
             'supports' => array(
 				'title',
-				'thumbnail',
 			),
             'public' => true,
             'menu_position' => 9,
@@ -184,11 +188,12 @@ if ( ! function_exists( 'mc2020_widgets_init' ) ) {
 
 function mc2020_enqueue_scripts() {
 	wp_enqueue_style( 'mc2020-style', get_template_directory_uri() . '/style.css', [], time() );
-    wp_enqueue_style( 'mc2020-glide-core', get_template_directory_uri() . '/assets/css/glide.core.min.css', ['mc2020-style'], '3.4.1' );
-    wp_enqueue_script( 'mc2020-glide', get_template_directory_uri() . '/assets/js/glide.min.js', [], '3.4.1', true );
-	wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', ['jquery', 'mc2020-glide'], time(), true );
+    wp_enqueue_script( 'mc2020-slick', get_template_directory_uri() . '/assets/js/slick.min.js', [], '1.8.1', true );
+	wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', ['jquery', 'mc2020-slick'], time(), true );
 }
 add_action( 'wp_enqueue_scripts', 'mc2020_enqueue_scripts' );
+
+add_editor_style( 'style-editor.css' );
 
 /**
  * Create options page
@@ -199,8 +204,8 @@ function mc2020_acf_op_init() {
     if ( function_exists( 'acf_add_options_page' ) ) {
         
         $option_page = acf_add_options_page( array(
-            'page_title'    => __('Theme Options'),
-            'menu_title'    => __('mc2020'),
+            'page_title'    => __('Theme Options', 'mc2020'),
+            'menu_title'    => __('mc2020', 'mc2020'),
             'menu_slug'     => 'mc2020',
             'capability'    => 'edit_posts',
             'redirect'      => true,
@@ -209,6 +214,35 @@ function mc2020_acf_op_init() {
     }
 }
 add_action('acf/init', 'mc2020_acf_op_init');
+
+/**
+ * Create artwork bloc
+ */
+
+function my_acf_init_block_types() {
+
+    if( function_exists('acf_register_block_type') ) {
+
+        acf_register_block_type( array(
+            'name'              => 'artwork',
+            'title'             => __('Artwork'),
+            'description'       => __('Display an artwork.'),
+            'category'          => 'common',
+            'icon'              => 'art',
+            'keywords'          => array( 'artwork', 'art', 'work', 'piece', 'art piece' ),
+            'post_types'        => array( 'exhibition', 'viewing-room', 'artist' ),
+            'mode'              => 'edit',
+            'render_template'   => 'includes/blocks/artwork/artwork.php',
+            'enqueue_style'     => get_template_directory_uri() . '/includes/blocks/artwork/artwork.css',
+            'enqueue_script'    => get_template_directory_uri() . '/includes/blocks/artwork/artwork.js',
+            'supports'          => array(
+                'align'             => false,
+                'mode'              => false,
+            ),
+        ));
+    }
+}
+add_action('acf/init', 'my_acf_init_block_types');
 
 /**
  * Fix .current_page_parent class on nav for CPT
@@ -277,3 +311,17 @@ function mc2020_exhibitions_query( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'mc2020_exhibitions_query', 1 );
+
+/**
+ * Artwork: save first image from gallery as featured image
+ */
+
+function set_artwork_featured_image_from_gallery() {
+    $images = get_field( 'artwork_images', false, false );
+    $image_id = $images[0];
+
+    if ( $image_id ) {
+        set_post_thumbnail( $post->ID, $image_id );
+    }
+}
+add_action( 'save_post', 'set_artwork_featured_image_from_gallery' );
