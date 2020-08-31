@@ -18,11 +18,11 @@ $year = 0;
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php $end_date = get_field( 'end_date' );
-			$end_year = substr( $end_date, 0, 4 );
+			<?php $start_date = get_field( 'start_date' );
+			$start_year = substr( $start_date, 0, 4 );
 			?>
 
-			<?php if ( $end_date >= $today ) : ?>
+			<?php if ( $start_date >= $today ) : ?>
 
 				<?php if ( ! $current ) : ?>
 
@@ -51,7 +51,7 @@ $year = 0;
 
 				<?php endif; ?>
 
-				<?php if ( $year != $end_year ) : ?>
+				<?php if ( $year != $start_year ) : ?>
 
 					<?php if ( $open ) : ?>
 
@@ -60,7 +60,7 @@ $year = 0;
 
 					<?php endif; ?>
 
-					<?php $year = $end_year; ?>
+					<?php $year = $start_year; ?>
 
 					<div class="past-exhibitions__group">
 					<?php $open = true; ?>
