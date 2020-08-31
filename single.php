@@ -52,6 +52,16 @@
 
 	</article>
 
+	<?php if ( 'post' !== get_post_type() ) : ?>
+
+		<aside class="section section--no-padding-top single__share">
+
+			<?php get_template_part( 'includes/social-share' ); ?>
+
+		</aside>
+
+	<?php endif; ?>
+
 </main>
 
 <?php get_footer(); ?>

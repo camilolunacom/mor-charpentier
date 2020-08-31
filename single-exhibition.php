@@ -93,25 +93,53 @@ $end_date  = DateTime::createFromFormat('Ymd', $end_date_string);
 
 		</header>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+		<div class="single__main">
 
-			<div class="single__content single-post">
+			<?php get_template_part( 'includes/content-single' ); ?>
 
-				<?php get_template_part( 'includes/content-single', 'post' ); ?>
-
-			</div>
-
-		<?php else : ?>
-
-			<div class="single__main">
-
-				<?php get_template_part( 'includes/content-single' ); ?>
-
-			</div>
-
-			<?php endif; ?>
+		</div>
 
 	</article>
+
+	<aside class="section section--no-padding-top single__share cols">
+
+		<div class="col-half">
+
+			<?php get_template_part( 'includes/social-share' ); ?>
+
+		</div>
+
+		<div class="col-half">
+
+			<div class="share">
+
+				<h4 class="share__title title-line">
+
+					<?php _e( 'Press release', 'mc2020' ); ?>
+
+				</h4>
+
+				<div class="sm-icons share__btns">
+
+					<a class="sm-icons__link" href="<?php the_field( 'press_release' ); ?>" target="_blank">
+
+						<svg xmlns="http://www.w3.org/2000/svg" class="sm-icons__svg" viewbox="0 0 40 40">
+							<g id="sm-press-release" class="sm-icons__g sm-icons__g--press-release">
+								<circle class="sm-icons__circle" cx="20" cy="20" r="20"/>
+								<circle class="sm-icons__border" cx="20" cy="20" r="19"/>
+								<path class="sm-icons__brand" d="M23 15.62h4.78v11.54a.85.85 0 01-.84.84H15.09a.85.85 0 01-.84-.84V10.84a.85.85 0 01.84-.84h7v4.78a.84.84 0 00.91.84zm1 2.25h-5.9a.43.43 0 00-.43.43v.28a.43.43 0 00.43.42H24a.43.43 0 00.43-.42v-.28a.43.43 0 00-.43-.43zm.43 2.68a.43.43 0 00-.43-.43h-5.9a.43.43 0 00-.43.43v.28a.43.43 0 00.43.42H24a.43.43 0 00.43-.42zm0 2.25a.42.42 0 00-.43-.42h-5.9a.42.42 0 00-.43.42v.28a.43.43 0 00.43.42H24a.43.43 0 00.43-.42zm3.37-8.3h-4.5V10h.21a.84.84 0 01.6.25l3.44 3.44a.84.84 0 01.25.6z"/>
+							</g>
+						</svg>
+
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</aside>
 
 </main>
 
