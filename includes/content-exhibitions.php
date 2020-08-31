@@ -4,7 +4,8 @@ $artists = get_field( 'relation_artists_exhibitions' );
 $start_date_string = get_field( 'start_date' );
 $end_date_string = get_field( 'end_date' );
 
-$start_date_format = _x( 'F jS', 'Current exhibition start date format', 'mc2020' );
+$start_date_format_short = _x( 'F jS', 'Current exhibition start date format', 'mc2020' );
+$start_date_format = _x( 'F jS, Y', 'Current exhibition start date format', 'mc2020' );
 $end_date_format = _x( 'F jS, Y', 'Current exhibition end date format', 'mc2020' );
 
 $start_date  = DateTime::createFromFormat('Ymd', $start_date_string);
@@ -62,7 +63,20 @@ $end_date  = DateTime::createFromFormat('Ymd', $end_date_string);
 
 					<div class="past-exhibition__date">
 
-						<?php echo esc_html( $start_date->format( $start_date_format ) ); ?> – <?php echo esc_html( $end_date->format( $end_date_format ) ); ?>
+						<?php
+						$start_year = substr( $start_date_string, 0, 4 );
+						$end_year = substr( $end_date_string, 0, 4 );
+						?>
+
+						<?php if ( $start_year == $end_year ) : ?>
+
+							<?php echo esc_html( $start_date->format( $start_date_format_short ) ); ?> &ndash; <?php echo esc_html( $end_date->format( $end_date_format ) ); ?>
+
+						<?php else : ?>
+
+							<?php echo esc_html( $start_date->format( $start_date_format ) ); ?> &ndash; <?php echo esc_html( $end_date->format( $end_date_format ) ); ?>
+
+						<?php endif; ?>
 
 					</div>
 
