@@ -46,6 +46,28 @@ if ( ! function_exists( 'mc2020_theme_setup' ) ) {
     }
     add_action( 'after_setup_theme', 'mc2020_theme_setup' );
 
+    /**
+     * Enable support for WooCommerce
+     */
+
+    function mc2020_add_woocommerce_support() {
+        add_theme_support( 'woocommerce', array(
+            'thumbnail_image_width' => 150,
+            'single_image_width'    => 300,
+    
+            'product_grid'          => array(
+                'default_rows'    => 3,
+                'min_rows'        => 2,
+                'max_rows'        => 8,
+                'default_columns' => 4,
+                'min_columns'     => 2,
+                'max_columns'     => 5,
+            ),
+        ) );
+    }
+    
+    add_action( 'after_setup_theme', 'mc2020_add_woocommerce_support' );
+
 } // mc2020_theme_setup
 
 // Register cusotm post types
@@ -158,29 +180,7 @@ if ( ! function_exists( 'custom_post_types' ) ) {
     }
     add_action( 'init', 'custom_post_types', 0 );
 
-}  // custom_post_typ es
-
-// Setup widget areas.
-if ( ! function_exists( 'mc2020_widgets_init' ) ) {
-
-    function mc2020_widgets_init() {
-
-        $args = array(
-            'name' => esc_html__( 'News Sidebar', 'mc2020' ),
-            'id' => 'news-sidebar',
-            'description' => esc_html__( 'Add widgets for news sidebar.', 'mc2020' ),
-            'before_widget' => '<section class="widget">',
-            'class' => 'news-sidebar',
-            'after_widget' => '</section>',
-            'before_title' => '<h2 class=news-sidebar__title">',
-            'after_title' => '</h2>',
-	);
-        register_sidebar( $args );
-
-    }
-    add_action( 'widgets_init', 'mc2020_widgets_init' );
-
-} // mc2020_widgets_init
+}  // custom_post_types
 
 /**
  * Load JS and CSS
