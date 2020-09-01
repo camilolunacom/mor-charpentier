@@ -32,9 +32,8 @@ $end_date  = DateTime::createFromFormat('Ymd', $end_date_string);
 
 				<div class="past-exhibition__overlay">
 
-					<button class="past-exhibition__button btn btn--small" href="<?php echo the_permalink(); ?>">
-						<?php _e( 'View', 'mc2020' ); 
-						echo ' ' . esc_html( get_post_type() ); ?>
+					<button class="past-exhibition__button btn btn--small">
+						<?php printf( esc_html__( 'View %s', 'mc2020' ), get_post_type() ); ?>
 					</button>
 
 				</div>

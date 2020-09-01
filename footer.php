@@ -16,9 +16,9 @@
 		<div class="footer__col footer__col--credits">
 
 			<p id="footer__info">
-				&copy; <?php echo date("Y"); ?> <a href="<?php esc_url( bloginfo( 'url' ) ); ?>"><?php esc_html__( bloginfo( 'name' ) ); ?></a>.<br>
-				<?php _e('All rights reserved.', 'alunizar-child'); ?><br>
-				<?php printf(__('By %1$sAlunizar%2$s.', 'alunizar-child'), $part1, $part2);?>
+				&copy; <?php echo date("Y"); ?> <a href="<?php esc_url( bloginfo( 'url' ) ); ?>"><?php esc_html__( bloginfo( 'mc2020' ) ); ?></a>.<br>
+				<?php _e('All rights reserved.', 'mc2020'); ?><br>
+				<?php printf(__('By %1$sAlunizar%2$s.', 'mc2020'), $part1, $part2);?>
 			</p>
 
 		</div>
