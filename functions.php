@@ -63,6 +63,7 @@ if ( ! function_exists( 'mc2020_theme_setup' ) ) {
                 'max_columns'     => 2,
             ),
         ) );
+        add_theme_support( 'wc-product-gallery-lightbox' );
     }
     
     add_action( 'after_setup_theme', 'mc2020_add_woocommerce_support' );
@@ -324,3 +325,57 @@ function set_artwork_featured_image_from_gallery() {
     }
 }
 add_action( 'save_post', 'set_artwork_featured_image_from_gallery' );
+
+/**
+ * WooCommerce hooks
+ */
+
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+
+// Archive pages
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+add_action( 'woocommerce_before_main_content', 'mc2020_section_wrapper_open', 5 );
+add_action( 'woocommerce_before_shop_loop_item', 'mc2020_product_image_wrapper_open', 20 );
+add_action( 'woocommerce_before_shop_loop_item_title', 'mc2020_product_overlay', 5 );
+add_action( 'woocommerce_shop_loop_item_title', 'mc2020_product_image_wrapper_close', 5 );
+add_action( 'woocommerce_after_main_content', 'mc2020_section_wrapper_close', 20 );
+
+// Single products
+
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+add_action( 'woocommerce_single_product_summary', 'the_content', 20 );
+
+/**
+ * WooCommerce hook functions
+ */
+
+function mc2020_section_wrapper_open() {
+    echo '<div class="section">';
+}
+
+function mc2020_section_wrapper_close() {
+    echo '</div>';
+}
+
+function mc2020_product_overlay() {
+    $text_button = __( 'View', 'mc2020' ) . ' ' . esc_html( get_post_type() );
+    echo '<div class="product__overlay"><button class="product__button btn">' . $text_button . '</button></div>';
+}
+
+function mc2020_product_image_wrapper_open() {
+    echo '<div class="product__thumbnail-wrapper">';
+}
+
+function mc2020_product_image_wrapper_close() {
+    echo '</div>';
+}
