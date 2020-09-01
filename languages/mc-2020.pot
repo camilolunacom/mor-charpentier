@@ -1,0 +1,293 @@
+# Copyright (C) 2020 Alunizar
+# This file is distributed under the .
+msgid ""
+msgstr ""
+"Project-Id-Version: mor charpentier 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mc-2020\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-09-01T01:47:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: mc2020\n"
+
+#. Theme Name of the theme
+#: front-page.php:55
+msgid "mor charpentier"
+msgstr ""
+
+#. Description of the theme
+msgid "Custom theme for mor charpentier by Alunizar."
+msgstr ""
+
+#. Author of the theme
+msgid "Alunizar"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://www.alunizar.co/"
+msgstr ""
+
+#: 404.php:16
+#: includes/content-none.php:5
+msgid "No content found"
+msgstr ""
+
+#: 404.php:23
+msgid "Nothing was found at this location."
+msgstr ""
+
+#: 404.php:23
+msgid "Try using the main menu above."
+msgstr ""
+
+#: 404.php:30
+msgid "Go to home"
+msgstr ""
+
+#: archive-exhibition.php:31
+msgid "Current"
+msgstr ""
+
+#: archive-exhibition.php:50
+msgid "Past"
+msgstr ""
+
+#: category.php:13
+#: functions.php:194
+#: home.php:13
+msgid "Show filters"
+msgstr ""
+
+#: footer.php:20
+msgid "All rights reserved."
+msgstr ""
+
+#: footer.php:21
+msgid "By %1$sAlunizar%2$s."
+msgstr ""
+
+#: front-page.php:69
+msgid "Latest News"
+msgstr ""
+
+#: functions.php:40
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:79
+msgctxt "Post Type General Name"
+msgid "Artists"
+msgstr ""
+
+#: functions.php:80
+msgctxt "Post Type Singular Name"
+msgid "Artist"
+msgstr ""
+
+#: functions.php:81
+#: functions.php:85
+msgid "Artists"
+msgstr ""
+
+#: functions.php:82
+msgid "Artist"
+msgstr ""
+
+#: functions.php:86
+msgid "Gallery artists."
+msgstr ""
+
+#: functions.php:105
+msgctxt "Post Type General Name"
+msgid "Exhibitions"
+msgstr ""
+
+#: functions.php:106
+msgctxt "Post Type Singular Name"
+msgid "Exhibition"
+msgstr ""
+
+#: functions.php:107
+#: functions.php:111
+msgid "Exhibitions"
+msgstr ""
+
+#: functions.php:108
+msgid "Exhibition"
+msgstr ""
+
+#: functions.php:112
+msgid "Gallery exhibitions."
+msgstr ""
+
+#: functions.php:131
+msgctxt "Post Type General Name"
+msgid "Viewing Rooms"
+msgstr ""
+
+#: functions.php:132
+msgctxt "Post Type Singular Name"
+msgid "Viewing Room"
+msgstr ""
+
+#: functions.php:133
+msgid "Viewing Rooms"
+msgstr ""
+
+#: functions.php:134
+#: functions.php:137
+msgid "Viewing Room"
+msgstr ""
+
+#: functions.php:138
+msgid "Gallery viewing rooms."
+msgstr ""
+
+#: functions.php:158
+msgctxt "Post Type General Name"
+msgid "Artworks"
+msgstr ""
+
+#: functions.php:159
+msgctxt "Post Type Singular Name"
+msgid "Artwork"
+msgstr ""
+
+#: functions.php:160
+msgid "Artworks"
+msgstr ""
+
+#: functions.php:161
+#: functions.php:164
+#: functions.php:232
+msgid "Artwork"
+msgstr ""
+
+#: functions.php:165
+msgid "Gallery artworks."
+msgstr ""
+
+#: functions.php:195
+msgid "Hide filters"
+msgstr ""
+
+#: functions.php:211
+msgid "Theme Options"
+msgstr ""
+
+#: functions.php:212
+msgid "MC2020"
+msgstr ""
+
+#: functions.php:233
+msgid "Display an artwork."
+msgstr ""
+
+#: functions.php:375
+#: includes/content-exhibitions.php:36
+#: includes/content-grid.php:29
+msgid "View %s"
+msgstr ""
+
+#: header.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: includes/blocks/artwork/artwork.php:38
+msgid "Inquire for price"
+msgstr ""
+
+#: includes/blocks/artwork/artwork.php:60
+msgid "View artwork"
+msgstr ""
+
+#: includes/blocks/artwork/artwork.php:77
+msgid "Inquire"
+msgstr ""
+
+#: includes/blocks/artwork/artwork.php:79
+msgid "About the work"
+msgstr ""
+
+#: includes/content-exhibitions-current.php:7
+#: includes/content-exhibitions.php:7
+#: includes/current-exhibition.php:44
+#: single-exhibition.php:11
+msgctxt "Current exhibition start date format"
+msgid "F jS"
+msgstr ""
+
+#: includes/content-exhibitions-current.php:8
+#: includes/content-exhibitions.php:9
+#: includes/current-exhibition.php:45
+#: single-exhibition.php:12
+msgctxt "Current exhibition end date format"
+msgid "F jS, Y"
+msgstr ""
+
+#: includes/content-exhibitions.php:8
+msgctxt "Current exhibition start date format"
+msgid "F jS, Y"
+msgstr ""
+
+#: includes/content-exhibitions.php:52
+msgid "Group exhibition"
+msgstr ""
+
+#: includes/content-grid-posts.php:17
+#: includes/content-single-post.php:38
+msgid "View more"
+msgstr ""
+
+#: includes/content-none.php:11
+msgid "We couldn't find any content."
+msgstr ""
+
+#: includes/content-page-about.php:73
+msgid "Open"
+msgstr ""
+
+#: includes/content-single-extra-artist.php:21
+msgid "Exhibitions:"
+msgstr ""
+
+#: includes/content-single-extra-artist.php:46
+msgid "Viewing Rooms:"
+msgstr ""
+
+#: includes/content-single-extra-exhibition.php:21
+msgid "Artists:"
+msgstr ""
+
+#: includes/content-single-extra-exhibition.php:46
+#: single-exhibition.php:71
+msgid "Related Viewing Rooms:"
+msgstr ""
+
+#: includes/content-single-extra-viewing-room.php:44
+msgid "Related Exhibitions:"
+msgstr ""
+
+#: includes/current-exhibition.php:24
+msgid "Current exhibition"
+msgstr ""
+
+#: includes/current-exhibition.php:60
+msgid "There are no current exhibitions"
+msgstr ""
+
+#: includes/newsletter-form.php:4
+msgid "Sign up to newsletter"
+msgstr ""
+
+#: includes/social-share.php:17
+msgid "Share"
+msgstr ""
+
+#: single-exhibition.php:118
+msgid "Press release"
+msgstr ""

@@ -149,9 +149,9 @@ window.onload = () => {
     filtersBtn.addEventListener("click", () => {
       filters.classList.toggle("filters--active");
       if (filtersBtn.textContent === "Show filters") {
-        filtersBtn.textContent = "Hide filters";
+        filtersBtn.textContent = objectL10n.hideFilters;
       } else {
-        filtersBtn.textContent = "Show filters";
+        filtersBtn.textContent = objectL10n.showFilters;
       }
     });
   }

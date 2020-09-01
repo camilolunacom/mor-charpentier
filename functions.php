@@ -189,7 +189,11 @@ if ( ! function_exists( 'custom_post_types' ) ) {
 function mc2020_enqueue_scripts() {
 	wp_enqueue_style( 'mc2020-style', get_template_directory_uri() . '/style.css', [], time() );
     wp_enqueue_script( 'mc2020-slick', get_template_directory_uri() . '/assets/js/slick.min.js', [], '1.8.1', true );
-	wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', ['jquery', 'mc2020-slick'], time(), true );
+    wp_enqueue_script( 'mc2020-script', get_template_directory_uri() . '/assets/js/script.js', ['jquery', 'mc2020-slick'], time(), true );
+    wp_localize_script( 'mc2020-script', 'objectL10n', array(
+        'showFilters'   => esc_html__( 'Show filters', 'mc2020' ),
+        'hideFilters'   => esc_html__( 'Hide filters', 'mc2020' ),
+    ) );    
 }
 add_action( 'wp_enqueue_scripts', 'mc2020_enqueue_scripts' );
 
@@ -205,7 +209,7 @@ function mc2020_acf_op_init() {
         
         $option_page = acf_add_options_page( array(
             'page_title'    => __('Theme Options', 'mc2020'),
-            'menu_title'    => __('mc2020', 'mc2020'),
+            'menu_title'    => __('MC2020', 'mc2020'),
             'menu_slug'     => 'mc2020',
             'capability'    => 'edit_posts',
             'redirect'      => true,

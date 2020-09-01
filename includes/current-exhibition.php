@@ -41,8 +41,8 @@
         $start_date_string = get_field( 'start_date' );
         $end_date_string = get_field( 'end_date' );
 
-        $start_date_format = _x( 'F dS', 'Current exhibition start date format', 'mc2020' );
-        $end_date_format = _x( 'F dS, Y', 'Current exhibition end date format', 'mc2020' );
+        $start_date_format = _x( 'F jS', 'Current exhibition start date format', 'mc2020' );
+        $end_date_format = _x( 'F jS, Y', 'Current exhibition end date format', 'mc2020' );
 
         $start_date  = DateTime::createFromFormat('Ymd', $start_date_string);
         $end_date  = DateTime::createFromFormat('Ymd', $end_date_string);
