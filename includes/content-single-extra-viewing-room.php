@@ -23,11 +23,22 @@ $exhibitions = get_field( 'relation_exhibitions_vrs' );
             <?php foreach( $artists as $artist ): 
                 $permalink = get_permalink( $artist->ID );
                 $title = get_the_title( $artist->ID );
+                $status = get_post_status( $artist->ID );
             ?>
 
-                <li class="extra__item">
-                    <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-                </li>
+                <?php if ( $status == 'published' ) : ?>
+
+                    <li class="extra__item">
+                        <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a> <?php echo esc_html( $status ); ?>
+                    </li>
+
+                <?php else : ?>
+
+                    <li class="extra__item">
+                        <?php echo esc_html( $title ); ?> <?php echo esc_html( $status ); ?>
+                    </li>
+
+                <?php endif; ?>
 
             <?php endforeach; ?>
 

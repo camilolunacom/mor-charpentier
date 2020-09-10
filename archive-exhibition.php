@@ -10,9 +10,9 @@ $year = 0;
 
 <main class="'site-main" role="main">
 
-	<section class="section exhibition">
+	<section class="mc-section exhibition">
 
-		<h1 class="section__title">
+		<h1 class="mc-section__title">
 			<?php post_type_archive_title(); ?>
 		</h1>
 

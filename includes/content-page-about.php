@@ -2,7 +2,7 @@
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="section__title">', '</h1>'); ?>
+		<?php the_title( '<h1 class="mc-section__title">', '</h1>'); ?>
 
 	</header>
 
@@ -14,40 +14,20 @@
 
 			<div class="col-half">
 
-				<div class="glide">
+				<div class="slick">
 
-					<div class="glide__track" data-glide-el="track">
+					<div class="slick__slides">
 
-						<ul class="glide__slides">
+					<?php foreach( $images as $image_id ): ?>
 
-						<?php foreach( $images as $image_id ): ?>
+						<div class="slick__slide">
 
-							<li class="glide__slide">
+							<?php echo wp_get_attachment_image( $image_id, 'news' ); ?>
 
-								<?php echo wp_get_attachment_image( $image_id, 'news' ); ?>
+						</div>
 
-							</li>
+					<?php endforeach; ?>
 
-						<?php endforeach; ?>
-
-						</ul>
-					</div>
-
-					<div class="glide__arrows" data-glide-el="controls">
-						<button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-							<svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330">
-								<g id="arrow-left" class="slider-arrow__g">
-									<path d="M5.3 152.18L152 5.31a18.11 18.11 0 0125.62 0l17.1 17.13a18.15 18.15 0 010 25.62L78.49 165l116.24 116.94a18.15 18.15 0 010 25.62l-17.1 17.13a18.11 18.11 0 01-25.62 0L5.31 177.82a18.14 18.14 0 01-.01-25.64z"/>
-								</g>
-							</svg>
-						</button>
-						<button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-							<svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330">
-								<g id="arrow-right" class="slider-arrow__g">
-									<path d="M194.7 177.82L48 324.69a18.11 18.11 0 01-25.62 0L5.31 307.56a18.15 18.15 0 010-25.62L121.51 165 5.27 48.06a18.15 18.15 0 010-25.62L22.41 5.31a18.11 18.11 0 0125.59 0l146.69 146.87a18.14 18.14 0 01.01 25.64z"/>
-								</g>
-							</svg>
-						</button>
 					</div>
 
 				</div>

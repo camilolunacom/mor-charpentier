@@ -12,3 +12,12 @@
 .wp-block[data-align="full"] {
     max-width: none;
 }
+
+/* Image row block group */
+.image-row .wp-block-group__inner-container {
+    display: flex;
+}
+
+.image-row .wp-block-group__inner-container > * {
+    padding-right: 8px;
+}

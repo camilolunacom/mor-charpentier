@@ -2,9 +2,9 @@
 
 <main class="'site-main" role="main">
 
-	<section class="section section--no-padding-bottom">
+	<section class="mc-section section--no-padding-bottom">
 
-		<h1 class="section__title">
+		<h1 class="mc-section__title">
 			<?php single_term_title(); ?>
 		</h1>
 
@@ -38,7 +38,7 @@
 
 	</main>
 
-	<section class="section section--no-padding-top section--no-padding-bottom">
+	<section class="mc-section section--no-padding-top section--no-padding-bottom">
 
 		<div class="pagination">
 			<?php echo paginate_links(); ?>
@@ -46,7 +46,7 @@
 
 	</section>
 
-	<section class="section">
+	<section class="mc-section">
 
 		<?php get_template_part( 'includes/newsletter-form' ); ?>
 

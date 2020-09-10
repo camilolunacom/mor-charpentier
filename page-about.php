@@ -2,7 +2,7 @@
 
 <main <?php post_class( 'site-main about' ); ?> role="main">
 
-	<section class="section">
+	<section class="mc-section">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -12,7 +12,7 @@
 
 	</section>
 
-	<section class="section section--cuarter-padding about__contact">
+	<section class="mc-section section--cuarter-padding about__contact">
 
 		<div class="about__contact-part"><?php the_field( 'address_field_1' ); ?></div>
 
@@ -25,12 +25,12 @@
 		</div>
 
 		<div class="about__contact-part">
-			<a href="mailto:<?php the_field( 'contact_email', 'option' ); ?>"><?php the_field( 'contact_email_display', 'option' ); ?></a>
+			<a href="mailto:<?php the_field( 'contact_email', 1754 ); ?>"><?php the_field( 'contact_email_display', 1754 ); ?></a>
 		</div>
 
 	</div>
 
-	<section class="section section--full-width section--no-padding-top">
+	<section class="mc-section section--full-width section--no-padding-top">
 
 		<div id="map-canvas"></div>
 

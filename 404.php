@@ -2,7 +2,7 @@
 
 <main class="site-main" role="main">
 
-	<section class="section">
+	<section class="mc-section">
 
 		<article <?php post_class(); ?>>
 

@@ -92,7 +92,7 @@ if ( ! function_exists( 'custom_post_types' ) ) {
 			),
             'public' => true,
             'menu_position' => 6,
-            'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJ1c2VycyIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLXVzZXJzIGZhLXctMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDY0MCA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTk2IDIyNGMzNS4zIDAgNjQtMjguNyA2NC02NHMtMjguNy02NC02NC02NC02NCAyOC43LTY0IDY0IDI4LjcgNjQgNjQgNjR6bTQ0OCAwYzM1LjMgMCA2NC0yOC43IDY0LTY0cy0yOC43LTY0LTY0LTY0LTY0IDI4LjctNjQgNjQgMjguNyA2NCA2NCA2NHptMzIgMzJoLTY0Yy0xNy42IDAtMzMuNSA3LjEtNDUuMSAxOC42IDQwLjMgMjIuMSA2OC45IDYyIDc1LjEgMTA5LjRoNjZjMTcuNyAwIDMyLTE0LjMgMzItMzJ2LTMyYzAtMzUuMy0yOC43LTY0LTY0LTY0em0tMjU2IDBjNjEuOSAwIDExMi01MC4xIDExMi0xMTJTMzgxLjkgMzIgMzIwIDMyIDIwOCA4Mi4xIDIwOCAxNDRzNTAuMSAxMTIgMTEyIDExMnptNzYuOCAzMmgtOC4zYy0yMC44IDEwLTQzLjkgMTYtNjguNSAxNnMtNDcuNi02LTY4LjUtMTZoLTguM0MxNzkuNiAyODggMTI4IDMzOS42IDEyOCA0MDMuMlY0MzJjMCAyNi41IDIxLjUgNDggNDggNDhoMjg4YzI2LjUgMCA0OC0yMS41IDQ4LTQ4di0yOC44YzAtNjMuNi01MS42LTExNS4yLTExNS4yLTExNS4yem0tMjIzLjctMTMuNEMxNjEuNSAyNjMuMSAxNDUuNiAyNTYgMTI4IDI1Nkg2NGMtMzUuMyAwLTY0IDI4LjctNjQgNjR2MzJjMCAxNy43IDE0LjMgMzIgMzIgMzJoNjUuOWM2LjMtNDcuNCAzNC45LTg3LjMgNzUuMi0xMDkuNHoiLz48L3N2Zz4=',
+            'menu_icon' => 'dashicons-groups',
             'show_in_admin_bar' => true,
             'show_in_nav_menus' => true,
             'can_export' => true,
@@ -118,7 +118,7 @@ if ( ! function_exists( 'custom_post_types' ) ) {
 			),
             'public' => true,
             'menu_position' => 7,
-            'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhZCIgZGF0YS1pY29uPSJwaG90by12aWRlbyIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLXBob3RvLXZpZGVvIGZhLXctMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDY0MCA1MTIiPjxnIGNsYXNzPSJmYS1ncm91cCI+PHBhdGggY2xhc3M9ImZhLXNlY29uZGFyeSIgZmlsbD0iY3VycmVudENvbG9yIiBkPSJNNjA4IDBIMTYwYTMyIDMyIDAgMDAtMzIgMzJ2OTZoMTYwVjY0aDE5MnYzMjBoMTI4YTMyIDMyIDAgMDAzMi0zMlYzMmEzMiAzMiAwIDAwLTMyLTMyek0yMzIgMTAzYTkgOSAwIDAxLTkgOWgtMzBhOSA5IDAgMDEtOS05VjczYTkgOSAwIDAxOS05aDMwYTkgOSAwIDAxOSA5em0zNTIgMjA4YTkgOSAwIDAxLTkgOWgtMzBhOSA5IDAgMDEtOS05di0zMGE5IDkgMCAwMTktOWgzMGE5IDkgMCAwMTkgOXptMC0xMDRhOSA5IDAgMDEtOSA5aC0zMGE5IDkgMCAwMS05LTl2LTMwYTkgOSAwIDAxOS05aDMwYTkgOSAwIDAxOSA5em0wLTEwNGE5IDkgMCAwMS05IDloLTMwYTkgOSAwIDAxLTktOVY3M2E5IDkgMCAwMTktOWgzMGE5IDkgMCAwMTkgOXoiIG9wYWNpdHk9Ii40Ii8+PHBhdGggY2xhc3M9ImZhLXByaW1hcnkiIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTQxNiAxNjBIMzJhMzIgMzIgMCAwMC0zMiAzMnYyODhhMzIgMzIgMCAwMDMyIDMyaDM4NGEzMiAzMiAwIDAwMzItMzJWMTkyYTMyIDMyIDAgMDAtMzItMzJ6TTk2IDIyNGEzMiAzMiAwIDExLTMyIDMyIDMyIDMyIDAgMDEzMi0zMnptMjg4IDIyNEg2NHYtMzJsNjQtNjQgMzIgMzIgMTI4LTEyOCA5NiA5NnoiLz48L2c+PC9zdmc+',
+            'menu_icon' => 'dashicons-images-alt2',
             'show_in_admin_bar' => true,
             'show_in_nav_menus' => true,
             'can_export' => true,
@@ -145,7 +145,7 @@ if ( ! function_exists( 'custom_post_types' ) ) {
             'taxonomies' => array('category', 'post_tag'),
             'public' => true,
             'menu_position' => 8,
-            'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJwZXJzb24tYm9vdGgiIGNsYXNzPSJzdmctaW5saW5lLS1mYSBmYS1wZXJzb24tYm9vdGggZmEtdy0xOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTc2IDUxMiI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTkyIDQ5NmMwIDguOCA3LjIgMTYgMTYgMTZoMzJjOC44IDAgMTYtNy4yIDE2LTE2VjMyMGgtNjR2MTc2em0zMi0yNzJoLTUwLjlsLTQ1LjItNDUuM0MxMTUuOCAxNjYuNiA5OS43IDE2MCA4Mi43IDE2MEg2NGMtMTcuMSAwLTMzLjIgNi43LTQ1LjMgMTguOEM2LjcgMTkwLjkgMCAyMDcgMCAyMjQuMUwuMiAzMjAgMCA0ODBjMCAxNy43IDE0LjMgMzIgMzEuOSAzMiAxNy42IDAgMzItMTQuMyAzMi0zMmwuMS0xMDAuN2MuOS41IDEuNiAxLjMgMi41IDEuN2wyOS4xIDQzdjU2YzAgMTcuNyAxNC4zIDMyIDMyIDMyczMyLTE0LjMgMzItMzJ2LTU2LjVjMC05LjktMi4zLTE5LjgtNi43LTI4LjZsLTQxLjItNjEuM1YyNTNsMjAuOSAyMC45YzkuMSA5LjEgMjEuMSAxNC4xIDMzLjkgMTQuMUgyMjRjMTcuNyAwIDMyLTE0LjMgMzItMzJzLTE0LjMtMzItMzItMzJ6TTY0IDEyOGMyNi41IDAgNDgtMjEuNSA0OC00OFM5MC41IDMyIDY0IDMyIDE2IDUzLjUgMTYgODBzMjEuNSA0OCA0OCA0OHptMjI0LTk2bDMxLjUgMjIzLjEtMzAuOSAxNTQuNmMtNC4zIDIxLjYgMTMgMzguMyAzMS40IDM4LjMgMTUuMiAwIDI4LTkuMSAzMi4zLTMwLjQuOSAxNi45IDE0LjYgMzAuNCAzMS43IDMwLjQgMTcuNyAwIDMyLTE0LjMgMzItMzIgMCAxNy43IDE0LjMgMzIgMzIgMzJzMzItMTQuMyAzMi0zMlYwSDI4OHYzMnptLTk2IDB2MTYwaDY0VjBoLTMyYy0xNy43IDAtMzIgMTQuMy0zMiAzMnpNNTQ0IDBoLTMydjQ5NmMwIDguOCA3LjIgMTYgMTYgMTZoMzJjOC44IDAgMTYtNy4yIDE2LTE2VjMyYzAtMTcuNy0xNC4zLTMyLTMyLTMyeiIvPjwvc3ZnPg==',
+            'menu_icon' => 'dashicons-cover-image',
             'show_in_admin_bar' => true,
             'show_in_nav_menus' => true,
             'can_export' => true,
@@ -169,7 +169,7 @@ if ( ! function_exists( 'custom_post_types' ) ) {
 			),
             'public' => true,
             'menu_position' => 9,
-            'menu_icon' => 'data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJpbWFnZSIgY2xhc3M9InN2Zy1pbmxpbmUtLWZhIGZhLWltYWdlIGZhLXctMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDUxMiA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTQ2NCA0NDhINDhjLTI2LjUxIDAtNDgtMjEuNDktNDgtNDhWMTEyYzAtMjYuNTEgMjEuNDktNDggNDgtNDhoNDE2YzI2LjUxIDAgNDggMjEuNDkgNDggNDh2Mjg4YzAgMjYuNTEtMjEuNDkgNDgtNDggNDh6TTExMiAxMjBjLTMwLjkyOCAwLTU2IDI1LjA3Mi01NiA1NnMyNS4wNzIgNTYgNTYgNTYgNTYtMjUuMDcyIDU2LTU2LTI1LjA3Mi01Ni01Ni01NnpNNjQgMzg0aDM4NFYyNzJsLTg3LjUxNS04Ny41MTVjLTQuNjg2LTQuNjg2LTEyLjI4NC00LjY4Ni0xNi45NzEgMEwyMDggMzIwbC01NS41MTUtNTUuNTE1Yy00LjY4Ni00LjY4Ni0xMi4yODQtNC42ODYtMTYuOTcxIDBMNjQgMzM2djQ4eiIvPjwvc3ZnPg==',
+            'menu_icon' => 'dashicons-art',
             'show_in_admin_bar' => true,
             'show_in_nav_menus' => true,
             'can_export' => true,
@@ -213,6 +213,7 @@ function mc2020_acf_op_init() {
             'menu_slug'     => 'mc2020',
             'capability'    => 'edit_posts',
             'redirect'      => true,
+            'post_id'       => 1754,
         ));
 
     }
@@ -220,7 +221,7 @@ function mc2020_acf_op_init() {
 add_action('acf/init', 'mc2020_acf_op_init');
 
 /**
- * Create artwork bloc
+ * Create artwork block
  */
 
 function my_acf_init_block_types() {
@@ -236,12 +237,31 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'artwork', 'art', 'work', 'piece', 'art piece' ),
             'post_types'        => array( 'exhibition', 'viewing-room', 'artist' ),
             'mode'              => 'edit',
-            'render_template'   => 'includes/blocks/artwork/artwork.php',
+            'render_template'   => get_template_directory() . 'includes/blocks/artwork/artwork.php',
             'enqueue_style'     => get_template_directory_uri() . '/includes/blocks/artwork/artwork.css',
             'enqueue_script'    => get_template_directory_uri() . '/includes/blocks/artwork/artwork.js',
             'supports'          => array(
                 'align'             => false,
                 'mode'              => false,
+            ),
+        ));
+
+        acf_register_block_type( array(
+            'name'              => 'image-row',
+            'title'             => __('Image Row', 'mc2020'),
+            'description'       => __('All images inside the block will have the same height.', 'mc2020'),
+            'category'          => 'formatting',
+            'mode'              => 'preview',
+            'icon'              => 'align-wide',
+            'keywords'          => array( 'image', 'row' ),
+            'post_types'        => array( 'exhibition', 'viewing-room', 'artist' ),
+            'render_template'   => get_template_directory() . 'includes/blocks/image-row/image-row.php',
+            'enqueue_style'     => get_template_directory_uri() . '/includes/blocks/image-row/image-row.css',
+            'enqueue_script'    => get_template_directory_uri() . '/includes/blocks/image-row/image-row.js',
+            'supports'          => array(
+                'align' => false,
+                'mode' => false,
+                'jsx' => true
             ),
         ));
     }
@@ -364,7 +384,7 @@ add_action( 'woocommerce_single_product_summary', 'the_content', 20 );
  */
 
 function mc2020_section_wrapper_open() {
-    echo '<div class="section">';
+    echo '<div class="mc-section">';
 }
 
 function mc2020_section_wrapper_close() {
@@ -383,3 +403,71 @@ function mc2020_product_image_wrapper_open() {
 function mc2020_product_image_wrapper_close() {
     echo '</div>';
 }
+
+/**
+ * WPML helper function that returns original ids when translated versions don't exist
+ * @since 1.0.0
+ * @author ryanapsmith
+ * URL: https://wpml.org/forums/topic/page-templates-not-working-in-translated-languages-eg-page-about-us-php/#post-6929215
+ * @param integer content type id
+ * @param string content type
+ * @param string default language to show (optional)
+ *
+ * @return integer
+ */
+ 
+function _wpml_id( $id, $type, $lang = '' ) {
+    if ( ! empty( $lang ) ) {
+        $original = false;
+    } else {
+        $original = true;
+    }
+ 
+    return apply_filters( 'wpml_object_id', $id, $type, $original, $lang );
+}
+ 
+
+/**
+ * WPML helper function to set the default language template regardless of current language
+ *
+ * @since 1.0.0
+ * @author ryanapsmith
+ * @return object
+ * URL: https://wpml.org/forums/topic/page-templates-not-working-in-translated-languages-eg-page-about-us-php/#post-6929215
+ *
+ */
+ 
+function _set_template_by_lang( $template ) {
+    if ( function_exists( 'icl_get_languages' ) ) {
+        global $sitepress;
+        $default_lang = $sitepress->get_default_language();
+        $lang         = ICL_LANGUAGE_CODE;
+ 
+        if ( $lang != $default_lang ) {
+            if ( is_page() ) {
+                //get original page id
+                $original_post_id = _wpml_id( get_the_ID(), 'page', $default_lang );
+                //get slug of original page
+                $slug = get_post_field( 'post_name', $original_post_id );
+ 
+                $new_template = locate_template( array( 'page-' . $slug . '.php' ) );
+                if ( ! empty( $new_template ) ) {
+                    return $new_template;
+                }
+            }
+        }
+    }
+ 
+    return $template;
+}
+ 
+add_filter( 'template_include', '_set_template_by_lang', 99 );
+
+// remove "Private: " from titles
+add_filter( 'private_title_format', 'cv_disable_title_prefix', 99, 2 );
+add_filter( 'protected_title_format', 'cv_disable_title_prefix', 99,2  );
+function cv_disable_title_prefix( $format, $post ) {
+	$format = '%s';
+	return $format;
+}
+

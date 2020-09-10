@@ -2,7 +2,7 @@
       
   <header class="entry-header">
   
-    <?php the_title( '<h1 class="section__title">', '</h1>'); ?>
+    <?php the_title( '<h1 class="mc-section__title">', '</h1>'); ?>
   
   </header>
 

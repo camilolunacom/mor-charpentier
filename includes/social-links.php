@@ -1,6 +1,6 @@
 <div class="footer__social-links sm-icons">
 
-  <a class="footer__social-link sm-icons__link sm-icons__link--facebook" href="<?php the_field( 'facebook_profile', 'option' ); ?>" target="_blank">
+  <a class="footer__social-link sm-icons__link sm-icons__link--facebook" href="<?php the_field( 'facebook_profile', 1754 ); ?>" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" class="sm-icons__svg" viewbox="0 0 40 40">
       <g id="sm-facebook" class="sm-icons__g sm-icons__g--facebook">
         <circle class="sm-icons__circle" cx="20" cy="20" r="20"/>
@@ -10,7 +10,7 @@
     </svg>
   </a>
 
-  <a class="footer__social-link sm-icons__link sm-icons__link--instagram" href="<?php the_field( 'instagram_profile_link', 'option' ); ?>" target="_blank">
+  <a class="footer__social-link sm-icons__link sm-icons__link--instagram" href="<?php the_field( 'instagram_profile_link', 1754 ); ?>" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" class="sm-icons__svg" viewbox="0 0 40 40">
       <g id="sm-instagram" class="sm-icons__g sm-icons__g--instagram">
         <circle class="sm-icons__circle" cx="20" cy="20" r="20"/>
@@ -20,7 +20,7 @@
     </svg>
   </a>
 
-  <a class="footer__social-link sm-icons__link sm-icons__link--twitter" href="<?php the_field( 'twitter_profile_link', 'option' ); ?>" target="_blank">
+  <a class="footer__social-link sm-icons__link sm-icons__link--twitter" href="<?php the_field( 'twitter_profile_link', 1754 ); ?>" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" class="sm-icons__svg" viewbox="0 0 40 40">
       <g id="sm-twitter" class="sm-icons__g sm-icons__g--twitter">
         <circle class="sm-icons__circle" cx="20" cy="20" r="20"/>

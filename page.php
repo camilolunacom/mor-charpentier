@@ -2,7 +2,7 @@
 
 <main <?php post_class( 'site-main' ); ?> role="main">
 
-	<section class="section">
+	<section class="mc-section">
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

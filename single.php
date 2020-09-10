@@ -2,11 +2,11 @@
 
 <main class="site-main" role="main">
 
-	<article <?php post_class( 'section single' ); ?>>
+	<article <?php post_class( 'mc-section single' ); ?>>
 
 		<header class="single__header">
 
-			<h1 class="section__title single__title">
+			<h1 class="mc-section__title single__title">
 
 				<?php if ( is_page() || is_singular() ) {
 					single_post_title();
@@ -54,7 +54,7 @@
 
 	<?php if ( 'post' !== get_post_type() ) : ?>
 
-		<aside class="section section--no-padding-top single__share">
+		<aside class="mc-section section--no-padding-top single__share">
 
 			<?php get_template_part( 'includes/social-share' ); ?>
 

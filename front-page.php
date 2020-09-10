@@ -14,7 +14,7 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 	<!-- Hero slider -->
 	<section class="hero">
 
-<div class="hero-slider<?php if ( $header_tone ) : ?> hero-slider--light<?php endif; ?>"<?php if( $autoplay_speed_miliseconds ) : ?> data-slick='{"autoplay": true, "autoplaySpeed": <?php echo $autoplay_speed_miliseconds; ?>}'" <?php endif; ?><?php if ( $background_color ) : ?>style="background-color: <?php echo $background_color ?>"<?php endif; ?>>
+		<div class="hero-slider<?php if ( $header_tone ) : ?> hero-slider--light<?php endif; ?>"<?php if( $autoplay_speed_miliseconds ) : ?> data-slick='{"autoplay": true, "autoplaySpeed": <?php echo $autoplay_speed_miliseconds; ?>}'" <?php endif; ?><?php if ( $background_color ) : ?>style="background-color: <?php echo $background_color ?>"<?php endif; ?>>
 
 			<?php if ( have_rows( 'slider' ) ) : while ( have_rows( 'slider' ) ) : the_row(); ?>
 
@@ -32,8 +32,9 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 				$background_size = get_sub_field( 'background_size' );
 				?>
 
-<div class="hero-slider__slide<?php if ( $text_color ) :?> hero-slider__slide--light<?php endif; ?><?php if ( $background_size ) :?> hero-slider__slide--cover<?php endif; ?>""<?php if ( $background ) : ?> style="background-image: url(<?php echo $background; ?>);<?php endif; ?>">
-				<div class="hero-slider__overlay" style="<?php if ( $overlay_color ) : ?>background-color: <?php echo $overlay_color; ?>; <?php endif; ?><?php if ( $overlay_opacity ) : ?>opacity: <?php echo $overlay_opacity_decimal; ?>; <?php endif; ?>"></div>
+				<div class="hero-slider__slide<?php if ( $text_color ) :?> hero-slider__slide--light<?php endif; ?><?php if ( $background_size ) :?> hero-slider__slide--cover<?php endif; ?>""<?php if ( $background ) : ?> style="background-image: url(<?php echo $background; ?>);<?php endif; ?>">
+
+					<div class="hero-slider__overlay" style="<?php if ( $overlay_color ) : ?>background-color: <?php echo $overlay_color; ?>; <?php endif; ?><?php if ( $overlay_opacity ) : ?>opacity: <?php echo $overlay_opacity_decimal; ?>; <?php endif; ?>"></div>
 
 					<div class="hero-slider__content"<?php if ( $hero_height ) : ?> style="min-height: calc(<?php echo $hero_height; ?>vh - 20px);<?php endif; ?>">
 
@@ -64,9 +65,9 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 	</section>
 
 	<!-- Latest news -->
-	<section class="section section--no-padding-bottom">
+	<section class="mc-section section--no-padding-bottom">
 
-		<h2 class="section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
+		<h2 class="mc-section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
 
 		<div class="grid grid--posts">
 

@@ -168,6 +168,46 @@ button:focus {
     }
   }
 
+  .hamburguer {
+    position: absolute;
+    top: 18px;
+    right: 18.5px;
+    padding: 18.5px 5px;
+    margin: 0;
+    border: none;
+    background: none;
+    appearance: none;
+    z-index: 10;
+    cursor: pointer;
+
+    &__middle {
+      position: relative;
+
+      &, 
+      &::before,
+      &::after {
+        width: 1.5em;
+        height: 3px;
+        background: #000;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -8px;
+      }
+
+      &::after {
+        bottom: -8px;
+      }
+    }
+  }
+
   &__logo-img {
     width: 160px;
   }
@@ -203,6 +243,7 @@ button:focus {
 
       a {
         @include transition;
+        position: relative;
         color: #bbb;
 
         &:hover {
@@ -439,7 +480,7 @@ button:focus {
   }
 }
 
-.section {
+.mc-section {
   max-width: 1480px;
   width: 90%;
   margin: auto;
@@ -1697,4 +1738,145 @@ button:focus {
 .woocommerce-MyAccount-navigation-link a:hover {
   color: #000;
   opacity: 1;
+}
+
+.image-row .wp-block-group__inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.image-row .wp-block-image {
+  margin: 0;
+}
+
+.wp-block-image figure figcaption {
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .main-header {
+    &__menu .menu-item {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-header {
+    @include transition();
+    height: 80px;
+
+    &__logo {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 2;
+    }
+
+    &__button {
+      display: block;
+    }
+
+    &--active {
+      background: #fff !important;
+      height: 100%;
+    }
+
+    &__nav {
+      @include transition();
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      height: calc(100vh - 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+
+      .main-header--active & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__nav-container {
+      width: 100%;
+    }
+
+    &__menu {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 7em 0 2em;
+
+      .menu-item {
+        margin: 4px 10px;
+
+        &-has-children {
+          & > a {
+            display: none;
+          }
+        }
+
+        &:last-of-type {
+          margin-right: 10px;
+        }
+      }
+
+      .sub-menu {
+        position: initial;
+        visibility: visible;
+        opacity: 1;
+
+        .menu-item {
+          margin: 8px 10px;
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          a {
+          padding: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+
+    &__col {
+      text-align: center;
+      margin: 1em auto;
+
+      &--credits {
+        order: 3;
+      }
+    }
+
+    &-exhibition__name::after,
+    &-exhibition__artists::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    &__info {
+      margin-bottom: 0;
+    }
+    
+    &__social-links {
+      justify-content: center;
+    }
+  }
 }

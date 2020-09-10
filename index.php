@@ -2,11 +2,11 @@
 
 <main class="<?php post_class( 'site-main' ); ?>" role="main">
 
-	<section class="section">
+	<section class="mc-section">
 
 	<?php if ( is_archive() ) : ?>
 
-		<h1 class="section__title">
+		<h1 class="mc-section__title">
 			<?php if ( is_page() || is_singular() ) {
 				single_post_title();
 			} else if ( is_category() || is_tag() ) {
