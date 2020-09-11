@@ -18,11 +18,13 @@ $year = 0;
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			<?php $start_date = get_field( 'start_date' );
+			<?php $end_date = get_field( 'end_date' );
+			$end_year = substr( $end_date, 0, 4 );
+			$start_date = get_field( 'start_date' );
 			$start_year = substr( $start_date, 0, 4 );
 			?>
 
-			<?php if ( $start_date >= $today ) : ?>
+			<?php if ( $end_date >= $today ) : ?>
 
 				<?php if ( ! $current ) : ?>
 
