@@ -65,7 +65,7 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 	</section>
 
 	<!-- Latest news -->
-	<section class="mc-section section--no-padding-bottom">
+	<section class="mc-section mc-section--no-padding-bottom">
 
 		<h2 class="mc-section__title"><?php _e('Latest News', 'mc2020'); ?></h2>
 

@@ -2,7 +2,7 @@
 
 <main class="'site-main" role="main">
 
-	<section class="mc-section section--no-padding-bottom">
+	<section class="mc-section mc-section--no-padding-bottom">
 
 		<h1 class="mc-section__title">
 			<?php single_post_title(); ?>
@@ -38,7 +38,7 @@
 
 	</main>
 
-	<section class="mc-section section--no-padding-top section--no-padding-bottom">
+	<section class="mc-section mc-section--no-padding-top mc-section--no-padding-bottom">
 
 		<div class="pagination">
 			<?php echo paginate_links(); ?>

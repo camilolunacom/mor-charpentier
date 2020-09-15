@@ -54,7 +54,7 @@
 
 	<?php if ( 'post' !== get_post_type() ) : ?>
 
-		<aside class="mc-section section--no-padding-top single__share">
+		<aside class="mc-section mc-section--no-padding-top single__share">
 
 			<?php get_template_part( 'includes/social-share' ); ?>
 

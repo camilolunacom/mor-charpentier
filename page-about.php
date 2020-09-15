@@ -12,7 +12,7 @@
 
 	</section>
 
-	<section class="mc-section section--cuarter-padding about__contact">
+	<section class="mc-section mc-section--cuarter-padding about__contact">
 
 		<div class="about__contact-part"><?php the_field( 'address_field_1' ); ?></div>
 
@@ -30,7 +30,7 @@
 
 	</div>
 
-	<section class="mc-section section--full-width section--no-padding-top">
+	<section class="mc-section mc-section--full-width mc-section--no-padding-top">
 
 		<div id="map-canvas"></div>
 

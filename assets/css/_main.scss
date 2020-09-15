@@ -183,7 +183,7 @@ button:focus {
     &__middle {
       position: relative;
 
-      &, 
+      &,
       &::before,
       &::after {
         width: 1.5em;
@@ -700,7 +700,9 @@ button:focus {
  *******/
 
 .error404 {
-  text-align: center;
+  &__container {
+    text-align: center;
+  }
 
   &__404 {
     font-size: 120px;
@@ -1347,7 +1349,6 @@ button:focus {
 .cols {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1em;
 }
 
 .col-half {
@@ -1588,6 +1589,7 @@ button:focus {
 
 .woocommerce input[type="text"],
 .woocommerce input[type="email"],
+.woocommerce input[type="password"],
 .woocommerce input[type="tel"],
 .woocommerce input[type="number"],
 .woocommerce textarea,
@@ -1726,7 +1728,7 @@ button:focus {
 }
 
 .woocommerce-MyAccount-navigation-link {
-  margin: .5em;
+  margin: 0.5em;
 }
 
 .woocommerce-MyAccount-navigation-link a {
@@ -1791,7 +1793,7 @@ button:focus {
       opacity: 0;
       visibility: hidden;
       width: 100%;
-      height: calc(100vh - 20px);
+      height: 0;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -1800,6 +1802,7 @@ button:focus {
       .main-header--active & {
         opacity: 1;
         visibility: visible;
+        height: calc(100vh - 20px);
       }
     }
 
@@ -1844,10 +1847,25 @@ button:focus {
           }
 
           a {
-          padding: 0 !important;
+            padding: 0 !important;
           }
         }
       }
+    }
+  }
+
+  .blocks-gallery-grid.columns-3 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-3 .blocks-gallery-item,
+  .wp-block-gallery.columns-3 .blocks-gallery-image,
+  .wp-block-gallery.columns-3 .blocks-gallery-item {
+    width: calc(50% - 8px);
+
+    &:nth-of-type(3n) {
+      margin-right: 16px;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
     }
   }
 }
@@ -1859,6 +1877,7 @@ button:focus {
     &__col {
       text-align: center;
       margin: 1em auto;
+      width: 100%;
 
       &--credits {
         order: 3;
@@ -1870,13 +1889,91 @@ button:focus {
       margin-left: auto;
       margin-right: auto;
     }
-    
+
     &__info {
       margin-bottom: 0;
     }
-    
+
     &__social-links {
       justify-content: center;
+    }
+  }
+
+  .blocks-gallery-grid.columns-3 .blocks-gallery-image,
+  .blocks-gallery-grid.columns-3 .blocks-gallery-item,
+  .wp-block-gallery.columns-3 .blocks-gallery-image,
+  .wp-block-gallery.columns-3 .blocks-gallery-item {
+    width: 100%;
+    margin-right: 0;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .single-exhibition {
+    aside {
+      display: block;
+
+      & > div {
+        margin: 3em 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .single-post {
+    display: block;
+
+    &__col {
+      width: 100%;
+      margin: 3em 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__date {
+      text-align: center;
+    }
+
+    .share {
+      margin: 2em auto 0;
+    }
+  }
+
+  .woocommerce.post-type-archive-product ul.products li.product {
+    width: 100%;
+    float: none;
+    margin: 0 0 2em;
+  }
+
+  .woocommerce-account .woocommerce-MyAccount-navigation {
+    margin-bottom: 3em;
+  }
+
+  .cols {
+    display: block;
+  }
+
+  .col-half {
+    width: 100%;
+    margin: 0 0 4em;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
