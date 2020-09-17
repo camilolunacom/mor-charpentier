@@ -113,7 +113,7 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 
 	</article>
 
-	<aside class="mc-section mc-section--no-padding-top mc-single__share cols">
+	<aside class="mc-section mc-section--no-padding-top single__share cols">
 
 		<?php if ( get_field( 'press_release' ) ) : ?>
 
