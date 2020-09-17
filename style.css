@@ -687,9 +687,9 @@ button:focus {
   margin-right: 0;
 }
 
-.main-header__menu .menu-item.current-menu-item > a,
-.main-header__menu .menu-item.current-menu-parent > a,
-.main-header__menu .menu-item.current_page_parent > a {
+.main-header__menu .menu-item.current-menu-item:not(.wpml-ls-item) > a,
+.main-header__menu .menu-item.current-menu-parent:not(.wpml-ls-item) > a,
+.main-header__menu .menu-item.current_page_parent:not(.wpml-ls-item) > a {
   color: #000;
   opacity: 1;
 }

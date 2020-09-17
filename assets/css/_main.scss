@@ -234,9 +234,9 @@ button:focus {
         margin-right: 0;
       }
 
-      &.current-menu-item > a,
-      &.current-menu-parent > a,
-      &.current_page_parent > a {
+      &.current-menu-item:not(.wpml-ls-item) > a,
+      &.current-menu-parent:not(.wpml-ls-item) > a,
+      &.current_page_parent:not(.wpml-ls-item) > a {
         color: #000;
         opacity: 1;
       }
