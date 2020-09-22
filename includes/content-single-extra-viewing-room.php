@@ -26,16 +26,16 @@ $exhibitions = get_field( 'relation_exhibitions_vrs' );
                 $status = get_post_status( $artist->ID );
             ?>
 
-                <?php if ( $status == 'published' ) : ?>
+                <?php if ( $status == 'publish' ) : ?>
 
                     <li class="extra__item">
-                        <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a> <?php echo esc_html( $status ); ?>
+                        <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
                     </li>
 
                 <?php else : ?>
 
                     <li class="extra__item">
-                        <?php echo esc_html( $title ); ?> <?php echo esc_html( $status ); ?>
+                        <?php echo esc_html( $title ); ?>
                     </li>
 
                 <?php endif; ?>

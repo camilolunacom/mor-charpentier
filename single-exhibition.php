@@ -34,7 +34,7 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 				    $status = get_post_status( $artist->ID );
             	?>
 
-					<?php if ( $status == 'published' ) : ?>
+					<?php if ( $status == 'publish' ) : ?>
 
 						<li class="single--exhibition__artist">
 							<h2>
