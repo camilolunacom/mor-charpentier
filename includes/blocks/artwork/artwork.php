@@ -22,7 +22,7 @@ if( ! empty($block['className'] ) ) {
 }
 
 // Load values and assing defaults.
-$artwork_id = get_field( 'artwork' ) ?: 'Artwork...';
+$artwork_id = get_field( 'artworks' );
 $title = get_the_title( $artwork_id );
 $artist_id = get_field( 'artist', $artwork_id );
 $artist = get_the_title( $artist_id );

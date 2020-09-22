@@ -25,7 +25,7 @@
     <p class="single-post__date"><?php echo get_the_date(); ?></p>
 
     <div class="single-post__content">
-
+		
         <?php the_content(); ?>
 
     </div>

@@ -39,7 +39,9 @@
 				<?php get_template_part( 'includes/content-single', 'post' ); ?>
 
 			</div>
-
+			
+				
+			
 		<?php else : ?>
 
 			<div class="single__main">
@@ -47,7 +49,11 @@
 				<?php get_template_part( 'includes/content-single' ); ?>
 
 			</div>
-
+		
+			<?php 
+				$artwork_id = get_field( 'artwork',get_the_ID() );
+				echo $artwork_id;
+				get_template_part( 'includes/blocks/artwork/artwork' ); ?>
 			<?php endif; ?>
 
 	</article>
