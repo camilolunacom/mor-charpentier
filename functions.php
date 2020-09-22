@@ -237,9 +237,7 @@ function my_acf_init_block_types() {
             'keywords'          => array( 'artwork', 'art', 'work', 'piece', 'art piece' ),
             'post_types'        => array( 'exhibition', 'viewing-room', 'artist' ),
             'mode'              => 'edit',
-            'render_template'   => get_template_directory() . 'includes/blocks/artwork/artwork.php',
-            'enqueue_style'     => get_template_directory_uri() . '/includes/blocks/artwork/artwork.css',
-            'enqueue_script'    => get_template_directory_uri() . '/includes/blocks/artwork/artwork.js',
+            'render_template'   => 'includes/blocks/artwork/artwork.php',
             'supports'          => array(
                 'align'             => false,
                 'mode'              => false,

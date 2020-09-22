@@ -64,4 +64,6 @@
 
 </main>
 
+<?php get_template_part( 'includes/single-overlay' ); ?>
+
 <?php get_footer(); ?>

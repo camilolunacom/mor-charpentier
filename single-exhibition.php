@@ -159,4 +159,6 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 
 </main>
 
+<?php get_template_part( 'includes/single-overlay' ); ?>
+
 <?php get_footer(); ?>
