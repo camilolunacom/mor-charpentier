@@ -2543,36 +2543,9 @@ button:focus {
     margin-bottom: 0;
   }
   .single--exhibition .single__header {
-    position: relative;
     padding: 0;
   }
   .exhibition__arrow {
-    top: -16px;
-    -webkit-transform: none;
-            transform: none;
-  }
-  .exhibition__arrow--prev {
-    left: 0;
-    padding-left: 20px;
-  }
-  .exhibition__arrow--prev::before {
-    left: 0;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
-  .exhibition__arrow--next {
-    right: 0;
-    padding-right: 20px;
-    text-align: right;
-  }
-  .exhibition__arrow--next::before {
-    right: 0;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-  .exhibition__arrow::before {
-    display: block;
-    position: absolute;
-    top: 5px;
+    display: none;
   }
 }

@@ -2017,42 +2017,13 @@ button:focus {
 
   .single--exhibition {
     .single__header {
-      position: relative;
       padding: 0;
     }
   }
   
   .exhibition {
     &__arrow {
-      top: -16px;
-      transform: none;
-  
-      &--prev {
-        left: 0;
-        padding-left: 20px;
-  
-        &::before {
-          left: 0;
-          transform: rotate(-90deg);
-        }
-      }
-  
-      &--next {
-        right: 0;
-        padding-right: 20px;
-        text-align: right;
-  
-        &::before {
-          right: 0;
-          transform: rotate(90deg);
-        }
-      }
-  
-      &::before {
-        display: block;
-        position: absolute;
-        top: 5px;
-      }
+      display: none;
     }
   }
 }
