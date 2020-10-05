@@ -1842,13 +1842,13 @@ button:focus {
 .single--exhibition__artist h2 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 2.25em;
-  line-height: 1.361em;
+  font-size: 1.375em;
+  line-height: 1.409em;
 }
 
 .single--exhibition__title {
-  font-size: 1.375em;
-  line-height: 1.409em;
+  font-size: 2.25em;
+  line-height: 1.361em;
   margin: 0;
   text-transform: uppercase;
 }

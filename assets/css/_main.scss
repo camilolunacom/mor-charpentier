@@ -1319,12 +1319,12 @@ button:focus {
     h2 {
       margin: 0;
       text-transform: uppercase;
-      @include h2-large;
+      @include h3-small;
     }
   }
-
+  
   &__title {
-    @include h3-small;
+    @include h2-large;
     margin: 0;
     text-transform: uppercase;
   }

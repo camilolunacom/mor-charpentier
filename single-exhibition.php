@@ -24,6 +24,12 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 
 		<header class="single__header">
 
+			<h1 class="mc-section__title single--exhibition__title">
+
+				<?php single_post_title(); ?>
+
+			</h1>
+
 		<?php if ( $artists ) : ?>
 			
 			<ul class="single--exhibition__artists">
@@ -57,12 +63,6 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 			</ul>
 
 			<?php endif; ?>
-
-			<h1 class="mc-section__title single--exhibition__title">
-
-				<?php single_post_title(); ?>
-
-			</h1>
 
 			<?php if ( $start_date && $end_date ) : ?>
 
