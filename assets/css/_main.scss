@@ -1096,6 +1096,11 @@ button:focus {
 
   &__container {
     margin: 1em 0;
+
+    &:first-of-type,
+    &:first-of-type .extra__title {
+      margin-top: 0;
+    }
   }
 
   &__title {
@@ -1124,19 +1129,12 @@ button:focus {
   }
 
   &__item {
-    display: inline;
+    display: block;
+    margin-bottom: 4px;
   }
 
   &__link {
     font-weight: 400;
-
-    &::after {
-      content: ", ";
-
-      .extra__item:last-of-type & {
-        content: none;
-      }
-    }
   }
 }
 

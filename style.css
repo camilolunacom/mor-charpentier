@@ -1607,6 +1607,11 @@ button:focus {
   margin: 1em 0;
 }
 
+.extra__container:first-of-type,
+.extra__container:first-of-type .extra__title {
+  margin-top: 0;
+}
+
 .extra__title {
   font-size: 18px;
   line-height: 1.5em;
@@ -1634,19 +1639,12 @@ button:focus {
 }
 
 .extra__item {
-  display: inline;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .extra__link {
   font-weight: 400;
-}
-
-.extra__link::after {
-  content: ", ";
-}
-
-.extra__item:last-of-type .extra__link::after {
-  content: none;
 }
 
 /**************

@@ -249,7 +249,7 @@ function my_acf_init_block_types() {
             'title'             => __('Related Posts', 'mc2020'),
             'description'       => __('Related posts to this post.', 'mc2020'),
             'category'          => 'common',
-            'icon'              => 'aside',
+            'icon'              => 'format-aside',
             'keywords'          => array( 'related' ),
             'post_types'        => array( 'artist' ),
             'mode'              => 'preview',
