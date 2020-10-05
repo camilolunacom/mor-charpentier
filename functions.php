@@ -245,21 +245,18 @@ function my_acf_init_block_types() {
         ));
 
         acf_register_block_type( array(
-            'name'              => 'image-row',
-            'title'             => __('Image Row', 'mc2020'),
-            'description'       => __('All images inside the block will have the same height.', 'mc2020'),
-            'category'          => 'formatting',
+            'name'              => 'related',
+            'title'             => __('Related Posts', 'mc2020'),
+            'description'       => __('Related posts to this post.', 'mc2020'),
+            'category'          => 'common',
+            'icon'              => 'aside',
+            'keywords'          => array( 'related' ),
+            'post_types'        => array( 'artist' ),
             'mode'              => 'preview',
-            'icon'              => 'align-wide',
-            'keywords'          => array( 'image', 'row' ),
-            'post_types'        => array( 'exhibition', 'viewing-room', 'artist' ),
-            'render_template'   => get_template_directory() . 'includes/blocks/image-row/image-row.php',
-            'enqueue_style'     => get_template_directory_uri() . '/includes/blocks/image-row/image-row.css',
-            'enqueue_script'    => get_template_directory_uri() . '/includes/blocks/image-row/image-row.js',
+            'render_template'   => 'includes/blocks/related/related.php',
             'supports'          => array(
                 'align' => false,
                 'mode' => false,
-                'jsx' => true
             ),
         ));
     }
