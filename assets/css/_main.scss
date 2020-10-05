@@ -177,31 +177,64 @@ button:focus {
     appearance: none;
     z-index: 10;
     cursor: pointer;
+    @include transition();
 
-    &__middle {
-      position: relative;
-
-      &,
+    &__container {
       &::before,
       &::after {
         width: 1.5em;
         height: 3px;
         background: #000;
+        @include transition();
       }
 
       &::before,
       &::after {
         content: "";
         position: absolute;
-        left: 0;
+        left: 5px;
       }
 
       &::before {
-        top: -8px;
+        top: 9px;
       }
 
       &::after {
-        bottom: -8px;
+        bottom: 9px;
+      }
+    }
+
+    &__middle {
+      position: relative;
+      left: 0;
+      width: 1.5em;
+      height: 3px;
+      background: #000;
+      @include transition();
+    }
+  }
+
+  &--active {
+    .hamburguer {
+      &__container {
+        &::before {
+          top: 8px;
+          left: 9px;
+          transform: rotate(45deg);
+          transform-origin: left;
+        }
+  
+        &::after {
+          bottom: 8px;
+          left: 9px;
+          transform: rotate(-45deg);
+          transform-origin: left;
+        }
+      }
+
+      &__middle {
+        left: -100%;
+        opacity: 0;
       }
     }
   }
