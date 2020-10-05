@@ -103,6 +103,22 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 
 			</div>
 
+			<?php if ( get_previous_post() ) : ?>
+
+				<div class="exhibition__arrow exhibition__arrow--prev">
+					<?php previous_post_link( '%link', '%title' ); ?>
+				</div>
+
+			<?php endif; ?>
+
+			<?php if ( get_next_post() ) : ?>
+
+				<div class="exhibition__arrow exhibition__arrow--next">
+					<?php next_post_link( '%link', '%title' ); ?>
+				</div>
+
+			<?php endif; ?>
+
 		</header>
 
 		<div class="single__main">

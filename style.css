@@ -1668,6 +1668,46 @@ button:focus {
   padding-bottom: 7em;
 }
 
+.exhibition__arrow {
+  position: absolute;
+  top: 50%;
+  opacity: 0.3;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.exhibition__arrow--prev {
+  left: 0;
+  -webkit-transform: rotate(-90deg) translate(-50%);
+          transform: rotate(-90deg) translate(-50%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.exhibition__arrow--next {
+  right: 0;
+  -webkit-transform: rotate(90deg) translate(50%);
+          transform: rotate(90deg) translate(50%);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.exhibition__arrow::before {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 13.6px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE3MCAyMDAiPjxwYXRoIGQ9Ik0xNDYuMDggMTA4LjM3bC00NC40NC00NC40M1YyMDBINjguMzZWNjMuOTRsLTQ0LjQ0IDQ0LjQzTDAgODUuMDYgODQuOSAwIDE3MCA4NS4wNnoiLz48L3N2Zz4=);
+}
+
+.exhibition__arrow:hover {
+  opacity: 1;
+}
+
 .current-exhibitions {
   max-width: 800px;
   margin: 0 auto 5em;
@@ -1830,6 +1870,11 @@ button:focus {
   font-size: 14px;
   line-height: 1.57em;
   font-weight: 400;
+}
+
+.single--exhibition .single__header {
+  position: relative;
+  padding: 0 3em;
 }
 
 .single--exhibition__artists {
@@ -2496,5 +2541,38 @@ button:focus {
   }
   .col-half:last-child {
     margin-bottom: 0;
+  }
+  .single--exhibition .single__header {
+    position: relative;
+    padding: 0;
+  }
+  .exhibition__arrow {
+    top: -16px;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .exhibition__arrow--prev {
+    left: 0;
+    padding-left: 20px;
+  }
+  .exhibition__arrow--prev::before {
+    left: 0;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .exhibition__arrow--next {
+    right: 0;
+    padding-right: 20px;
+    text-align: right;
+  }
+  .exhibition__arrow--next::before {
+    right: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .exhibition__arrow::before {
+    display: block;
+    position: absolute;
+    top: 5px;
   }
 }
