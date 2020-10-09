@@ -259,6 +259,22 @@ function my_acf_init_block_types() {
                 'mode' => false,
             ),
         ));
+
+        acf_register_block_type( array(
+            'name'              => 'biography',
+            'title'             => __('Biography', 'mc2020'),
+            'description'       => __('Artist biography.', 'mc2020'),
+            'category'          => 'common',
+            'icon'              => 'format-aside',
+            'keywords'          => array( 'bio', 'biography', 'description' ),
+            'post_types'        => array( 'artist' ),
+            'mode'              => 'preview',
+            'render_template'   => 'includes/blocks/biography/biography.php',
+            'supports'          => array(
+                'align' => false,
+                'mode' => false,
+            ),
+        ));
     }
 }
 add_action('acf/init', 'my_acf_init_block_types');

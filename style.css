@@ -2373,6 +2373,14 @@ button:focus {
   text-align: center;
 }
 
+.bio {
+  text-align: justify;
+}
+
+.bio__hidden {
+  display: none;
+}
+
 @media screen and (max-width: 1100px) {
   .main-header__menu .menu-item {
     margin: 0 10px;

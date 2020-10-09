@@ -223,6 +223,16 @@ la_carte = [
       loadMapScript();
     }
   });
+
+  /**
+   * Toggle artist bio
+   */
+
+  $('.bio__btn').on('click', function () {
+    $('.bio__hidden').slideDown();
+    $(this).slideUp('slow');
+  });
+
 })(jQuery);
 
 /**
