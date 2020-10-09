@@ -33,7 +33,7 @@ $vrs = get_field( 'relation_artists_vrs', $post_id );
 
     <div class="extra__container extra__container--exhibitions">
 
-        <h3 class="extra__title"><?php _e( 'Exhibitions:', 'mc2020' ); ?></h3>
+        <h3 class="extra__title"><?php _e( 'Exhibitions at mor charpentier', 'mc2020' ); ?></h3>
 
         <ul class="extra__list">
 
@@ -58,7 +58,7 @@ $vrs = get_field( 'relation_artists_vrs', $post_id );
 
     <div class="extra__container extra__container--viewingrooms">
 
-    <h3 class="extra__title"><?php _e( 'Viewing Rooms:', 'mc2020' ); ?></h3>
+    <h3 class="extra__title"><?php _e( 'Viewing Rooms', 'mc2020' ); ?></h3>
 
         <ul class="extra__list">
 
