@@ -27,52 +27,56 @@ $vrs = get_field( 'relation_artists_vrs', $post_id );
 
 ?>
 
-<?php if ( $exhibitions ) : ?>
+<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 
-<div class="extra__container extra__container--exhibitions">
+    <?php if ( $exhibitions ) : ?>
 
-    <h3 class="extra__title"><?php _e( 'Exhibitions:', 'mc2020' ); ?></h3>
+    <div class="extra__container extra__container--exhibitions">
 
-    <ul class="extra__list">
+        <h3 class="extra__title"><?php _e( 'Exhibitions:', 'mc2020' ); ?></h3>
 
-        <?php foreach( $exhibitions as $exhibition ): 
-            $permalink = get_permalink( $exhibition->ID );
-            $title = get_the_title( $exhibition->ID );
-        ?>
+        <ul class="extra__list">
 
-            <li class="extra__item">
-                <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-            </li>
+            <?php foreach( $exhibitions as $exhibition ): 
+                $permalink = get_permalink( $exhibition->ID );
+                $title = get_the_title( $exhibition->ID );
+            ?>
 
-        <?php endforeach; ?>
+                <li class="extra__item">
+                    <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+                </li>
 
-    </ul>
+            <?php endforeach; ?>
+
+        </ul>
+
+    </div>
+
+    <?php endif; ?>
+
+    <?php if ( $vrs ) : ?>
+
+    <div class="extra__container extra__container--viewingrooms">
+
+    <h3 class="extra__title"><?php _e( 'Viewing Rooms:', 'mc2020' ); ?></h3>
+
+        <ul class="extra__list">
+
+            <?php foreach( $vrs as $vr ): 
+                $permalink = get_permalink( $vr->ID );
+                $title = get_the_title( $vr->ID );
+            ?>
+
+                <li class="extra__item">
+                    <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
+                </li>
+
+            <?php endforeach; ?>
+
+        </ul>
+
+    </div>
+
+    <?php endif; ?>
 
 </div>
-
-<?php endif; ?>
-
-<?php if ( $vrs ) : ?>
-
-<div class="extra__container extra__container--viewingrooms">
-
-<h3 class="extra__title"><?php _e( 'Viewing Rooms:', 'mc2020' ); ?></h3>
-
-    <ul class="extra__list">
-
-        <?php foreach( $vrs as $vr ): 
-            $permalink = get_permalink( $vr->ID );
-            $title = get_the_title( $vr->ID );
-        ?>
-
-            <li class="extra__item">
-                <a class="extra__link" href="<?php echo esc_url( $permalink ); ?>"><?php echo esc_html( $title ); ?></a>
-            </li>
-
-        <?php endforeach; ?>
-
-    </ul>
-
-</div>
-
-<?php endif; ?>
