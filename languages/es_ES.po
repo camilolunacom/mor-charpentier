@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mor charpentier 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mc-2020\n"
-"POT-Creation-Date: 2020-09-01T01:47:20+00:00\n"
-"PO-Revision-Date: 2020-09-09 16:29-0500\n"
+"POT-Creation-Date: 2020-10-15T15:06:42+00:00\n"
+"PO-Revision-Date: 2020-10-15 10:08-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Theme Name of the theme
-#: front-page.php:55
+#: front-page.php:56
 msgid "mor charpentier"
 msgstr "mor charpentier"
 
@@ -49,15 +49,15 @@ msgstr "Intenta utilizar el menú superior."
 msgid "Go to home"
 msgstr "Ir al inicio"
 
-#: archive-exhibition.php:31
+#: archive-exhibition.php:33
 msgid "Current"
 msgstr "Actual"
 
-#: archive-exhibition.php:50
+#: archive-exhibition.php:52
 msgid "Past"
 msgstr "Pasadas"
 
-#: category.php:13 functions.php:194 home.php:13
+#: category.php:13 functions.php:199 home.php:13
 msgid "Show filters"
 msgstr "Mostrar filtros"
 
@@ -69,119 +69,143 @@ msgstr "Todos los derechos reservados."
 msgid "By %1$sAlunizar%2$s."
 msgstr "Por %1$sAlunizar%2$s."
 
-#: front-page.php:69
+#: front-page.php:70
 msgid "Latest News"
 msgstr "Últimas noticias"
 
-#: functions.php:40
+#: functions.php:45
 msgid "Primary Menu"
 msgstr "Menú principal"
 
-#: functions.php:79
+#: functions.php:84
 msgctxt "Post Type General Name"
 msgid "Artists"
 msgstr "Artistas"
 
-#: functions.php:80
+#: functions.php:85
 msgctxt "Post Type Singular Name"
 msgid "Artist"
 msgstr "Artista"
 
-#: functions.php:81 functions.php:85
+#: functions.php:86 functions.php:90
 msgid "Artists"
 msgstr "Astistas"
 
-#: functions.php:82
+#: functions.php:87
 msgid "Artist"
 msgstr "Astista"
 
-#: functions.php:86
+#: functions.php:91
 msgid "Gallery artists."
 msgstr "Artistas de la galería."
 
-#: functions.php:105
+#: functions.php:110
 msgctxt "Post Type General Name"
 msgid "Exhibitions"
 msgstr "Exposiciones"
 
-#: functions.php:106
+#: functions.php:111
 msgctxt "Post Type Singular Name"
 msgid "Exhibition"
 msgstr "Exposición"
 
-#: functions.php:107 functions.php:111
+#: functions.php:112 functions.php:116
 msgid "Exhibitions"
 msgstr "Exposiciones"
 
-#: functions.php:108
+#: functions.php:113
 msgid "Exhibition"
 msgstr "Exposición"
 
-#: functions.php:112
+#: functions.php:117
 msgid "Gallery exhibitions."
 msgstr "Exposiciones de la galería."
 
-#: functions.php:131
+#: functions.php:136
 msgctxt "Post Type General Name"
 msgid "Viewing Rooms"
 msgstr "Viewing Rooms"
 
-#: functions.php:132
+#: functions.php:137
 msgctxt "Post Type Singular Name"
 msgid "Viewing Room"
 msgstr "Viewing Room"
 
-#: functions.php:133
+#: functions.php:138 includes/blocks/related/related.php:61
 msgid "Viewing Rooms"
 msgstr "Viewing Rooms"
 
-#: functions.php:134 functions.php:137
+#: functions.php:139 functions.php:142
 msgid "Viewing Room"
 msgstr "Viewing Room"
 
-#: functions.php:138
+#: functions.php:143
 msgid "Gallery viewing rooms."
 msgstr "Viewing Rooms de la galería."
 
-#: functions.php:158
+#: functions.php:163
 msgctxt "Post Type General Name"
 msgid "Artworks"
 msgstr "Obras"
 
-#: functions.php:159
+#: functions.php:164
 msgctxt "Post Type Singular Name"
-msgid "Artwork"
-msgstr "Obra"
-
-#: functions.php:160
-msgid "Artworks"
-msgstr "Obras"
-
-#: functions.php:161 functions.php:164 functions.php:232
 msgid "Artwork"
 msgstr "Obra"
 
 #: functions.php:165
+msgid "Artworks"
+msgstr "Obras"
+
+#: functions.php:166 functions.php:169 functions.php:238
+msgid "Artwork"
+msgstr "Obra"
+
+#: functions.php:170
 msgid "Gallery artworks."
 msgstr "Obras de la galería."
 
-#: functions.php:195
+#: functions.php:200
 msgid "Hide filters"
 msgstr "Ocultar filtros"
 
-#: functions.php:211
+#: functions.php:201
+msgid "Read less"
+msgstr "Leer menos"
+
+#: functions.php:202 includes/blocks/biography/biography.php:50
+msgid "Read more"
+msgstr "Leer más"
+
+#: functions.php:216
 msgid "Theme Options"
 msgstr "Opciones del tema"
 
-#: functions.php:212
+#: functions.php:217
 msgid "MC2020"
 msgstr "MC2020"
 
-#: functions.php:233
+#: functions.php:239
 msgid "Display an artwork."
 msgstr "Mostrar una obra."
 
-#: functions.php:375 includes/content-exhibitions.php:36
+#: functions.php:254
+msgid "Related Posts"
+msgstr "Exposiciones relacionadas"
+
+#: functions.php:255
+msgid "Related posts to this post."
+msgstr "Exposiciones relacionadas a esta publicación."
+
+#: functions.php:270
+msgid "Biography"
+msgstr "Biografía"
+
+#: functions.php:271
+msgid "Artist biography."
+msgstr "Biografía del artista."
+
+#: functions.php:411 includes/content-exhibitions.php:40
 #: includes/content-grid.php:29
 msgid "View %s"
 msgstr "Ver %s"
@@ -206,30 +230,34 @@ msgstr "Consultar"
 msgid "About the work"
 msgstr "Sobre la obra"
 
-#: includes/content-exhibitions-current.php:7
-#: includes/content-exhibitions.php:7 includes/current-exhibition.php:44
-#: single-exhibition.php:11
+#: includes/blocks/related/related.php:36
+msgid "Exhibitions at mor charpentier"
+msgstr "Exposiciones en mor charpentier"
+
+#: includes/content-exhibitions-current.php:10
+#: includes/content-exhibitions.php:10 includes/current-exhibition.php:47
+#: single-exhibition.php:14
 msgctxt "Current exhibition start date format"
 msgid "F jS"
 msgstr "j \\d\\e F"
 
-#: includes/content-exhibitions-current.php:8
-#: includes/content-exhibitions.php:9 includes/current-exhibition.php:45
-#: single-exhibition.php:12
+#: includes/content-exhibitions-current.php:11
+#: includes/content-exhibitions.php:12 includes/current-exhibition.php:48
+#: single-exhibition.php:15
 msgctxt "Current exhibition end date format"
 msgid "F jS, Y"
 msgstr "j \\d\\e F, Y"
 
-#: includes/content-exhibitions.php:8
+#: includes/content-exhibitions.php:11
 msgctxt "Current exhibition start date format"
 msgid "F jS, Y"
 msgstr "F j, Y"
 
-#: includes/content-exhibitions.php:52
+#: includes/content-exhibitions.php:56
 msgid "Group exhibition"
 msgstr "Exposición colectiva"
 
-#: includes/content-grid-posts.php:17 includes/content-single-post.php:38
+#: includes/content-grid-posts.php:17
 msgid "View more"
 msgstr "Ver más"
 
@@ -237,35 +265,23 @@ msgstr "Ver más"
 msgid "We couldn't find any content."
 msgstr "No hemos encontrado ningún contenido."
 
-#: includes/content-page-about.php:73
+#: includes/content-page-about.php:53
 msgid "Open"
 msgstr "Abierto"
 
-#: includes/content-single-extra-artist.php:21
-msgid "Exhibitions:"
-msgstr "Exposiciones:"
-
-#: includes/content-single-extra-artist.php:46
-msgid "Viewing Rooms:"
-msgstr "Viewing Rooms:"
-
-#: includes/content-single-extra-exhibition.php:21
-msgid "Artists:"
-msgstr "Artistas:"
-
-#: includes/content-single-extra-exhibition.php:46 single-exhibition.php:71
-msgid "Related Viewing Rooms:"
-msgstr "Salas de visualización relacionadas:"
-
-#: includes/content-single-extra-viewing-room.php:44
+#: includes/content-single-extra-viewing-room.php:55
 msgid "Related Exhibitions:"
 msgstr "Exposiciones relacionadas:"
+
+#: includes/content-single-post.php:38
+msgid "Learn more"
+msgstr "Más información"
 
 #: includes/current-exhibition.php:24
 msgid "Current exhibition"
 msgstr "Exposición actual"
 
-#: includes/current-exhibition.php:60
+#: includes/current-exhibition.php:64
 msgid "There are no current exhibitions"
 msgstr "No hay exposiciones actualmente"
 
@@ -277,9 +293,22 @@ msgstr "Inscribirse al boletín"
 msgid "Share"
 msgstr "Compartir"
 
-#: single-exhibition.php:118
+#: single-exhibition.php:83
+msgid "Related Viewing Rooms:"
+msgstr "Salas de visualización relacionadas:"
+
+#: single-exhibition.php:142
 msgid "Press release"
 msgstr "Comunicado de prensa"
+
+#~ msgid "Exhibitions:"
+#~ msgstr "Exposiciones:"
+
+#~ msgid "Viewing Rooms:"
+#~ msgstr "Viewing Rooms:"
+
+#~ msgid "Artists:"
+#~ msgstr "Artistas:"
 
 #~ msgctxt "Current exhibition start date format"
 #~ msgid "F dS"
