@@ -35,7 +35,7 @@
     <?php if ( $external_link ) : ?>
 
         <a class="btn single-post__btn" href="<?php echo $external_link; ?>" target="_blank">
-            <?php _e( 'View more', 'mc2020' ); ?>
+            <?php _e( 'Learn more', 'mc2020' ); ?>
         </a>
 
     <?php endif; ?>
