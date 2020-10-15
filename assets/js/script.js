@@ -229,8 +229,13 @@ la_carte = [
    */
 
   $('.bio__btn').on('click', function () {
-    $('.bio__hidden').slideDown();
-    $(this).slideUp('slow');
+    if ($('.bio__hidden').hasClass('bio__hidden--shown')) {
+      $('.bio__hidden').slideUp().removeClass('bio__hidden--shown');
+      $(this).text(objectL10n.readMore);
+    } else {
+      $('.bio__hidden').slideDown().addClass('bio__hidden--shown');
+      $(this).text(objectL10n.readLess);
+    }
   });
 
 })(jQuery);

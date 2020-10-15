@@ -34,6 +34,11 @@ if ( ! function_exists( 'mc2020_theme_setup' ) ) {
         add_theme_support( 'editor-styles' );
 
         /**
+         * Include style-editor.css for styling the block editor
+         */
+        add_editor_style( 'style-editor.css' );
+
+        /**
          * Add support for custom navigation menus.
          */
         register_nav_menus( array(
@@ -193,11 +198,11 @@ function mc2020_enqueue_scripts() {
     wp_localize_script( 'mc2020-script', 'objectL10n', array(
         'showFilters'   => esc_html__( 'Show filters', 'mc2020' ),
         'hideFilters'   => esc_html__( 'Hide filters', 'mc2020' ),
+        'readLess'      => esc_html__( 'Read less', 'mc2020' ),
+        'readMore'      => esc_html__( 'Read more', 'mc2020' ),
     ) );    
 }
 add_action( 'wp_enqueue_scripts', 'mc2020_enqueue_scripts' );
-
-add_editor_style( 'style-editor.css' );
 
 /**
  * Create options page
