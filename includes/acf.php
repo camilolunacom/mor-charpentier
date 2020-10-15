@@ -1,4 +1,5 @@
 <?php
+
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
@@ -419,6 +420,26 @@ if( function_exists('acf_add_local_field_group') ):
         'key' => 'group_5f43ed6a28ba7',
         'title' => 'Viewing Room Extra Information',
         'fields' => array(
+            array(
+                'key' => 'field_5f885b9f53ba2',
+                'label' => 'Subtitle',
+                'name' => 'subtitle',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'wpml_cf_preferences' => 3,
+                'default_value' => '',
+                'placeholder' => '',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+            ),
             array(
                 'key' => 'field_5f43ed6a2db07',
                 'label' => 'Related Exhibitions',
@@ -1257,4 +1278,5 @@ if( function_exists('acf_add_local_field_group') ):
     ));
     
 endif;
+
 ?>
