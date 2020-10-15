@@ -21,3 +21,8 @@
 .image-row .wp-block-group__inner-container > * {
     padding-right: 8px;
 }
+
+/* Remove pullquote borders */
+.wp-block-pullquote {
+    border: none;
+}
