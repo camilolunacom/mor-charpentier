@@ -102,6 +102,7 @@ body {
 
 #page {
   min-height: calc(100vh - 20px);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -158,7 +159,7 @@ button:focus {
 
   &__logo {
     display: block;
-    height: 32px;
+    height: 38.4px;
     fill: #000;
 
     .main-header--light:not(.main-header--fixed) & {
@@ -240,7 +241,7 @@ button:focus {
   }
 
   &__logo-img {
-    width: 160px;
+    width: 192px;
   }
 
   &__button {
@@ -275,7 +276,7 @@ button:focus {
       a {
         @include transition;
         position: relative;
-        color: #bbb;
+        color: #666;
 
         &:hover {
           color: #000;
@@ -637,6 +638,10 @@ button:focus {
 // Slider
 
 .hero-slider {
+  &__title {
+    font-size: 48px;
+  }
+
   &__slide {
     background-position: center;
     background-size: contain;
@@ -1136,7 +1141,7 @@ button:focus {
 
   &__title {
     @include body-large;
-    margin: 1rem 0 0.5rem;
+    margin: 1rem 0 0.75rem;
   }
 
   &__list {
@@ -1161,7 +1166,7 @@ button:focus {
 
   &__item {
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 0.5rem;
   }
 
   &__link {
@@ -1803,7 +1808,7 @@ button:focus {
 }
 
 .woocommerce-MyAccount-navigation-link a {
-  color: #bbb;
+  color: #666;
   @include transition();
 }
 
@@ -1950,6 +1955,22 @@ button:focus {
 }
 
 @media screen and (max-width: 768px) {
+  .main-header {
+    &__logo {
+      height: 32px;
+    }
+    
+    &__logo-img {
+      width: 160px;
+    }
+  }
+
+  .hero-slider {
+    &__title {
+      font-size: 32px;
+    }
+  }
+
   .footer {
     flex-direction: column;
 
