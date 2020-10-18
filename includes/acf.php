@@ -1105,7 +1105,7 @@ if( function_exists('acf_add_local_field_group') ):
                         'key' => 'field_5f39afe64005a',
                         'label' => 'Title',
                         'name' => 'title',
-                        'type' => 'text',
+                        'type' => 'textarea',
                         'instructions' => '',
                         'required' => 0,
                         'conditional_logic' => 0,
@@ -1114,12 +1114,12 @@ if( function_exists('acf_add_local_field_group') ):
                             'class' => '',
                             'id' => '',
                         ),
-                        'wpml_cf_preferences' => 3,
+                        'wpml_cf_preferences' => 0,
                         'default_value' => '',
                         'placeholder' => '',
-                        'prepend' => '',
-                        'append' => '',
                         'maxlength' => '',
+                        'rows' => 2,
+                        'new_lines' => 'br',
                     ),
                     array(
                         'key' => 'field_5f39afef4005b',
@@ -1276,7 +1276,7 @@ if( function_exists('acf_add_local_field_group') ):
         'active' => true,
         'description' => '',
     ));
-    
+
 endif;
 
 ?>
