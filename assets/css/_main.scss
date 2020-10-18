@@ -224,7 +224,7 @@ button:focus {
           transform: rotate(45deg);
           transform-origin: left;
         }
-  
+
         &::after {
           bottom: 8px;
           left: 9px;
@@ -1399,7 +1399,7 @@ button:focus {
       @include h3-small;
     }
   }
-  
+
   &__title {
     @include h2-large;
     margin: 0;
@@ -1409,6 +1409,84 @@ button:focus {
   &__date {
     font-weight: 700;
     margin-bottom: 2em;
+  }
+}
+
+/****************
+ * Viewing Room *
+ ****************/
+
+.single-viewing-room {
+  .gray-bg {
+    background: #f2f2f2;
+  }
+
+  .wp-block-columns {
+    min-height: 100%;
+
+    figure {
+      margin: 0 auto;
+    }
+
+    .wp-block-image {
+      margin-bottom: 0;
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .is-vertically-aligned-center {
+    background: #f2f2f2;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 4em 0;
+
+    & > * {
+      padding-left: 4rem;
+      padding-right: 4rem;
+      margin-top: 0 !important;
+    }
+
+    blockquote {
+      font-size: 20px;
+      margin: 1em 0 2em !important;
+
+      p {
+        font-size: inherit;
+        margin-bottom: 0.2em;
+      }
+
+      cite {
+        font-size: 0.7778em;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .wp-block-group.text-cols {
+    background: #f2f2f2;
+
+    .wp-block-group__inner-container {
+      padding: 4em;
+      columns: 300px 3;
+      column-gap: 4em;
+    }
+
+    .text-cols-all {
+      column-span: all;
+    }
+
+    .has-medium-font-size:not(:first-of-type) {
+      margin: 1.563em 0;
+    }
   }
 }
 
@@ -1960,7 +2038,7 @@ button:focus {
     &__logo {
       height: 32px;
     }
-    
+
     &__logo-img {
       width: 160px;
     }
@@ -2083,7 +2161,7 @@ button:focus {
       padding: 0;
     }
   }
-  
+
   .exhibition {
     &__arrow {
       display: none;

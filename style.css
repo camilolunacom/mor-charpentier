@@ -1940,6 +1940,88 @@ button:focus {
   margin-bottom: 2em;
 }
 
+/****************
+ * Viewing Room *
+ ****************/
+.single-viewing-room .gray-bg {
+  background: #f2f2f2;
+}
+
+.single-viewing-room .wp-block-columns {
+  min-height: 100%;
+}
+
+.single-viewing-room .wp-block-columns figure {
+  margin: 0 auto;
+}
+
+.single-viewing-room .wp-block-columns .wp-block-image {
+  margin-bottom: 0;
+}
+
+.single-viewing-room .wp-block-columns .wp-block-image img {
+  display: block;
+}
+
+.single-viewing-room .is-vertically-aligned-center {
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  padding: 4em 0;
+}
+
+.single-viewing-room .is-vertically-aligned-center > * {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-top: 0 !important;
+}
+
+.single-viewing-room .is-vertically-aligned-center blockquote {
+  font-size: 20px;
+  margin: 1em 0 2em !important;
+}
+
+.single-viewing-room .is-vertically-aligned-center blockquote p {
+  font-size: inherit;
+  margin-bottom: 0.2em;
+}
+
+.single-viewing-room .is-vertically-aligned-center blockquote cite {
+  font-size: 0.7778em;
+  opacity: 0.8;
+}
+
+.single-viewing-room .wp-block-group.text-cols {
+  background: #f2f2f2;
+}
+
+.single-viewing-room .wp-block-group.text-cols .wp-block-group__inner-container {
+  padding: 4em;
+  -webkit-columns: 300px 3;
+          columns: 300px 3;
+  -webkit-column-gap: 4em;
+          column-gap: 4em;
+}
+
+.single-viewing-room .wp-block-group.text-cols .text-cols-all {
+  -webkit-column-span: all;
+          column-span: all;
+}
+
+.single-viewing-room .wp-block-group.text-cols .has-medium-font-size:not(:first-of-type) {
+  margin: 1.563em 0;
+}
+
 /*********
  * About *
  *********/
