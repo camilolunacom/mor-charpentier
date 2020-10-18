@@ -2607,13 +2607,13 @@ button:focus {
 }
 
 @media screen and (min-width: 600px) {
-  .related-block {
+  .wp-block-column:not(:first-child) .related-block {
     padding-left: 2em;
   }
 }
 
 @media screen and (max-width: 599px) {
-  .related-block {
+  .wp-block-column:not(:first-child) .related-block {
     padding-top: 2em;
   }
 }
