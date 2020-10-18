@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className"
-$className = 'artwork-small';
+$className = 'related-block';
 if( ! empty($block['className'] ) ) {
     $className .= ' ' . $block['className'];
 }
