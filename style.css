@@ -1653,7 +1653,7 @@ button:focus {
 .extra__title {
   font-size: 18px;
   line-height: 1.5em;
-  margin: 1rem 0 0.75rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .extra__list {
@@ -1678,7 +1678,7 @@ button:focus {
 
 .extra__item {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .extra__link {
@@ -2602,5 +2602,17 @@ button:focus {
   }
   .exhibition__arrow {
     display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .related-block {
+    padding-left: 2em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .related-block {
+    padding-top: 2em;
   }
 }

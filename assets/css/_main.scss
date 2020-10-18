@@ -1141,7 +1141,7 @@ button:focus {
 
   &__title {
     @include body-large;
-    margin: 1rem 0 0.75rem;
+    margin: 1rem 0 0.5rem;
   }
 
   &__list {
@@ -1166,7 +1166,7 @@ button:focus {
 
   &__item {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   &__link {
@@ -2087,5 +2087,17 @@ button:focus {
     &__arrow {
       display: none;
     }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .related-block {
+    padding-left: 2em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .related-block {
+    padding-top: 2em;
   }
 }
