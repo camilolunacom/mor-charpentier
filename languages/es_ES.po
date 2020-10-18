@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mor charpentier 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mc-2020\n"
-"POT-Creation-Date: 2020-10-15T15:06:42+00:00\n"
-"PO-Revision-Date: 2020-10-15 10:08-0500\n"
+"POT-Creation-Date: 2020-10-18T03:20:44+00:00\n"
+"PO-Revision-Date: 2020-10-17 22:23-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -170,12 +170,12 @@ msgid "Hide filters"
 msgstr "Ocultar filtros"
 
 #: functions.php:201
-msgid "Read less"
-msgstr "Leer menos"
+msgid "Close"
+msgstr "Cerrar"
 
 #: functions.php:202 includes/blocks/biography/biography.php:50
 msgid "Read more"
-msgstr "Leer más"
+msgstr "Seguir leyendo"
 
 #: functions.php:216
 msgid "Theme Options"
@@ -300,6 +300,9 @@ msgstr "Salas de visualización relacionadas:"
 #: single-exhibition.php:142
 msgid "Press release"
 msgstr "Comunicado de prensa"
+
+#~ msgid "Read less"
+#~ msgstr "Leer menos"
 
 #~ msgid "Exhibitions:"
 #~ msgstr "Exposiciones:"

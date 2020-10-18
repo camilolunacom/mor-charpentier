@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mor charpentier 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mc-2020\n"
-"POT-Creation-Date: 2020-10-15T15:06:42+00:00\n"
-"PO-Revision-Date: 2020-10-15 10:19-0500\n"
+"POT-Creation-Date: 2020-10-18T03:20:44+00:00\n"
+"PO-Revision-Date: 2020-10-17 22:24-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -170,14 +170,12 @@ msgid "Hide filters"
 msgstr "Masquer les filtres"
 
 #: functions.php:201
-msgid "Read less"
-msgstr ""
+msgid "Close"
+msgstr "Fermer"
 
 #: functions.php:202 includes/blocks/biography/biography.php:50
-#, fuzzy
-#| msgid "View more"
 msgid "Read more"
-msgstr "Voir"
+msgstr "Lire plus"
 
 #: functions.php:216
 msgid "Theme Options"
@@ -201,11 +199,11 @@ msgstr ""
 
 #: functions.php:270
 msgid "Biography"
-msgstr ""
+msgstr "Biographie"
 
 #: functions.php:271
 msgid "Artist biography."
-msgstr ""
+msgstr "Biographie de l’artiste"
 
 #: functions.php:411 includes/content-exhibitions.php:40
 #: includes/content-grid.php:29
@@ -233,10 +231,8 @@ msgid "About the work"
 msgstr "A propos de l'oeuvre"
 
 #: includes/blocks/related/related.php:36
-#, fuzzy
-#| msgid "mor charpentier"
 msgid "Exhibitions at mor charpentier"
-msgstr "mor charpentier"
+msgstr "Expositions chez mor charpentier"
 
 #: includes/content-exhibitions-current.php:10
 #: includes/content-exhibitions.php:10 includes/current-exhibition.php:47

@@ -198,7 +198,7 @@ function mc2020_enqueue_scripts() {
     wp_localize_script( 'mc2020-script', 'objectL10n', array(
         'showFilters'   => esc_html__( 'Show filters', 'mc2020' ),
         'hideFilters'   => esc_html__( 'Hide filters', 'mc2020' ),
-        'readLess'      => esc_html__( 'Read less', 'mc2020' ),
+        'readLess'      => esc_html__( 'Close', 'mc2020' ),
         'readMore'      => esc_html__( 'Read more', 'mc2020' ),
     ) );    
 }
