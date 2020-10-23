@@ -491,4 +491,4 @@ function cv_disable_title_prefix( $format, $post ) {
  * ACF Field registration
  */
 
-include_once( get_template_directory() . '/includes/acf.php' );
+// include_once( get_template_directory() . '/includes/acf.php' );
