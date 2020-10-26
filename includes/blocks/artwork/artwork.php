@@ -31,7 +31,7 @@ $thumb = wp_get_attachment_image( $images[0], 'full' );
 $availability = get_field( 'availability', $artwork_id );
 $show_price = get_field( 'show_price', $artwork_id );
 $price_raw = get_field( 'price', $artwork_id );
-$price = number_format( $price_raw, 2, ',', ' ' );
+$price = number_format( $price_raw, 0, ',', ' ' );
 $excerpt = get_field( 'short_description', $artwork_id );
 $description = get_field( 'full_description', $artwork_id );
 $form = do_shortcode( '[happyforms id="1986" /]' );
