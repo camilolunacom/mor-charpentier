@@ -339,7 +339,7 @@ function hideArtwork() {
   document.getElementsByTagName("body")[0].classList.remove("mc-no-overflow");
   overlay.classList.remove("overlay-artwork--active");
   jQuery(".overlay-artwork__button").fadeIn(0);
-  jQuery(".overlay-artwor__slider").slick("unslick");
+  jQuery(".overlay-artwork__slider").slick("unslick");
 }
 
 function closeOnEsc(e) {
