@@ -2021,6 +2021,14 @@ button:focus {
   margin: 1.563em 0;
 }
 
+.single-viewing-room .single__title {
+  font-size: 4.5em;
+}
+
+.single-viewing-room .extra__link {
+  font-size: 2.25em;
+}
+
 /*********
  * About *
  *********/
@@ -2684,6 +2692,12 @@ button:focus {
   }
   .exhibition__arrow {
     display: none;
+  }
+  .single-viewing-room .single__title {
+    font-size: 2.25em;
+  }
+  .single-viewing-room .extra__link {
+    font-size: 1.125em;
   }
 }
 

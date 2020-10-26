@@ -1487,6 +1487,18 @@ button:focus {
       margin: 1.563em 0;
     }
   }
+
+  .single {
+    &__title {
+      font-size: 4.5em;
+    }
+  }
+
+  .extra {
+    &__link {
+      font-size: 2.25em;
+    }
+  }
 }
 
 /*********
@@ -2164,6 +2176,20 @@ button:focus {
   .exhibition {
     &__arrow {
       display: none;
+    }
+  }
+
+  .single-viewing-room {
+    .single {
+      &__title {
+        font-size: 2.25em;
+      }
+    }
+
+    .extra {
+      &__link {
+        font-size: 1.125em;
+      }
     }
   }
 }
