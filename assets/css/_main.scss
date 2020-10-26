@@ -1643,6 +1643,7 @@ button:focus {
 
   &__left {
     width: calc(70% - 2em);
+    height: 100%;
   }
 
   &__right {
@@ -1718,6 +1719,35 @@ button:focus {
     }
   }
 }
+
+.artwork-slider{
+  height: 100%;
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .slick-list, .slick-track, .slick-slide {
+    height: 100%;
+  }
+
+  .slick-track {
+    display: flex !important;
+  }
+
+  .slick-slide {
+    height: inherit !important;
+  }
+
+  .slick-slide img {
+    max-height: 100%;
+    width: auto;
+  }
+}
+
 
 .mc-hidden {
   display: none !important;

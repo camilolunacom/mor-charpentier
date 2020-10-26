@@ -42,7 +42,7 @@ $actual_price = $show_price ? $formatted_price : $price_message;
 $html_images = "";
 
 foreach ( $images as $image ) {
-    $html_images .= wp_get_attachment_image( $image, 'full' );
+    $html_images .= "<div><div class=\"artwork-slider__slide\">" . wp_get_attachment_image( $image, 'full' ) . "</div></div>";
 }
 
 ?>

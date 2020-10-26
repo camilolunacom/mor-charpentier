@@ -321,7 +321,7 @@ function showArtwork(artwork) {
   document.getElementsByTagName("body")[0].classList.add("mc-no-overflow");
   document.addEventListener("keydown", closeOnEsc);
 
-  jQuery(".overlay-artwork__slider").slick({
+  jQuery(".artwork-slider").slick({
     nextArrow:
       '<button type="button" class="hero-slider__arrow hero-slider__arrow--right"><svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330"><g id="arrow-right" class="slider-arrow__g"><path d="M194.7 177.82L48 324.69a18.11 18.11 0 01-25.62 0L5.31 307.56a18.15 18.15 0 010-25.62L121.51 165 5.27 48.06a18.15 18.15 0 010-25.62L22.41 5.31a18.11 18.11 0 0125.59 0l146.69 146.87a18.14 18.14 0 01.01 25.64z"/></g></svg></button>',
     prevArrow:
@@ -339,7 +339,7 @@ function hideArtwork() {
   document.getElementsByTagName("body")[0].classList.remove("mc-no-overflow");
   overlay.classList.remove("overlay-artwork--active");
   jQuery(".overlay-artwork__button").fadeIn(0);
-  jQuery(".overlay-artwork__slider").slick("unslick");
+  jQuery(".artwork-slider").slick("unslick");
 }
 
 function closeOnEsc(e) {

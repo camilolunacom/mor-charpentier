@@ -2188,6 +2188,7 @@ button:focus {
 
 .overlay-artwork__left {
   width: calc(70% - 2em);
+  height: 100%;
 }
 
 .overlay-artwork__right {
@@ -2261,6 +2262,42 @@ button:focus {
 
 .overlay-artwork .happyforms-form.happyforms-styles .happyforms-part--legal .happyforms-part__el .label a {
   text-decoration: underline;
+}
+
+.artwork-slider {
+  height: 100%;
+}
+
+.artwork-slider__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.artwork-slider .slick-list, .artwork-slider .slick-track, .artwork-slider .slick-slide {
+  height: 100%;
+}
+
+.artwork-slider .slick-track {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.artwork-slider .slick-slide {
+  height: inherit !important;
+}
+
+.artwork-slider .slick-slide img {
+  max-height: 100%;
+  width: auto;
 }
 
 .mc-hidden {
