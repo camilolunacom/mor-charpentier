@@ -39,6 +39,12 @@ $price_message = __( 'Inquire for price', 'mc2020' );
 $formatted_price = $price . ' €';
 $actual_price = $show_price ? $formatted_price : $price_message;
 
+$html_images = "";
+
+foreach ( $images as $image ) {
+    $html_images .= wp_get_attachment_image( $image, 'full' );
+}
+
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
@@ -67,6 +73,7 @@ $actual_price = $show_price ? $formatted_price : $price_message;
 <script>
 const artwork<?php echo $artwork_id; ?> = {
     image: `<?php echo $thumb; ?>`,
+    images: `<?php echo $html_images; ?>`,
     title: `<?php echo $title; ?>`,
     artist: `<?php echo $artist; ?>`,
     excerpt: `<?php echo $excerpt; ?>`,

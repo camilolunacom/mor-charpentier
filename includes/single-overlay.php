@@ -2,7 +2,7 @@
 	<button class="overlay-artwork__close" onclick="hideArtwork()">X</button>
 	<div class="overlay-artwork__cols">
 		<div class="overlay-artwork__left">
-		<div class="overlay-artwork__img-container"></div>
+		<div class="overlay-artwork__img-container overlay-artwork__slider"></div>
 		</div>
 		<div class="overlay-artwork__right">
 			<div class="overlay-artwork__title"></div>
