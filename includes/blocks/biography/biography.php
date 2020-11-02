@@ -25,6 +25,18 @@ if( ! empty($block['className'] ) ) {
 $shown = get_field( 'shown', $post_id )?: 'Always visible...';
 $hidden = get_field( 'hidden', $post_id ) ?: 'Hidden...';
 
+$en_cv = get_field( 'english_cv', $post_id );
+$es_cv = get_field( 'spanish_cv', $post_id );
+$fr_cv = get_field( 'french_cv', $post_id );
+
+if ( ICL_LANGUAGE_CODE == 'es' && $es_cv ) {
+    $cv = $es_cv;
+} elseif ( ICL_LANGUAGE_CODE == 'fr' && $fr_cv  ) {
+    $cv = $fr_cv;
+} elseif ( $en_cv ) {
+    $cv = $en_cv;
+}
+
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="bio <?php echo esc_attr($className); ?>">
@@ -44,6 +56,12 @@ $hidden = get_field( 'hidden', $post_id ) ?: 'Hidden...';
         <div class="bio__hidden">
             
             <?php echo $hidden ?>
+
+            <?php if ( $cv ) : ?>
+
+                <p><a href="<?php echo $cv; ?>"><?php _e( 'Download CV', 'mc2020' ); ?></a></p>
+
+            <?php endif; ?>
             
         </div>
         
