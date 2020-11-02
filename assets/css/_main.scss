@@ -416,9 +416,13 @@ button:focus {
     margin-bottom: 1.5em;
   }
 
-  &__legal-links a {
-    font-weight: inherit;
-    text-decoration: underline;
+  &__legal-links {
+    margin-bottom: 0;
+
+    a {
+      font-weight: inherit;
+      text-decoration: underline;
+    }
   }
 
   &__social-links {
