@@ -351,7 +351,7 @@ button:focus {
   line-height: 21px;
 
   &__col {
-    width: 33.3334%;
+    flex-grow: 1;
 
     &--exhibition {
       font-size: 12px;
@@ -361,6 +361,7 @@ button:focus {
 
     &--credits {
       text-align: center;
+      flex-grow: 2;
     }
 
     &--contact {
@@ -413,6 +414,11 @@ button:focus {
   &__email {
     display: inline-block;
     margin-bottom: 1.5em;
+  }
+
+  &__legal-links a {
+    font-weight: inherit;
+    text-decoration: underline;
   }
 
   &__social-links {
@@ -2121,6 +2127,14 @@ button:focus {
 
     &__info {
       margin-bottom: 0;
+    }
+
+    &__legal-links a {
+      display: block;
+    }
+    
+    &__legal-links span {
+      display: none;
     }
 
     &__social-links {

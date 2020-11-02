@@ -21,6 +21,10 @@
 				<?php printf(__('By %1$sAlunizar%2$s.', 'mc2020'), $part1, $part2);?>
 			</p>
 
+			<p class="footer__legal-links">
+				<?php echo get_the_privacy_policy_link(); ?><span> &ndash; </span><a href="/terms-of-service/"><?php _e( 'Terms of Service', 'mc2020' ); ?></a>
+			</p>
+
 		</div>
 
 		<div class="footer__col footer__col--contact">

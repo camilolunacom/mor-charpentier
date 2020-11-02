@@ -810,7 +810,9 @@ button:focus {
 }
 
 .footer__col {
-  width: 33.3334%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .footer__col--exhibition {
@@ -821,6 +823,9 @@ button:focus {
 
 .footer__col--credits {
   text-align: center;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
 .footer__col--contact {
@@ -869,6 +874,11 @@ button:focus {
 .footer__email {
   display: inline-block;
   margin-bottom: 1.5em;
+}
+
+.footer__legal-links a {
+  font-weight: inherit;
+  text-decoration: underline;
 }
 
 .footer__social-links {
@@ -2666,6 +2676,12 @@ button:focus {
   }
   .footer__info {
     margin-bottom: 0;
+  }
+  .footer__legal-links a {
+    display: block;
+  }
+  .footer__legal-links span {
+    display: none;
   }
   .footer__social-links {
     -webkit-box-pack: center;
