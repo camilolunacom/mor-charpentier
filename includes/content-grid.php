@@ -26,7 +26,12 @@
 
 				<button class="grid__button grid__button--line btn btn--small" href="<?php echo the_permalink(); ?>">
 
-					<?php printf( esc_html__( 'View %s', 'mc2020' ), get_post_type() ); ?>
+					<?php
+						$type = get_post_type();
+						$obj = get_post_type_object( $type );
+						$name = $obj->labels->singular_name;
+					?>
+					<?php printf( esc_html__( 'View %s', 'mc2020' ), $name ); ?>
 
 				</button>
 
