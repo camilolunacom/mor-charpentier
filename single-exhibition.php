@@ -16,6 +16,18 @@ $end_date_format = _x( 'F jS, Y', 'Current exhibition end date format', 'mc2020'
 
 $start_date  = date_i18n( $start_date_format, $start_timestamp );
 $end_date  = date_i18n( $end_date_format, $end_timestamp );
+
+$press_release = get_field( 'press_release' );
+$press_release_es = get_field( 'press_release_es' );
+$press_release_fr = get_field( 'press_release_fr' );
+
+if ( ICL_LANGUAGE_CODE == 'es' && $press_release_es ) {
+    $pr = $press_release_es;
+} elseif ( ICL_LANGUAGE_CODE == 'fr' && $press_release_fr  ) {
+    $pr = $press_release_fr;
+} elseif ( $press_release ) {
+    $pr = $press_release;
+}
 ?>
 
 <main class="site-main" role="main">
@@ -131,7 +143,7 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 
 	<aside class="mc-section mc-section--no-padding-top single__share cols">
 
-		<?php if ( get_field( 'press_release' ) ) : ?>
+		<?php if ( $pr ) : ?>
 
 		<div class="col-half">
 
@@ -145,7 +157,7 @@ $end_date  = date_i18n( $end_date_format, $end_timestamp );
 
 				<div class="sm-icons share__btns">
 
-					<a class="sm-icons__link" href="<?php esc_html( the_field( 'press_release' ) ); ?>" target="_blank">
+					<a class="sm-icons__link" href="<?php echo $pr; ?>" target="_blank">
 
 						<svg xmlns="http://www.w3.org/2000/svg" class="sm-icons__svg" viewbox="0 0 40 40">
 							<g id="sm-press-release" class="sm-icons__g sm-icons__g--press-release">
