@@ -22,7 +22,7 @@
 			</p>
 
 			<p class="footer__legal-links">
-				<?php echo get_the_privacy_policy_link(); ?><span> &ndash; </span><a href="/terms-of-service/"><?php _e( 'Terms of Service', 'mc2020' ); ?></a>
+				<a href="<?php echo get_privacy_policy_url(); ?>"><?php _e( 'Privacy Policy', 'mc2020' ); ?></a><span> &ndash; </span><a href="/terms-of-service/"><?php _e( 'Terms of Service', 'mc2020' ); ?></a>
 			</p>
 
 		</div>

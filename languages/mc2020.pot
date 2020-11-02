@@ -9,9 +9,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-18T03:20:44+00:00\n"
+"POT-Creation-Date: 2020-11-02T22:31:48+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.5.0-alpha\n"
+"X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: mc2020\n"
 
 #. Theme Name of the theme
@@ -68,6 +68,14 @@ msgstr ""
 
 #: footer.php:21
 msgid "By %1$sAlunizar%2$s."
+msgstr ""
+
+#: footer.php:25
+msgid "Privacy Policy"
+msgstr ""
+
+#: footer.php:25
+msgid "Terms of Service"
 msgstr ""
 
 #: front-page.php:70
@@ -181,7 +189,7 @@ msgid "Close"
 msgstr ""
 
 #: functions.php:202
-#: includes/blocks/biography/biography.php:50
+#: includes/blocks/biography/biography.php:68
 msgid "Read more"
 msgstr ""
 
@@ -215,7 +223,7 @@ msgstr ""
 
 #: functions.php:411
 #: includes/content-exhibitions.php:40
-#: includes/content-grid.php:29
+#: includes/content-grid.php:34
 msgid "View %s"
 msgstr ""
 
@@ -227,16 +235,20 @@ msgstr ""
 msgid "Inquire for price"
 msgstr ""
 
-#: includes/blocks/artwork/artwork.php:60
+#: includes/blocks/artwork/artwork.php:66
 msgid "View artwork"
 msgstr ""
 
-#: includes/blocks/artwork/artwork.php:77
+#: includes/blocks/artwork/artwork.php:84
 msgid "Inquire"
 msgstr ""
 
-#: includes/blocks/artwork/artwork.php:79
+#: includes/blocks/artwork/artwork.php:86
 msgid "About the work"
+msgstr ""
+
+#: includes/blocks/biography/biography.php:62
+msgid "Download CV"
 msgstr ""
 
 #: includes/blocks/related/related.php:36
@@ -304,10 +316,10 @@ msgstr ""
 msgid "Share"
 msgstr ""
 
-#: single-exhibition.php:83
+#: single-exhibition.php:95
 msgid "Related Viewing Rooms:"
 msgstr ""
 
-#: single-exhibition.php:142
+#: single-exhibition.php:154
 msgid "Press release"
 msgstr ""

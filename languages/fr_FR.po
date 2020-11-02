@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mor charpentier 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mc-2020\n"
-"POT-Creation-Date: 2020-10-18T03:20:44+00:00\n"
-"PO-Revision-Date: 2020-10-17 22:24-0500\n"
+"POT-Creation-Date: 2020-11-02T22:31:48+00:00\n"
+"PO-Revision-Date: 2020-11-02 17:33-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -68,6 +68,14 @@ msgstr "Tous les droits sont réservés."
 #: footer.php:21
 msgid "By %1$sAlunizar%2$s."
 msgstr "Par %1$sAlunizar%2$s."
+
+#: footer.php:25
+msgid "Privacy Policy"
+msgstr "Politique de confidentialité"
+
+#: footer.php:25
+msgid "Terms of Service"
+msgstr "Conditions d’utilisation"
 
 #: front-page.php:70
 msgid "Latest News"
@@ -173,7 +181,7 @@ msgstr "Masquer les filtres"
 msgid "Close"
 msgstr "Fermer"
 
-#: functions.php:202 includes/blocks/biography/biography.php:50
+#: functions.php:202 includes/blocks/biography/biography.php:68
 msgid "Read more"
 msgstr "Lire plus"
 
@@ -195,7 +203,7 @@ msgstr "Expositions associées"
 
 #: functions.php:255
 msgid "Related posts to this post."
-msgstr ""
+msgstr "Articles liés à ce message."
 
 #: functions.php:270
 msgid "Biography"
@@ -206,7 +214,7 @@ msgid "Artist biography."
 msgstr "Biographie de l’artiste"
 
 #: functions.php:411 includes/content-exhibitions.php:40
-#: includes/content-grid.php:29
+#: includes/content-grid.php:34
 msgid "View %s"
 msgstr "Voir %s"
 
@@ -218,17 +226,21 @@ msgstr "Aller au contenu"
 msgid "Inquire for price"
 msgstr "Consulter le prix"
 
-#: includes/blocks/artwork/artwork.php:60
+#: includes/blocks/artwork/artwork.php:66
 msgid "View artwork"
 msgstr "Voir l'oeuvre"
 
-#: includes/blocks/artwork/artwork.php:77
+#: includes/blocks/artwork/artwork.php:84
 msgid "Inquire"
 msgstr "Consulter"
 
-#: includes/blocks/artwork/artwork.php:79
+#: includes/blocks/artwork/artwork.php:86
 msgid "About the work"
 msgstr "A propos de l'oeuvre"
+
+#: includes/blocks/biography/biography.php:62
+msgid "Download CV"
+msgstr "Télécharger le CV"
 
 #: includes/blocks/related/related.php:36
 msgid "Exhibitions at mor charpentier"
@@ -293,11 +305,11 @@ msgstr "s’inscrire à la newsletter"
 msgid "Share"
 msgstr "Partager"
 
-#: single-exhibition.php:83
+#: single-exhibition.php:95
 msgid "Related Viewing Rooms:"
 msgstr "Viewing Rooms associées:"
 
-#: single-exhibition.php:142
+#: single-exhibition.php:154
 msgid "Press release"
 msgstr "Communiqué"
 
