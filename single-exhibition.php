@@ -118,7 +118,7 @@ if ( ICL_LANGUAGE_CODE == 'es' && $press_release_es ) {
 			<?php if ( get_previous_post() ) : ?>
 
 				<div class="exhibition__arrow exhibition__arrow--prev">
-					<?php previous_post_link( '%link', '%title' ); ?>
+					<?php previous_post_link( '%link', '<span>%title</span>' ); ?>
 				</div>
 
 			<?php endif; ?>
@@ -126,7 +126,7 @@ if ( ICL_LANGUAGE_CODE == 'es' && $press_release_es ) {
 			<?php if ( get_next_post() ) : ?>
 
 				<div class="exhibition__arrow exhibition__arrow--next">
-					<?php next_post_link( '%link', '%title' ); ?>
+					<?php next_post_link( '%link', '<span>%title</span>' ); ?>
 				</div>
 
 			<?php endif; ?>

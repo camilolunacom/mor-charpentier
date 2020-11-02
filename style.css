@@ -1730,7 +1730,15 @@ button:focus {
           transform-origin: top right;
 }
 
-.exhibition__arrow::before {
+.exhibition__arrow a:hover {
+  opacity: 1;
+}
+
+.exhibition__arrow span {
+  display: block;
+}
+
+.exhibition__arrow span::before {
   content: "";
   display: block;
   margin: auto;
@@ -2281,7 +2289,9 @@ button:focus {
   height: 100%;
 }
 
-.artwork-slider .slick-list, .artwork-slider .slick-track, .artwork-slider .slick-slide {
+.artwork-slider .slick-list,
+.artwork-slider .slick-track,
+.artwork-slider .slick-slide {
   height: 100%;
 }
 
