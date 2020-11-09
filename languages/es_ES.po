@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: mor charpentier 1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mc-2020\n"
 "POT-Creation-Date: 2020-11-02T22:31:48+00:00\n"
-"PO-Revision-Date: 2020-11-02 17:32-0500\n"
+"PO-Revision-Date: 2020-11-08 20:46-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -240,7 +240,7 @@ msgstr "Sobre la obra"
 
 #: includes/blocks/biography/biography.php:62
 msgid "Download CV"
-msgstr "Descargar hoja de vida"
+msgstr "Descargar CV"
 
 #: includes/blocks/related/related.php:36
 msgid "Exhibitions at mor charpentier"
