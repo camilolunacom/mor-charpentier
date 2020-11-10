@@ -2122,7 +2122,8 @@ button:focus {
  * Artwork *
  ***********/
 .artwork-small__thumbnail img {
-  display: bloc;
+  display: block;
+  margin: auto;
 }
 
 .artwork-small__short {
