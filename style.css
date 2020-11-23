@@ -1156,7 +1156,7 @@ button:focus {
   z-index: 2;
   fill: #000;
   background-color: transparent;
-  opacity: 0.3;
+  opacity: 0.6;
   border: none;
   cursor: pointer;
   -webkit-transform: translateY(-50%);
@@ -1169,7 +1169,7 @@ button:focus {
 }
 
 .hero-slider__arrow:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .hero-slider__arrow:focus {

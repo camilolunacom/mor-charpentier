@@ -180,6 +180,10 @@ la_carte = [
         '<button type="button" class="hero-slider__arrow hero-slider__arrow--right"><svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330"><g id="arrow-right" class="slider-arrow__g"><path d="M194.7 177.82L48 324.69a18.11 18.11 0 01-25.62 0L5.31 307.56a18.15 18.15 0 010-25.62L121.51 165 5.27 48.06a18.15 18.15 0 010-25.62L22.41 5.31a18.11 18.11 0 0125.59 0l146.69 146.87a18.14 18.14 0 01.01 25.64z"/></g></svg></button>',
       prevArrow:
         '<button type="button" class="hero-slider__arrow hero-slider__arrow--left"><svg xmlns="http://www.w3.org/2000/svg" class="slider-arrow" viewBox="0 0 200 330"><g id="arrow-left" class="slider-arrow__g"><path d="M5.3 152.18L152 5.31a18.11 18.11 0 0125.62 0l17.1 17.13a18.15 18.15 0 010 25.62L78.49 165l116.24 116.94a18.15 18.15 0 010 25.62l-17.1 17.13a18.11 18.11 0 01-25.62 0L5.31 177.82a18.14 18.14 0 01-.01-25.64z"/></g></svg></button>',
+      autoplay: true,
+      autoplaySpeed: 4000,
+      pauseOnFocus: false,
+      pauseOnHover: false,
     });
 
     $(".slick__slides").slick({
