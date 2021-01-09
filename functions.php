@@ -493,3 +493,21 @@ function cv_disable_title_prefix( $format, $post ) {
  */
 
 // include_once( get_template_directory() . '/includes/acf.php' );
+
+/**
+ * Add fix for forms
+ */
+
+function happyforms_patch_overlay() {
+?>
+    <script type="text/javascript">
+        if ( undefined !== window.jQuery ) {
+            jQuery(document).on('mouseenter', '.happyforms-form form', function () {
+            jQuery( '.happyforms-form' ).happyForm();
+            });
+        }
+    </script>
+<?php
+}
+add_action( 'wp_footer', 'happyforms_patch_overlay' );
+    
