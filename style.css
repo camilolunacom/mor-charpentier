@@ -2454,6 +2454,20 @@ button:focus {
   margin-right: 1em;
 }
 
+.woocommerce div.product div.images .flex-control-thumbs {
+  margin-top: 6%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+  width: 20%;
+  margin-right: 6.6666%;
+  margin-bottom: 6.6666%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li:nth-of-type(4n) {
+  margin-right: 0;
+}
+
 .woocommerce-info,
 .woocommerce-error,
 .woocommerce-info,
