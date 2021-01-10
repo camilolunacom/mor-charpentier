@@ -354,6 +354,18 @@ function mc2020_exhibitions_query( $query ) {
 add_action( 'pre_get_posts', 'mc2020_exhibitions_query', 1 );
 
 /**
+ * Modify viewing rooms archive query
+ */
+
+function mc2020_viewing_rooms_query( $query ) {
+    if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'viewing-room' ) ) {
+        $query->set( 'tag__not_in', array( 473 ) );
+        return;
+    }
+}
+add_action( 'pre_get_posts', 'mc2020_viewing_rooms_query', 1 );
+
+/**
  * Artwork: save first image from gallery as featured image
  */
 
@@ -510,4 +522,3 @@ function happyforms_patch_overlay() {
 <?php
 }
 add_action( 'wp_footer', 'happyforms_patch_overlay' );
-    
