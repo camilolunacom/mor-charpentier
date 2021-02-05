@@ -35,7 +35,7 @@ $price = number_format( $price_raw, 0, ',', ' ' );
 $excerpt = get_field( 'short_description', $artwork_id );
 $description = get_field( 'full_description', $artwork_id );
 $form = do_shortcode( '[happyforms id="1986" /]' );
-$price_message = __( 'Inquire for price', 'mc2020' );
+$price_message = "";
 $formatted_price = $price . ' €';
 $actual_price = $show_price ? $formatted_price : $price_message;
 
@@ -59,7 +59,8 @@ foreach ( $images as $image ) {
             <h3 class="artwork-small__title"><?php echo $title; ?></h3>
             <p class="artwork-small__artist"><?php echo $artist; ?></p>
             <p class="artwork-small__excerpt"><?php echo $excerpt; ?></p>
-            <?php if ( $availability ) : ?><p class="artwork-small__price"><?php echo $actual_price; ?></p><? endif; ?>
+            <?php if ( $availability ) : ?><p class="artwork-small__price"><?php echo $actual_price; ?></p>
+            <? endif; ?>
         </div>
 
         <div class="artwork-small__btn-container">
