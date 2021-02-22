@@ -67,11 +67,11 @@
 <?php get_template_part( 'includes/single-overlay' ); ?>
 
 <script type="text/javascript">
-if (undefined !== window.jQuery) {
-  jQuery(document).on('mouseenter', '.happyforms-form form', function() {
-    jQuery('.happyforms-form').happyForm();
-  });
-}
+  if (undefined !== window.jQuery) {
+    jQuery(document).on('mouseenter', '.happyforms-form form', function() {
+      jQuery('.happyforms-form').happyForm();
+    });
+  }
 </script>
 
 <?php get_footer(); ?>
