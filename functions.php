@@ -512,13 +512,13 @@ function cv_disable_title_prefix( $format, $post ) {
 
 function happyforms_patch_overlay() {
 ?>
-    <script type="text/javascript">
-        if ( undefined !== window.jQuery ) {
-            jQuery(document).on('mouseenter', '.happyforms-form form', function () {
-            jQuery( '.happyforms-form' ).happyForm();
-            });
-        }
-    </script>
+<script type="text/javascript">
+if (undefined !== window.jQuery) {
+  jQuery(document).on('mouseenter', '.happyforms-form form', function() {
+    jQuery('.happyforms-form').happyForm();
+  });
+}
+</script>
 <?php
 }
 add_action( 'wp_footer', 'happyforms_patch_overlay' );

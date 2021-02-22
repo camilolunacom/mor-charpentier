@@ -2,23 +2,23 @@
 
 <main class="site-main" role="main">
 
-	<article <?php post_class( 'mc-section single' ); ?>>
+  <article <?php post_class( 'mc-section single' ); ?>>
 
-		<header class="single__header">
+    <header class="single__header">
 
-			<h1 class="mc-section__title single__title">
+      <h1 class="mc-section__title single__title">
 
-				<?php if ( is_page() || is_singular() ) {
+        <?php if ( is_page() || is_singular() ) {
 					single_post_title();
 				} else {
 					wp_title( '' );
 				} ?>
 
-			</h1>
+      </h1>
 
-			<div class="single__extra extra">
+      <div class="single__extra extra">
 
-				<?php if ( 'artist' === get_post_type() ) {
+        <?php if ( 'artist' === get_post_type() ) {
 
 					get_template_part( 'includes/content-single-extra', 'artist' );
 
@@ -28,42 +28,50 @@
 
 				} ?>
 
-			</div>
+      </div>
 
-		</header>
+    </header>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+    <?php if ( 'post' === get_post_type() ) : ?>
 
-			<div class="single__content single-post">
+    <div class="single__content single-post">
 
-				<?php get_template_part( 'includes/content-single', 'post' ); ?>
+      <?php get_template_part( 'includes/content-single', 'post' ); ?>
 
-			</div>
+    </div>
 
-		<?php else : ?>
+    <?php else : ?>
 
-			<div class="single__main">
+    <div class="single__main">
 
-				<?php get_template_part( 'includes/content-single' ); ?>
+      <?php get_template_part( 'includes/content-single' ); ?>
 
-			</div>
+    </div>
 
-			<?php endif; ?>
+    <?php endif; ?>
 
-	</article>
+  </article>
 
-	<?php if ( 'post' !== get_post_type() ) : ?>
+  <?php if ( 'post' !== get_post_type() ) : ?>
 
-		<aside class="mc-section mc-section--no-padding-top single__share">
+  <aside class="mc-section mc-section--no-padding-top single__share">
 
-			<?php get_template_part( 'includes/social-share' ); ?>
+    <?php get_template_part( 'includes/social-share' ); ?>
 
-		</aside>
+  </aside>
 
-	<?php endif; ?>
+  <?php endif; ?>
 
 </main>
 
 <?php get_template_part( 'includes/single-overlay' ); ?>
+
+<script type="text/javascript">
+if (undefined !== window.jQuery) {
+  jQuery(document).on('mouseenter', '.happyforms-form form', function() {
+    jQuery('.happyforms-form').happyForm();
+  });
+}
+</script>
 
 <?php get_footer(); ?>
