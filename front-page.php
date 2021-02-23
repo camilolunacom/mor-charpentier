@@ -32,7 +32,7 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 				$background_size = get_sub_field( 'background_size' );
 				?>
 
-				<div class="hero-slider__slide<?php if ( $text_color ) :?> hero-slider__slide--light<?php endif; ?><?php if ( $background_size ) :?> hero-slider__slide--cover<?php endif; ?>""<?php if ( $background ) : ?> style="background-image: url(<?php echo $background; ?>);<?php endif; ?>">
+				<div class="hero-slider__slide<?php if ( $text_color ) :?> hero-slider__slide--light<?php endif; ?><?php if ( $background_size ) :?> hero-slider__slide--cover<?php endif; ?>" <?php if ( $background ) : ?> style="background-image: url(<?php echo $background; ?>);"<?php endif; ?>>
 
 					<div class="hero-slider__overlay" style="<?php if ( $overlay_color ) : ?>background-color: <?php echo $overlay_color; ?>; <?php endif; ?><?php if ( $overlay_opacity ) : ?>opacity: <?php echo $overlay_opacity_decimal; ?>; <?php endif; ?>"></div>
 
@@ -53,10 +53,10 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 			<?php endwhile; else : ?>
 
 				<li class="hero-slider__slide">
-          <div class="hero-slider__content" style="min-height: calc(100vh - 20px);">
-            <h2 class="hero-slider__title"><?php _e( 'mor charpentier', 'mc2020' ); ?></h2>
-          </div>
-        </li>
+					<div class="hero-slider__content" style="min-height: calc(100vh - 20px);">
+						<h2 class="hero-slider__title"><?php _e( 'mor charpentier', 'mc2020' ); ?></h2>
+					</div>
+				</li>
 
 			<?php endif; ?>
 
