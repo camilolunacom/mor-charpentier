@@ -36,7 +36,7 @@ $autoplay_speed_miliseconds = $autoplay_speed > 0 ? $autoplay_speed * 1000 : 0;
 
 					<div class="hero-slider__overlay" style="<?php if ( $overlay_color ) : ?>background-color: <?php echo $overlay_color; ?>; <?php endif; ?><?php if ( $overlay_opacity ) : ?>opacity: <?php echo $overlay_opacity_decimal; ?>; <?php endif; ?>"></div>
 
-					<div class="hero-slider__content"<?php if ( $hero_height ) : ?> style="min-height: calc(<?php echo $hero_height; ?>vh - 20px);<?php endif; ?>">
+					<div class="hero-slider__content"<?php if ( $hero_height ) : ?> style="min-height: calc(<?php echo $hero_height; ?>vh - 20px);"<?php endif; ?>>
 
 						<?php if ( $title ) : ?><h2 class="hero-slider__title"><?php echo $title; ?></h2><?php endif; ?>
 
