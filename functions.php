@@ -421,7 +421,7 @@ function mc2020_section_wrapper_close() {
 }
 
 function mc2020_product_overlay() {
-    $text_button = sprintf( esc_html__( 'View %s', 'mc2020' ), get_post_type() );
+    $text_button = sprintf( esc_html__( 'View product', 'mc2020' ), get_post_type() );
     echo '<div class="product__overlay"><button class="product__button btn">' . $text_button . '</button></div>';
 }
 
