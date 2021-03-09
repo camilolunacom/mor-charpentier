@@ -60,7 +60,7 @@ foreach ( $images as $image ) {
             <p class="artwork-small__artist"><?php echo $artist; ?></p>
             <p class="artwork-small__excerpt"><?php echo $excerpt; ?></p>
             <?php if ( $availability ) : ?><p class="artwork-small__price"><?php echo $actual_price; ?></p>
-            <? endif; ?>
+            <?php endif; ?>
         </div>
 
         <div class="artwork-small__btn-container">
