@@ -333,6 +333,10 @@ function showArtwork(artwork) {
   });
 
   overlay.classList.add("overlay-artwork--active");
+
+  jQuery(".artwork-title .happyforms-input input").val(artwork.title);
+  jQuery(".artwork-artist .happyforms-input input").val(artwork.artist);
+  jQuery(".artwork-price .happyforms-input input").val(actualPrice);
 }
 
 function hideArtwork() {
